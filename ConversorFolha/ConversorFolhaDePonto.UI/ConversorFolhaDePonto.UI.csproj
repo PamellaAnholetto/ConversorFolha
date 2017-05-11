@@ -1,0 +1,253 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{9BC93D7F-9C81-4013-B5B4-E150B1464C3D}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ConversorFolhaDePonto.UI</RootNamespace>
+    <AssemblyName>ConversorFolhaDePonto.UI</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Ico_SF_GC[icone].ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>ConversorFolhaDePonto.UI.Program</StartupObject>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="cadastrareventoForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="cadastrareventoForm.Designer.cs">
+      <DependentUpon>cadastrareventoForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="cadastrarfuncionarioForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="cadastrarfuncionarioForm.Designer.cs">
+      <DependentUpon>cadastrarfuncionarioForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="manterempresaForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="manterempresaForm.Designer.cs">
+      <DependentUpon>manterempresaForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="manterfuncionarioForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="manterfuncionarioForm.Designer.cs">
+      <DependentUpon>manterfuncionarioForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="cadastrargeralForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="cadastrargeralForm.Designer.cs">
+      <DependentUpon>cadastrargeralForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="mantereventoForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="mantereventoForm.Designer.cs">
+      <DependentUpon>mantereventoForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="cadastrarlayoutForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="cadastrarlayoutForm.Designer.cs">
+      <DependentUpon>cadastrarlayoutForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="converterlayoutForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="converterlayoutForm.Designer.cs">
+      <DependentUpon>converterlayoutForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="consultarempresaForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="consultarempresaForm.Designer.cs">
+      <DependentUpon>consultarempresaForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="consultareventoForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="consultareventoForm.Designer.cs">
+      <DependentUpon>consultareventoForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="consultarfuncionarioForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="consultarfuncionarioForm.Designer.cs">
+      <DependentUpon>consultarfuncionarioForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="consultarlayoutForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="consultarlayoutForm.Designer.cs">
+      <DependentUpon>consultarlayoutForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="manterlayoutForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="manterlayoutForm.Designer.cs">
+      <DependentUpon>manterlayoutForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="menuForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="menuForm.Designer.cs">
+      <DependentUpon>menuForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Utilities.cs" />
+    <EmbeddedResource Include="cadastrareventoForm.resx">
+      <DependentUpon>cadastrareventoForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="cadastrarfuncionarioForm.mzn-IR.resx">
+      <DependentUpon>cadastrarfuncionarioForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="cadastrarfuncionarioForm.pt.resx">
+      <DependentUpon>cadastrarfuncionarioForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="cadastrarfuncionarioForm.resx">
+      <DependentUpon>cadastrarfuncionarioForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="manterempresaForm.resx">
+      <DependentUpon>manterempresaForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="manterfuncionarioForm.resx">
+      <DependentUpon>manterfuncionarioForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="cadastrargeralForm.resx">
+      <DependentUpon>cadastrargeralForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="mantereventoForm.resx">
+      <DependentUpon>mantereventoForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="cadastrarlayoutForm.resx">
+      <DependentUpon>cadastrarlayoutForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="converterlayoutForm.resx">
+      <DependentUpon>converterlayoutForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="consultarempresaForm.resx">
+      <DependentUpon>consultarempresaForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="consultareventoForm.resx">
+      <DependentUpon>consultareventoForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="consultarfuncionarioForm.resx">
+      <DependentUpon>consultarfuncionarioForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="consultarlayoutForm.resx">
+      <DependentUpon>consultarlayoutForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="manterlayoutForm.resx">
+      <DependentUpon>manterlayoutForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="menuForm.resx">
+      <DependentUpon>menuForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <None Include="Properties\DataSources\cadastroeventofuncionarioForm.datasource" />
+    <None Include="Properties\DataSources\cadastrogeralForm.datasource" />
+    <None Include="Properties\DataSources\cadastrolayoutForm.datasource" />
+    <None Include="Properties\DataSources\ConversorFolhaDePonto.Modelo.CadastroEmpresa.datasource" />
+    <None Include="Properties\DataSources\ConversorFolhaDePonto.Modelo.CadastroEvento.datasource" />
+    <None Include="Properties\DataSources\ConversorFolhaDePonto.Modelo.CadastroFuncionario.datasource" />
+    <None Include="Properties\DataSources\ConversorFolhaDePonto.Modelo.Empresa.datasource" />
+    <None Include="Properties\DataSources\ConversorFolhaDePonto.Modelo.Evento.datasource" />
+    <None Include="Properties\DataSources\ConversorFolhaDePonto.Modelo.Funcionario.datasource" />
+    <None Include="Properties\DataSources\ConversorFolhaDePonto.Modelo.Layout.datasource" />
+    <None Include="Properties\DataSources\ConversorFolhaDePonto.UI.Properties.Resources.datasource" />
+    <None Include="Properties\DataSources\ConversorFolhaDePonto.UI.Properties.Settings.datasource" />
+    <None Include="Properties\DataSources\conversorForm.datasource" />
+    <None Include="Properties\DataSources\empresamanutencaoForm.datasource" />
+    <None Include="Properties\DataSources\eventomanutencaoForm.datasource" />
+    <None Include="Properties\DataSources\funcionariomanutencaoForm.datasource" />
+    <None Include="Properties\DataSources\layoutmanutencaoForm.datasource" />
+    <None Include="Properties\DataSources\menuForm.datasource" />
+    <None Include="Properties\DataSources\Program.datasource" />
+    <None Include="Properties\DataSources\Utilities.datasource" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ConversorFolhaDePonto.BLL\ConversorFolhaDePonto.BLL.csproj">
+      <Project>{c06312ab-aade-4f5d-aadb-5db13ad86348}</Project>
+      <Name>ConversorFolhaDePonto.BLL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ConversorFolhaDePonto.Modelo\ConversorFolhaDePonto.Modelo.csproj">
+      <Project>{cc563c9c-998e-4726-ba44-8d974f82fe79}</Project>
+      <Name>ConversorFolhaDePonto.Modelo</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Ico_SF_GC[icone].ico" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
