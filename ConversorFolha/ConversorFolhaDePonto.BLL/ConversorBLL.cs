@@ -1,4 +1,5 @@
-﻿using ConversorFolhaDePonto.Modelo;
+﻿using ConversorFolhaDePonto.DAL;
+using ConversorFolhaDePonto.Modelo;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -7,7 +8,7 @@ namespace ConversorFolhaDePonto.BLL
 {
     public static class ConversorBLL
     {
-        public static List<string> ConverterArquivo(string[] AArquivoOriginal, Empresa ObjEmpresa, Layout ObjLayout)
+        public static void ConverterArquivo(string[] AArquivoOriginal, Empresa ObjEmpresa, Layout ObjLayout , string strDiretorio)
         {
             List<string> strArquivoConvertido = new List<string>();
             List<Funcionario> lFuncionarios = DataBaseBLL.ListarFuncionariosPorEmpresa(ObjEmpresa.Id);
@@ -91,7 +92,9 @@ namespace ConversorFolhaDePonto.BLL
             }
             if (!string.IsNullOrEmpty(strErros))
                 throw new Exception(strErros);
-            return strArquivoConvertido;
+
+            ConversorDAL Dal = new ConversorDAL();
+            Dal.GerarArquivo(strArquivoConvertido, strDiretorio);
         }
 
         public static void AdicionarErros(int contador, string strFuncionarioExterno, string strEventoExterno,

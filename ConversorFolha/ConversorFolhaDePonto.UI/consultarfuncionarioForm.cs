@@ -40,8 +40,22 @@ namespace ConversorFolhaDePonto.UI
         {
             try
             {
-                if (consultafuncionarioGridView.SelectedRows.Count == 0) throw new Exception("Selecione pelo menos uma empresa.");
-                ManutencaofuncionarioForm objForm = new ManutencaofuncionarioForm(consultafuncionarioGridView.SelectedRows[0].Cells, codigoempresaComboBox, nomeempresaTextBox);
+                if (consultafuncionarioGridView.SelectedRows.Count == 0) throw new Exception("Selecione uma empresa.");
+                CadastrarfuncionarioForm objForm = new CadastrarfuncionarioForm(consultafuncionarioGridView.SelectedRows[0].Cells, codigoempresaComboBox, nomeempresaTextBox);
+                objForm.Show();
+            }
+            catch (Exception ex)
+            {
+                MensagemErro(ex);
+            }
+        }
+
+        private void incluirfuncionarioButton_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (consultafuncionarioGridView.SelectedRows.Count == 0) throw new Exception("Selecione uma empresa.");
+                CadastrarfuncionarioForm objForm = new CadastrarfuncionarioForm(codigoempresaComboBox, nomeempresaTextBox);
                 objForm.Show();
             }
             catch (Exception ex)
@@ -53,12 +67,6 @@ namespace ConversorFolhaDePonto.UI
         public void MensagemErro(Exception ex)
         {
             MessageBox.Show(ex.Message, ParametroInfo.SistemaVersao, MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-        }
-
-        private void incluirfuncionarioButton_Click(object sender, EventArgs e)
-        {
-            CadastrarfuncionarioForm objForm = new CadastrarfuncionarioForm(codigoempresaComboBox, nomeempresaTextBox);
-            objForm.Show();
         }
     }
 }

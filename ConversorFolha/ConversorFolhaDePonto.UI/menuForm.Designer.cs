@@ -34,7 +34,7 @@
             this.layoutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.novaempresaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.conversaoStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.manutencaoStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.ConsultaStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.layoutToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.eventosStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.empresasStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -49,7 +49,7 @@
             this.menuMenuStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.cadastroStripMenuItem,
             this.conversaoStripMenuItem,
-            this.manutencaoStripMenuItem,
+            this.ConsultaStripMenuItem,
             this.ajudaToolStripMenuItem});
             this.menuMenuStrip.Location = new System.Drawing.Point(0, 0);
             this.menuMenuStrip.Name = "menuMenuStrip";
@@ -69,7 +69,7 @@
             // layoutToolStripMenuItem
             // 
             this.layoutToolStripMenuItem.Name = "layoutToolStripMenuItem";
-            this.layoutToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.layoutToolStripMenuItem.Size = new System.Drawing.Size(116, 22);
             this.layoutToolStripMenuItem.Text = "Layout";
             this.layoutToolStripMenuItem.ToolTipText = "Cadastro completo do layout";
             this.layoutToolStripMenuItem.Click += new System.EventHandler(this.layoutToolStripMenuItem_Click);
@@ -77,7 +77,7 @@
             // novaempresaToolStripMenuItem
             // 
             this.novaempresaToolStripMenuItem.Name = "novaempresaToolStripMenuItem";
-            this.novaempresaToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.novaempresaToolStripMenuItem.Size = new System.Drawing.Size(116, 22);
             this.novaempresaToolStripMenuItem.Text = "Geral";
             this.novaempresaToolStripMenuItem.ToolTipText = "Cadastro completo das empresas";
             this.novaempresaToolStripMenuItem.Click += new System.EventHandler(this.novaEmpresaToolStripMenuItem_Click);
@@ -90,16 +90,16 @@
             this.conversaoStripMenuItem.ToolTipText = "Realiza a conversão do arquivo da folha de ponto.";
             this.conversaoStripMenuItem.Click += new System.EventHandler(this.conversaoStripMenuItem_Click);
             // 
-            // manutencaoStripMenuItem
+            // ConsultaStripMenuItem
             // 
-            this.manutencaoStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.ConsultaStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.layoutToolStripMenuItem1,
             this.eventosStripMenuItem,
             this.empresasStripMenuItem,
             this.funcionariosStripMenuItem});
-            this.manutencaoStripMenuItem.Name = "manutencaoStripMenuItem";
-            this.manutencaoStripMenuItem.Size = new System.Drawing.Size(97, 21);
-            this.manutencaoStripMenuItem.Text = "Manutenção";
+            this.ConsultaStripMenuItem.Name = "ConsultaStripMenuItem";
+            this.ConsultaStripMenuItem.Size = new System.Drawing.Size(72, 21);
+            this.ConsultaStripMenuItem.Text = "Consulta";
             // 
             // layoutToolStripMenuItem1
             // 
@@ -167,7 +167,7 @@
 
         private System.Windows.Forms.MenuStrip menuMenuStrip;
         private System.Windows.Forms.ToolStripMenuItem conversaoStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem manutencaoStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem ConsultaStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem empresasStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem eventosStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem funcionariosStripMenuItem;

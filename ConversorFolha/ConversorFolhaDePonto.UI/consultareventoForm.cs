@@ -40,25 +40,33 @@ namespace ConversorFolhaDePonto.UI
         {
             try
             {
-                if (consultaeventoGridView.SelectedRows.Count == 0) throw new Exception("Selecione pelo menos uma empresa.");
-                ManutencaoeventoForm objForm = new ManutencaoeventoForm(consultaeventoGridView.SelectedRows[0].Cells, codigoempresaComboBox, nomeempresaTextBox);
+                if (consultaeventoGridView.SelectedRows.Count == 0) throw new Exception("Selecione uma empresa.");
+                cadastrareventoForm objForm = new cadastrareventoForm(consultaeventoGridView.SelectedRows[0].Cells, codigoempresaComboBox, nomeempresaTextBox);
                 objForm.Show();
             }
             catch (Exception ex)
             {
                 MensagemErro(ex);
             }
+        }       
+
+        private void IncluireventoButton_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (consultaeventoGridView.SelectedRows.Count == 0) throw new Exception("Selecione uma empresa.");
+                cadastrareventoForm objForm = new cadastrareventoForm(codigoempresaComboBox, nomeempresaTextBox);
+                objForm.Show();
+            }
+            catch (Exception ex)
+            {
+                MensagemErro(ex);
+            }           
         }
 
         public void MensagemErro(Exception ex)
         {
             MessageBox.Show(ex.Message, ParametroInfo.SistemaVersao, MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-        }
-
-        private void IncluireventoButton_Click(object sender, EventArgs e)
-        {
-            cadastrareventoForm objForm = new cadastrareventoForm(codigoempresaComboBox, nomeempresaTextBox);
-            objForm.Show();
         }
     }
 }

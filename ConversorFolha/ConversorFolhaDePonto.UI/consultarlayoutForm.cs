@@ -32,13 +32,12 @@ namespace ConversorFolhaDePonto.UI
             }
         }
         
-
         private void DetalheslayoutButton_Click(object sender, EventArgs e)
         {
             try
             {
-                if (consultalayoutGridView.SelectedRows.Count == 0) throw new Exception("Selecione pelo menos uma empresa.");
-                manterlayoutForm objForm = new manterlayoutForm(consultalayoutGridView.SelectedRows[0].Cells, nomelayoutComboBox);
+                if (consultalayoutGridView.SelectedRows.Count == 0) throw new Exception("Selecione uma empresa.");
+                CadastrarlayoutForm objForm = new CadastrarlayoutForm(consultalayoutGridView.SelectedRows[0].Cells, nomelayoutComboBox);
                 objForm.Show();
             }
             catch (Exception ex)

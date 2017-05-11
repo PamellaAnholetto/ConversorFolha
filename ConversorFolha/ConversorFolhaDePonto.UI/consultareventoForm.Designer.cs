@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ConsultaeventoForm));
             this.consultaeventoGridView = new System.Windows.Forms.DataGridView();
             this.idEmpresaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -41,13 +41,13 @@
             this.transferivelDataGridViewCheckBoxColumn = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.eventoBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.consultaeventoGroupBox = new System.Windows.Forms.GroupBox();
+            this.incluireventoButton = new System.Windows.Forms.Button();
             this.detalheseventoButton = new System.Windows.Forms.Button();
             this.codigoempresaComboBox = new System.Windows.Forms.ComboBox();
             this.empresaBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.nomeempresaLabel = new System.Windows.Forms.Label();
             this.nomeempresaTextBox = new System.Windows.Forms.TextBox();
             this.codigoempresaLabel = new System.Windows.Forms.Label();
-            this.incluireventoButton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.consultaeventoGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.eventoBindingSource)).BeginInit();
             this.consultaeventoGroupBox.SuspendLayout();
@@ -63,14 +63,14 @@
             this.consultaeventoGridView.AutoGenerateColumns = false;
             this.consultaeventoGridView.BackgroundColor = System.Drawing.SystemColors.Menu;
             this.consultaeventoGridView.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.consultaeventoGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle10.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle10.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle10.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle10.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.consultaeventoGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle10;
             this.consultaeventoGridView.ColumnHeadersHeight = 60;
             this.consultaeventoGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.consultaeventoGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -84,17 +84,17 @@
             this.consultaeventoGridView.MultiSelect = false;
             this.consultaeventoGridView.Name = "consultaeventoGridView";
             this.consultaeventoGridView.ReadOnly = true;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.consultaeventoGridView.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle11.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle11.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle11.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.consultaeventoGridView.RowHeadersDefaultCellStyle = dataGridViewCellStyle11;
             this.consultaeventoGridView.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.consultaeventoGridView.RowsDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.consultaeventoGridView.RowsDefaultCellStyle = dataGridViewCellStyle12;
             this.consultaeventoGridView.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.consultaeventoGridView.Size = new System.Drawing.Size(561, 345);
             this.consultaeventoGridView.TabIndex = 5;
@@ -163,6 +163,23 @@
             this.consultaeventoGroupBox.TabIndex = 12;
             this.consultaeventoGroupBox.TabStop = false;
             // 
+            // incluireventoButton
+            // 
+            this.incluireventoButton.BackColor = System.Drawing.Color.Transparent;
+            this.incluireventoButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.incluireventoButton.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.incluireventoButton.ForeColor = System.Drawing.Color.Black;
+            this.incluireventoButton.Image = ((System.Drawing.Image)(resources.GetObject("incluireventoButton.Image")));
+            this.incluireventoButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.incluireventoButton.Location = new System.Drawing.Point(410, 420);
+            this.incluireventoButton.Name = "incluireventoButton";
+            this.incluireventoButton.Size = new System.Drawing.Size(69, 26);
+            this.incluireventoButton.TabIndex = 23;
+            this.incluireventoButton.Text = "Incluir";
+            this.incluireventoButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.incluireventoButton.UseVisualStyleBackColor = false;
+            this.incluireventoButton.Click += new System.EventHandler(this.IncluireventoButton_Click);
+            // 
             // detalheseventoButton
             // 
             this.detalheseventoButton.BackColor = System.Drawing.Color.Transparent;
@@ -188,7 +205,7 @@
             this.codigoempresaComboBox.FormattingEnabled = true;
             this.codigoempresaComboBox.Location = new System.Drawing.Point(9, 38);
             this.codigoempresaComboBox.Name = "codigoempresaComboBox";
-            this.codigoempresaComboBox.Size = new System.Drawing.Size(68, 25);
+            this.codigoempresaComboBox.Size = new System.Drawing.Size(72, 25);
             this.codigoempresaComboBox.TabIndex = 14;
             this.codigoempresaComboBox.ValueMember = "Nome";
             this.codigoempresaComboBox.SelectedIndexChanged += new System.EventHandler(this.CodigoempresaComboBox_SelectedIndexChanged);
@@ -201,7 +218,7 @@
             // 
             this.nomeempresaLabel.AutoSize = true;
             this.nomeempresaLabel.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.nomeempresaLabel.Location = new System.Drawing.Point(126, 19);
+            this.nomeempresaLabel.Location = new System.Drawing.Point(126, 18);
             this.nomeempresaLabel.Name = "nomeempresaLabel";
             this.nomeempresaLabel.Size = new System.Drawing.Size(97, 17);
             this.nomeempresaLabel.TabIndex = 9;
@@ -225,23 +242,6 @@
             this.codigoempresaLabel.Size = new System.Drawing.Size(105, 17);
             this.codigoempresaLabel.TabIndex = 1;
             this.codigoempresaLabel.Text = "Código Empresa";
-            // 
-            // incluireventoButton
-            // 
-            this.incluireventoButton.BackColor = System.Drawing.Color.Transparent;
-            this.incluireventoButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.incluireventoButton.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.incluireventoButton.ForeColor = System.Drawing.Color.Black;
-            this.incluireventoButton.Image = ((System.Drawing.Image)(resources.GetObject("incluireventoButton.Image")));
-            this.incluireventoButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.incluireventoButton.Location = new System.Drawing.Point(409, 421);
-            this.incluireventoButton.Name = "incluireventoButton";
-            this.incluireventoButton.Size = new System.Drawing.Size(70, 26);
-            this.incluireventoButton.TabIndex = 23;
-            this.incluireventoButton.Text = "Incluir";
-            this.incluireventoButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.incluireventoButton.UseVisualStyleBackColor = false;
-            this.incluireventoButton.Click += new System.EventHandler(this.IncluireventoButton_Click);
             // 
             // ConsultaeventoForm
             // 

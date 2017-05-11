@@ -30,6 +30,8 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CadastrarfuncionarioForm));
             this.cadastrofuncionarioGroupBox = new System.Windows.Forms.GroupBox();
+            this.excluirfuncionarioButton = new System.Windows.Forms.Button();
+            this.alterarfuncionarioButton = new System.Windows.Forms.Button();
             this.incluirfuncionarioButton = new System.Windows.Forms.Button();
             this.codigoempresaLabel = new System.Windows.Forms.Label();
             this.funcionarioGroupBox = new System.Windows.Forms.GroupBox();
@@ -47,20 +49,38 @@
             // 
             // cadastrofuncionarioGroupBox
             // 
-            resources.ApplyResources(this.cadastrofuncionarioGroupBox, "cadastrofuncionarioGroupBox");
+            this.cadastrofuncionarioGroupBox.Controls.Add(this.excluirfuncionarioButton);
+            this.cadastrofuncionarioGroupBox.Controls.Add(this.alterarfuncionarioButton);
             this.cadastrofuncionarioGroupBox.Controls.Add(this.incluirfuncionarioButton);
             this.cadastrofuncionarioGroupBox.Controls.Add(this.codigoempresaLabel);
             this.cadastrofuncionarioGroupBox.Controls.Add(this.funcionarioGroupBox);
             this.cadastrofuncionarioGroupBox.Controls.Add(this.codigoempresaComboBox);
             this.cadastrofuncionarioGroupBox.Controls.Add(this.nomeempresaLabel);
             this.cadastrofuncionarioGroupBox.Controls.Add(this.nomeempresaTextBox);
+            resources.ApplyResources(this.cadastrofuncionarioGroupBox, "cadastrofuncionarioGroupBox");
             this.cadastrofuncionarioGroupBox.Name = "cadastrofuncionarioGroupBox";
             this.cadastrofuncionarioGroupBox.TabStop = false;
             // 
+            // excluirfuncionarioButton
+            // 
+            this.excluirfuncionarioButton.BackColor = System.Drawing.Color.Transparent;
+            resources.ApplyResources(this.excluirfuncionarioButton, "excluirfuncionarioButton");
+            this.excluirfuncionarioButton.ForeColor = System.Drawing.Color.Black;
+            this.excluirfuncionarioButton.Name = "excluirfuncionarioButton";
+            this.excluirfuncionarioButton.UseVisualStyleBackColor = false;
+            // 
+            // alterarfuncionarioButton
+            // 
+            this.alterarfuncionarioButton.BackColor = System.Drawing.Color.Transparent;
+            resources.ApplyResources(this.alterarfuncionarioButton, "alterarfuncionarioButton");
+            this.alterarfuncionarioButton.ForeColor = System.Drawing.Color.Black;
+            this.alterarfuncionarioButton.Name = "alterarfuncionarioButton";
+            this.alterarfuncionarioButton.UseVisualStyleBackColor = false;
+            // 
             // incluirfuncionarioButton
             // 
-            resources.ApplyResources(this.incluirfuncionarioButton, "incluirfuncionarioButton");
             this.incluirfuncionarioButton.BackColor = System.Drawing.Color.Transparent;
+            resources.ApplyResources(this.incluirfuncionarioButton, "incluirfuncionarioButton");
             this.incluirfuncionarioButton.ForeColor = System.Drawing.SystemColors.ControlText;
             this.incluirfuncionarioButton.Name = "incluirfuncionarioButton";
             this.incluirfuncionarioButton.UseVisualStyleBackColor = false;
@@ -72,12 +92,12 @@
             // 
             // funcionarioGroupBox
             // 
-            resources.ApplyResources(this.funcionarioGroupBox, "funcionarioGroupBox");
             this.funcionarioGroupBox.Controls.Add(this.statusfuncionarioLabel);
             this.funcionarioGroupBox.Controls.Add(this.funcionariointernoTextBox);
             this.funcionarioGroupBox.Controls.Add(this.funcionarioexternoLabel);
             this.funcionarioGroupBox.Controls.Add(this.funcionarioexternoTextBox);
             this.funcionarioGroupBox.Controls.Add(this.funcionariointernoLabel);
+            resources.ApplyResources(this.funcionarioGroupBox, "funcionarioGroupBox");
             this.funcionarioGroupBox.Name = "funcionarioGroupBox";
             this.funcionarioGroupBox.TabStop = false;
             // 
@@ -108,9 +128,9 @@
             // 
             // codigoempresaComboBox
             // 
-            resources.ApplyResources(this.codigoempresaComboBox, "codigoempresaComboBox");
             this.codigoempresaComboBox.DisplayMember = "Id";
             this.codigoempresaComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            resources.ApplyResources(this.codigoempresaComboBox, "codigoempresaComboBox");
             this.codigoempresaComboBox.FormattingEnabled = true;
             this.codigoempresaComboBox.Name = "codigoempresaComboBox";
             this.codigoempresaComboBox.ValueMember = "Nome";
@@ -156,5 +176,7 @@
         private System.Windows.Forms.Label nomeempresaLabel;
         private System.Windows.Forms.TextBox nomeempresaTextBox;
         private System.Windows.Forms.Button incluirfuncionarioButton;
+        private System.Windows.Forms.Button excluirfuncionarioButton;
+        private System.Windows.Forms.Button alterarfuncionarioButton;
     }
 }

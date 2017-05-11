@@ -117,197 +117,398 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="excluirfuncionarioButton.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Popup</value>
+  </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="funcionariointernoLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>119, 22</value>
+  <data name="excluirfuncionarioButton.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Century Gothic, 9pt</value>
   </data>
-  <data name="&gt;&gt;funcionariointernoTextBox.ZOrder" xml:space="preserve">
-    <value>1</value>
+  <data name="excluirfuncionarioButton.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAK
+        8AAACvABQqw0mAAAAAd0SU1FB9MIHAsXIq53TVQAAALlSURBVDhPrZFvTNR1HMe/0wE/XMByLiRHPPCB
+        5pbO8aBlJg0axHBgFsQ0WR6BnLSCZEvHrBU0BtPl1AdqgI3YtFVTIhye8u8A5eIODrhyzoAJxx3H4R33
+        uz+cdxev4Dc2j8f53t7b98nr9f3s8xHPJdLnxmrxgTZY1TzAgwd/YRz7W6l+eISBP/X09t/nTmcPHR0d
+        VF5sQeRrg9HvtVav4kJEfNwXENsvcLahk5VMm2cYGjYybBzBMDTMoN7A6JgJ1xMbZ366zaacOmIPtARW
+        cSEiVf2I3Veoa+hSBMFgEIfDgdPpxGazYTablT6Zs1D7YxuJZVpi3v2ZVVyIKNU9xOuN1NXfVQSP/hmn
+        u0eLtrdP6cpbbxjCbjVT29BK0pcGYt9pfiaQiu4j9jbx3Q+aZTyAy+XC4/Hg8/nwer243W5kWcbnkdGb
+        Jrjab6Pi4uAzQXTRAOvTrlN9uZ3QUw8zVivuqkIC36tZPJ2HryIb+XgGCx/twbp/F+MZr9GVnbl2guis
+        X6mtbyMoWwj4PQTOl0NZHCZ1DnM5SbBP8DQrCf+J97EkCLpfigyboGSATbk3SVa3kFp+gxt943i/LWBM
+        lc6E7MdimUUueIPF4L/KjkLfHEUTFybYcEzHliNtxB+5Rdzhdi5pplg4+SGOzBeZNJmYW5Bxh0DBl4LY
+        0xJpiQkXqHUkFbaToLpL7tc3l082g6N0P6QI3Adfxe5dVJa6Eu8nbzMWI/glXPCCepCtJXdIKO7is3N/
+        0KGbZO5wCv7Ml3k8Y12ewIV7+fslRQG2Q2/SFBEmiCnRsb2sm1c+7aW05hoa3TjT2cnIebuZcHqwz9tx
+        F+whFPIrAudXKurDBRG5/VfjCzvZdspAWU0jGsMUD9N3MZsocBWnMp+1DVOsYCprB/OVR7m1TqwViLov
+        1klpv58Xb1237MuvmR8dNfoHD2YsdW+WuL1RojVO4rdYiabIKBojJRqiJJp3Ji+s0v8nQvwH0vMkaObe
+        ncAAAAAASUVORK5CYII=
+</value>
   </data>
-  <data name="&gt;&gt;codigoempresaLabel.ZOrder" xml:space="preserve">
-    <value>1</value>
+  <data name="excluirfuncionarioButton.ImageAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleLeft</value>
+  </data>
+  <data name="excluirfuncionarioButton.Location" type="System.Drawing.Point, System.Drawing">
+    <value>243, 97</value>
+  </data>
+  <data name="excluirfuncionarioButton.Size" type="System.Drawing.Size, System.Drawing">
+    <value>73, 26</value>
   </data>
   <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="codigoempresaComboBox.TabIndex" type="System.Int32, mscorlib">
-    <value>19</value>
+  <data name="excluirfuncionarioButton.TabIndex" type="System.Int32, mscorlib">
+    <value>26</value>
   </data>
-  <data name="funcionariointernoLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>50, 17</value>
+  <data name="excluirfuncionarioButton.Text" xml:space="preserve">
+    <value>Excluir</value>
   </data>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="incluirfuncionarioButton.TextImageRelation" type="System.Windows.Forms.TextImageRelation, System.Windows.Forms">
+  <data name="excluirfuncionarioButton.TextImageRelation" type="System.Windows.Forms.TextImageRelation, System.Windows.Forms">
     <value>ImageBeforeText</value>
   </data>
-  <data name="statusfuncionarioLabel.TabIndex" type="System.Int32, mscorlib">
-    <value>5</value>
+  <data name="&gt;&gt;excluirfuncionarioButton.Name" xml:space="preserve">
+    <value>excluirfuncionarioButton</value>
   </data>
-  <data name="&gt;&gt;nomeempresaLabel.Name" xml:space="preserve">
-    <value>nomeempresaLabel</value>
-  </data>
-  <data name="&gt;&gt;nomeempresaTextBox.ZOrder" xml:space="preserve">
-    <value>5</value>
-  </data>
-  <data name="&gt;&gt;cadastrofuncionarioGroupBox.Type" xml:space="preserve">
-    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;incluirfuncionarioButton.Name" xml:space="preserve">
-    <value>incluirfuncionarioButton</value>
-  </data>
-  <data name="&gt;&gt;codigoempresaLabel.Parent" xml:space="preserve">
-    <value>cadastrofuncionarioGroupBox</value>
-  </data>
-  <data name="incluirfuncionarioButton.Size" type="System.Drawing.Size, System.Drawing">
-    <value>72, 26</value>
-  </data>
-  <data name="&gt;&gt;funcionariointernoLabel.ZOrder" xml:space="preserve">
-    <value>4</value>
-  </data>
-  <data name="&gt;&gt;funcionarioGroupBox.Type" xml:space="preserve">
-    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;$this.Name" xml:space="preserve">
-    <value>CadastrarfuncionarioForm</value>
-  </data>
-  <data name="&gt;&gt;nomeempresaLabel.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="cadastrofuncionarioGroupBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>12, 12</value>
-  </data>
-  <data name="&gt;&gt;funcionarioexternoTextBox.Name" xml:space="preserve">
-    <value>funcionarioexternoTextBox</value>
-  </data>
-  <data name="statusfuncionarioLabel.Visible" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="nomeempresaTextBox.AccessibleName" xml:space="preserve">
-    <value>Nome da Empresa</value>
-  </data>
-  <data name="funcionarioGroupBox.Text" xml:space="preserve">
-    <value>Funcionário</value>
-  </data>
-  <data name="&gt;&gt;nomeempresaTextBox.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="funcionarioexternoTextBox.AccessibleName" xml:space="preserve">
-    <value>Funcionario Externo</value>
-  </data>
-  <data name="funcionarioGroupBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>9, 67</value>
-  </data>
-  <data name="&gt;&gt;funcionariointernoLabel.Parent" xml:space="preserve">
-    <value>funcionarioGroupBox</value>
-  </data>
-  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
-    <value>6, 13</value>
-  </data>
-  <data name="funcionarioexternoLabel.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="codigoempresaLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 16</value>
-  </data>
-  <data name="&gt;&gt;funcionariointernoTextBox.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;funcionarioexternoTextBox.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="&gt;&gt;funcionarioexternoLabel.Parent" xml:space="preserve">
-    <value>funcionarioGroupBox</value>
-  </data>
-  <data name="nomeempresaTextBox.MaxLength" type="System.Int32, mscorlib">
-    <value>200</value>
-  </data>
-  <data name="$this.StartPosition" type="System.Windows.Forms.FormStartPosition, System.Windows.Forms">
-    <value>CenterScreen</value>
-  </data>
-  <data name="funcionariointernoTextBox.AccessibleName" xml:space="preserve">
-    <value>Funcionario BuddyWin</value>
-  </data>
-  <data name="&gt;&gt;nomeempresaLabel.ZOrder" xml:space="preserve">
-    <value>4</value>
-  </data>
-  <data name="funcionarioexternoTextBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>49, 22</value>
-  </data>
-  <data name="funcionariointernoLabel.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
-  </data>
-  <data name="nomeempresaLabel.Text" xml:space="preserve">
-    <value>Nome Empresa</value>
-  </data>
-  <data name="funcionarioexternoLabel.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="funcionarioexternoTextBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>64, 21</value>
-  </data>
-  <data name="&gt;&gt;incluirfuncionarioButton.Type" xml:space="preserve">
+  <data name="&gt;&gt;excluirfuncionarioButton.Type" xml:space="preserve">
     <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="cadastrofuncionarioGroupBox.TabIndex" type="System.Int32, mscorlib">
-    <value>21</value>
-  </data>
-  <data name="&gt;&gt;statusfuncionarioLabel.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="funcionarioGroupBox.TabIndex" type="System.Int32, mscorlib">
-    <value>9</value>
-  </data>
-  <data name="&gt;&gt;cadastrofuncionarioGroupBox.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="funcionariointernoTextBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>173, 21</value>
-  </data>
-  <data name="funcionariointernoTextBox.TabIndex" type="System.Int32, mscorlib">
-    <value>3</value>
-  </data>
-  <data name="&gt;&gt;codigoempresaComboBox.Parent" xml:space="preserve">
+  <data name="&gt;&gt;excluirfuncionarioButton.Parent" xml:space="preserve">
     <value>cadastrofuncionarioGroupBox</value>
   </data>
-  <data name="incluirfuncionarioButton.TabIndex" type="System.Int32, mscorlib">
-    <value>20</value>
+  <data name="&gt;&gt;excluirfuncionarioButton.ZOrder" xml:space="preserve">
+    <value>0</value>
   </data>
-  <data name="funcionariointernoLabel.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
+  <data name="alterarfuncionarioButton.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Popup</value>
+  </data>
+  <data name="alterarfuncionarioButton.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Century Gothic, 9pt</value>
+  </data>
+  <data name="alterarfuncionarioButton.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAK
+        8AAACvABQqw0mAAAAAd0SU1FB9MKBRYKIYs9C6QAAAKsSURBVDhPtZFdSNNRGIdPiUEXXpVeGoRC4IVQ
+        IJF3hkFJIW4TsjltueXcnE5mzkamZpJKoGVzSzN1s7Zlfi1tpZBKqH1YpiYqzW1qfqT4NU3Tdn79xT9E
+        6WU9cC7O4fe857zvIf+E7OzMIzEx/EaBQFAsFAoVzOLGxsYG8/l8P6lU6sXGSPth72yzt9eylhCLjpCD
+        7DEhCsXdx6mpGiuHE9URHh5h53IjnRxOZDePx30XFXW+J4LLSxytKJZNhgfQFdlJWP19wBRpYnVCioq6
+        56wvXruzMrIgE0lwUZiIzMxCqFT5VJF8ayEsJnSi6/3nDdeddCwLj6Mr6BCYFzhZnZCCgo5Ru23CPT4x
+        hkGLEZZnFuirKmGoeoSntTWIbPOH7lU++gbsaE9LQJOfz0/Tvr2hrE5Izg1rr30OdGwDmG+ph30dcCwD
+        9gVA0ROGXBcPhTQaksoLuCyXU3laehKrbqNW13fMzLnpCoDVl2bMMAXmmU3uxzikT53Bvc1LkPWfhn+h
+        D/W8Tq6w2m+USrPF/nWTLriZAs+NWN0EDMM6yL4EQ0PjoBw5i0CNL/ZneBSwyp/I5frqTyNr1PEd+FZr
+        gIO5PaXlHDQQQu2MwLEyX3imkSomumfb+AuptKKkb2CJzjAzmK3Rw8YUMJaLEWLyQ8D9Azh6LQgZV1ui
+        2fhOJJKHeZ3d03SFAu6GCoxNLYITFoIEhQq3G5vxdpgiNaVOycZ3Eh9fqn7W6qA2poXp6gfoHV9H55tB
+        uNYA2yzQ4wCSk4y797+FWKxNrLMMUwcjTOt1GFoCPjh/wDYHLK0CU5MbkMmqt2awO2JxqcD0pI9pgMGk
+        xcDQIiwN/SjRtLqYL26TSg15KlXzCTa+E5FIe0qlMrtyblr6RZLKsviEcpFEogvk8Zo92Mj/gpBfeBKf
+        youBunEAAAAASUVORK5CYII=
+</value>
+  </data>
+  <data name="alterarfuncionarioButton.ImageAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleLeft</value>
+  </data>
+  <data name="alterarfuncionarioButton.Location" type="System.Drawing.Point, System.Drawing">
+    <value>243, 67</value>
+  </data>
+  <data name="alterarfuncionarioButton.Size" type="System.Drawing.Size, System.Drawing">
+    <value>73, 26</value>
+  </data>
+  <data name="alterarfuncionarioButton.TabIndex" type="System.Int32, mscorlib">
+    <value>25</value>
+  </data>
+  <data name="alterarfuncionarioButton.Text" xml:space="preserve">
+    <value>Alterar</value>
+  </data>
+  <data name="alterarfuncionarioButton.TextImageRelation" type="System.Windows.Forms.TextImageRelation, System.Windows.Forms">
+    <value>ImageBeforeText</value>
+  </data>
+  <data name="&gt;&gt;alterarfuncionarioButton.Name" xml:space="preserve">
+    <value>alterarfuncionarioButton</value>
+  </data>
+  <data name="&gt;&gt;alterarfuncionarioButton.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;alterarfuncionarioButton.Parent" xml:space="preserve">
+    <value>cadastrofuncionarioGroupBox</value>
+  </data>
+  <data name="&gt;&gt;alterarfuncionarioButton.ZOrder" xml:space="preserve">
+    <value>1</value>
   </data>
   <data name="incluirfuncionarioButton.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
     <value>Popup</value>
   </data>
-  <data name="&gt;&gt;statusfuncionarioLabel.Parent" xml:space="preserve">
-    <value>funcionarioGroupBox</value>
+  <data name="incluirfuncionarioButton.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Century Gothic, 9pt</value>
   </data>
-  <data name="codigoempresaLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>105, 17</value>
+  <data name="incluirfuncionarioButton.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAK
+        8AAACvABQqw0mAAAAAd0SU1FB9MKBhQKNYDWpFkAAAM+SURBVDhPTdN7bEtRHAfwI2zW0RKGLEKZeUT4
+        AxHxCOYxRPAHknlMlg1bY6QibJiY2FTnNW9GvTY6Sbd2rLKxtmu3Tmtru9lGsGHT1mrtlhUxrfj69Xr1
+        JJ/k3nPz+57fPedeFrbTks3WGfxHC0x4+bIZ9Y0vOHW2Bpie1aHK+BRPtHpoNBocvFACFqf3hy2TnWSM
+        RZB+LCSh2scmnccpmRaB8cHugNVWD1t9AyxWG2rrLHje2IQejwsn88sRsSYHgjVKHxWv40JCE41g0/KQ
+        I9NxAX6/H11dXeju7obL5YLdbud4PjkhvaXGKLEB/OX3QcXZJIr1T6wBm3UDOdcruIA3La2o1BtgqKrm
+        BK7rLFZ0frRDKnsIYZoFgiUFgYBcMpGFbXsKNu8Osq89pnIfenp64Ha70dnZiY6ODm71trY2uBztOH7t
+        Acbst4C/5G4g4CwXwNtmQt/Fhci6WoYf37/geVMzKjRaaHWV0FXqiQHmZ7VwfnhHi5QgKsNGAVwH5/51
+        wFupgPS6Gn6vE589dnztcuKLx4luVxvcjlbY3zbD2dKAnLwiTDhcD8HSoABeigkR61WYISrBot1KLBAX
+        I2aPEgv30P0+FWLSHmDxgVLEHipFTKYGU7MaIIi99z8gPNmMkfFqjIh/hEGbyhAW9xjh8VoIEg0YnGzE
+        UJEJw3eZEZ1uxWRafbq0kTrg9uBPgMgMYVIZIhMrsP6wChqdHoUKFU6cvYKs03S8l/NxU14MYVwuxiXL
+        sejia/CXBnUwUFSLcSlPELldh125pUjIeAi2QoktEjUsNTq0v3/LHa9w611qvwmpKjt4wZvITzFjkrgS
+        o1OrsEMix8aMYvDoNVLzauB49wq9vb1U3otRSfmYKmmGSOlAeGzQMYasLi0YkaTFRDpfseQGNkjKwRdb
+        cUDZQoU/4fP58Kn9FaLFRZh5oRV7tW6Ex9z+RsW/PyQ2gBcZOv1YAZst+zh3baZHLs/3yovUXl1Vtddk
+        NHoVCsXXwjtX0WdKurvvrEsdg+ZcdPQZNl9OxUdIFGGhJJpsJplESk6QwB/312lyhgTmJeQgWUWGEG6E
+        kGFkLAmEjf9jQhBql5sLPBcSKmb9fgHDOi22JMhcvwAAAABJRU5ErkJggg==
+</value>
   </data>
-  <data name="funcionariointernoTextBox.MaxLength" type="System.Int32, mscorlib">
-    <value>6</value>
+  <data name="incluirfuncionarioButton.ImageAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleLeft</value>
   </data>
-  <data name="&gt;&gt;funcionarioGroupBox.Name" xml:space="preserve">
-    <value>funcionarioGroupBox</value>
+  <data name="incluirfuncionarioButton.Location" type="System.Drawing.Point, System.Drawing">
+    <value>243, 126</value>
   </data>
-  <data name="&gt;&gt;incluirfuncionarioButton.ZOrder" xml:space="preserve">
-    <value>0</value>
+  <data name="incluirfuncionarioButton.Size" type="System.Drawing.Size, System.Drawing">
+    <value>73, 26</value>
+  </data>
+  <data name="incluirfuncionarioButton.TabIndex" type="System.Int32, mscorlib">
+    <value>20</value>
   </data>
   <data name="incluirfuncionarioButton.Text" xml:space="preserve">
     <value>Incluir</value>
   </data>
-  <data name="funcionarioexternoLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>52, 17</value>
+  <data name="incluirfuncionarioButton.TextImageRelation" type="System.Windows.Forms.TextImageRelation, System.Windows.Forms">
+    <value>ImageBeforeText</value>
   </data>
-  <data name="&gt;&gt;funcionarioGroupBox.Parent" xml:space="preserve">
+  <data name="&gt;&gt;incluirfuncionarioButton.Name" xml:space="preserve">
+    <value>incluirfuncionarioButton</value>
+  </data>
+  <data name="&gt;&gt;incluirfuncionarioButton.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;incluirfuncionarioButton.Parent" xml:space="preserve">
     <value>cadastrofuncionarioGroupBox</value>
+  </data>
+  <data name="&gt;&gt;incluirfuncionarioButton.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="codigoempresaLabel.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="codigoempresaLabel.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Century Gothic, 9pt</value>
+  </data>
+  <data name="codigoempresaLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 16</value>
+  </data>
+  <data name="codigoempresaLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>105, 17</value>
+  </data>
+  <data name="codigoempresaLabel.TabIndex" type="System.Int32, mscorlib">
+    <value>16</value>
+  </data>
+  <data name="codigoempresaLabel.Text" xml:space="preserve">
+    <value>Código Empresa</value>
+  </data>
+  <data name="&gt;&gt;codigoempresaLabel.Name" xml:space="preserve">
+    <value>codigoempresaLabel</value>
+  </data>
+  <data name="&gt;&gt;codigoempresaLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;codigoempresaLabel.Parent" xml:space="preserve">
+    <value>cadastrofuncionarioGroupBox</value>
+  </data>
+  <data name="&gt;&gt;codigoempresaLabel.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="statusfuncionarioLabel.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="statusfuncionarioLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 57</value>
+  </data>
+  <data name="statusfuncionarioLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>45, 17</value>
+  </data>
+  <data name="statusfuncionarioLabel.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
   </data>
   <data name="statusfuncionarioLabel.Text" xml:space="preserve">
     <value>Status</value>
   </data>
+  <data name="statusfuncionarioLabel.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;statusfuncionarioLabel.Name" xml:space="preserve">
+    <value>statusfuncionarioLabel</value>
+  </data>
+  <data name="&gt;&gt;statusfuncionarioLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;statusfuncionarioLabel.Parent" xml:space="preserve">
+    <value>funcionarioGroupBox</value>
+  </data>
+  <data name="&gt;&gt;statusfuncionarioLabel.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="funcionariointernoTextBox.AccessibleName" xml:space="preserve">
+    <value>Funcionario BuddyWin</value>
+  </data>
+  <data name="funcionariointernoTextBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>173, 21</value>
+  </data>
+  <data name="funcionariointernoTextBox.MaxLength" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="funcionariointernoTextBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>49, 22</value>
+  </data>
+  <data name="funcionariointernoTextBox.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;funcionariointernoTextBox.Name" xml:space="preserve">
+    <value>funcionariointernoTextBox</value>
+  </data>
+  <data name="&gt;&gt;funcionariointernoTextBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;funcionariointernoTextBox.Parent" xml:space="preserve">
+    <value>funcionarioGroupBox</value>
+  </data>
+  <data name="&gt;&gt;funcionariointernoTextBox.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="funcionarioexternoLabel.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="funcionarioexternoLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 22</value>
+  </data>
+  <data name="funcionarioexternoLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>52, 17</value>
+  </data>
+  <data name="funcionarioexternoLabel.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="funcionarioexternoLabel.Text" xml:space="preserve">
+    <value>Externo</value>
+  </data>
+  <data name="&gt;&gt;funcionarioexternoLabel.Name" xml:space="preserve">
+    <value>funcionarioexternoLabel</value>
+  </data>
+  <data name="&gt;&gt;funcionarioexternoLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;funcionarioexternoLabel.Parent" xml:space="preserve">
+    <value>funcionarioGroupBox</value>
+  </data>
+  <data name="&gt;&gt;funcionarioexternoLabel.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="funcionarioexternoTextBox.AccessibleName" xml:space="preserve">
+    <value>Funcionario Externo</value>
+  </data>
+  <data name="funcionarioexternoTextBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>64, 21</value>
+  </data>
+  <data name="funcionarioexternoTextBox.MaxLength" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="funcionarioexternoTextBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>49, 22</value>
+  </data>
+  <data name="funcionarioexternoTextBox.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;funcionarioexternoTextBox.Name" xml:space="preserve">
+    <value>funcionarioexternoTextBox</value>
+  </data>
+  <data name="&gt;&gt;funcionarioexternoTextBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;funcionarioexternoTextBox.Parent" xml:space="preserve">
+    <value>funcionarioGroupBox</value>
+  </data>
+  <data name="&gt;&gt;funcionarioexternoTextBox.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="funcionariointernoLabel.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="funcionariointernoLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>119, 22</value>
+  </data>
+  <data name="funcionariointernoLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>50, 17</value>
+  </data>
+  <data name="funcionariointernoLabel.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="funcionariointernoLabel.Text" xml:space="preserve">
+    <value>Interno</value>
+  </data>
+  <data name="&gt;&gt;funcionariointernoLabel.Name" xml:space="preserve">
+    <value>funcionariointernoLabel</value>
+  </data>
+  <data name="&gt;&gt;funcionariointernoLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;funcionariointernoLabel.Parent" xml:space="preserve">
+    <value>funcionarioGroupBox</value>
+  </data>
+  <data name="&gt;&gt;funcionariointernoLabel.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
   <data name="funcionarioGroupBox.Enabled" type="System.Boolean, mscorlib">
     <value>False</value>
   </data>
-  <data name="nomeempresaLabel.TabIndex" type="System.Int32, mscorlib">
-    <value>17</value>
+  <data name="funcionarioGroupBox.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Century Gothic, 9pt</value>
+  </data>
+  <data name="funcionarioGroupBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>9, 72</value>
+  </data>
+  <data name="funcionarioGroupBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>228, 80</value>
+  </data>
+  <data name="funcionarioGroupBox.TabIndex" type="System.Int32, mscorlib">
+    <value>9</value>
+  </data>
+  <data name="funcionarioGroupBox.Text" xml:space="preserve">
+    <value>Funcionário</value>
+  </data>
+  <data name="&gt;&gt;funcionarioGroupBox.Name" xml:space="preserve">
+    <value>funcionarioGroupBox</value>
+  </data>
+  <data name="&gt;&gt;funcionarioGroupBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;funcionarioGroupBox.Parent" xml:space="preserve">
+    <value>cadastrofuncionarioGroupBox</value>
+  </data>
+  <data name="&gt;&gt;funcionarioGroupBox.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="codigoempresaComboBox.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Century Gothic, 9pt</value>
+  </data>
+  <data name="codigoempresaComboBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>9, 36</value>
+  </data>
+  <data name="codigoempresaComboBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>68, 25</value>
+  </data>
+  <data name="codigoempresaComboBox.TabIndex" type="System.Int32, mscorlib">
+    <value>19</value>
+  </data>
+  <data name="&gt;&gt;codigoempresaComboBox.Name" xml:space="preserve">
+    <value>codigoempresaComboBox</value>
+  </data>
+  <data name="&gt;&gt;codigoempresaComboBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;codigoempresaComboBox.Parent" xml:space="preserve">
+    <value>cadastrofuncionarioGroupBox</value>
+  </data>
+  <data name="&gt;&gt;codigoempresaComboBox.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="nomeempresaLabel.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
   </data>
   <data name="nomeempresaLabel.Font" type="System.Drawing.Font, System.Drawing">
     <value>Century Gothic, 9pt</value>
@@ -315,62 +516,92 @@
   <data name="nomeempresaLabel.Location" type="System.Drawing.Point, System.Drawing">
     <value>122, 16</value>
   </data>
-  <data name="codigoempresaComboBox.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Century Gothic, 9pt</value>
-  </data>
-  <data name="funcionariointernoLabel.Text" xml:space="preserve">
-    <value>Interno</value>
-  </data>
-  <data name="&gt;&gt;nomeempresaTextBox.Parent" xml:space="preserve">
-    <value>cadastrofuncionarioGroupBox</value>
-  </data>
-  <data name="&gt;&gt;cadastrofuncionarioGroupBox.Name" xml:space="preserve">
-    <value>cadastrofuncionarioGroupBox</value>
-  </data>
-  <data name="&gt;&gt;incluirfuncionarioButton.Parent" xml:space="preserve">
-    <value>cadastrofuncionarioGroupBox</value>
-  </data>
-  <data name="codigoempresaComboBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>68, 25</value>
-  </data>
-  <data name="incluirfuncionarioButton.ImageAlign" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>MiddleLeft</value>
-  </data>
   <data name="nomeempresaLabel.Size" type="System.Drawing.Size, System.Drawing">
     <value>97, 17</value>
   </data>
-  <data name="&gt;&gt;codigoempresaLabel.Type" xml:space="preserve">
+  <data name="nomeempresaLabel.TabIndex" type="System.Int32, mscorlib">
+    <value>17</value>
+  </data>
+  <data name="nomeempresaLabel.Text" xml:space="preserve">
+    <value>Nome Empresa</value>
+  </data>
+  <data name="&gt;&gt;nomeempresaLabel.Name" xml:space="preserve">
+    <value>nomeempresaLabel</value>
+  </data>
+  <data name="&gt;&gt;nomeempresaLabel.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="funcionarioGroupBox.Font" type="System.Drawing.Font, System.Drawing">
+  <data name="&gt;&gt;nomeempresaLabel.Parent" xml:space="preserve">
+    <value>cadastrofuncionarioGroupBox</value>
+  </data>
+  <data name="&gt;&gt;nomeempresaLabel.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="nomeempresaTextBox.AccessibleName" xml:space="preserve">
+    <value>Nome da Empresa</value>
+  </data>
+  <data name="nomeempresaTextBox.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="nomeempresaTextBox.Font" type="System.Drawing.Font, System.Drawing">
     <value>Century Gothic, 9pt</value>
   </data>
-  <data name="&gt;&gt;funcionariointernoLabel.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="nomeempresaTextBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>124, 36</value>
   </data>
-  <data name="funcionarioexternoLabel.Text" xml:space="preserve">
-    <value>Externo</value>
+  <data name="nomeempresaTextBox.MaxLength" type="System.Int32, mscorlib">
+    <value>200</value>
   </data>
-  <data name="funcionarioexternoTextBox.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
+  <data name="nomeempresaTextBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>192, 22</value>
+  </data>
+  <data name="nomeempresaTextBox.TabIndex" type="System.Int32, mscorlib">
+    <value>18</value>
   </data>
   <data name="&gt;&gt;nomeempresaTextBox.Name" xml:space="preserve">
     <value>nomeempresaTextBox</value>
   </data>
-  <data name="&gt;&gt;funcionariointernoTextBox.Parent" xml:space="preserve">
-    <value>funcionarioGroupBox</value>
+  <data name="&gt;&gt;nomeempresaTextBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="codigoempresaComboBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>9, 36</value>
+  <data name="&gt;&gt;nomeempresaTextBox.Parent" xml:space="preserve">
+    <value>cadastrofuncionarioGroupBox</value>
   </data>
-  <data name="statusfuncionarioLabel.AutoSize" type="System.Boolean, mscorlib">
+  <data name="&gt;&gt;nomeempresaTextBox.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="cadastrofuncionarioGroupBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 12</value>
+  </data>
+  <data name="cadastrofuncionarioGroupBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>323, 160</value>
+  </data>
+  <data name="cadastrofuncionarioGroupBox.TabIndex" type="System.Int32, mscorlib">
+    <value>21</value>
+  </data>
+  <data name="&gt;&gt;cadastrofuncionarioGroupBox.Name" xml:space="preserve">
+    <value>cadastrofuncionarioGroupBox</value>
+  </data>
+  <data name="&gt;&gt;cadastrofuncionarioGroupBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;cadastrofuncionarioGroupBox.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;cadastrofuncionarioGroupBox.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
+  </metadata>
+  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
+    <value>6, 13</value>
   </data>
-  <data name="funcionarioGroupBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>228, 80</value>
+  <data name="$this.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
+    <value>Center</value>
   </data>
-  <data name="&gt;&gt;funcionarioexternoTextBox.Parent" xml:space="preserve">
-    <value>funcionarioGroupBox</value>
+  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
+    <value>345, 179</value>
   </data>
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -531,138 +762,16 @@
         HwD//wAA//gD////AAD//gA///8AAA==
 </value>
   </data>
-  <data name="incluirfuncionarioButton.Location" type="System.Drawing.Point, System.Drawing">
-    <value>249, 119</value>
-  </data>
-  <data name="nomeempresaTextBox.TabIndex" type="System.Int32, mscorlib">
-    <value>18</value>
-  </data>
-  <data name="&gt;&gt;funcionarioexternoLabel.Name" xml:space="preserve">
-    <value>funcionarioexternoLabel</value>
-  </data>
-  <data name="codigoempresaLabel.TabIndex" type="System.Int32, mscorlib">
-    <value>16</value>
-  </data>
-  <data name="&gt;&gt;funcionariointernoLabel.Name" xml:space="preserve">
-    <value>funcionariointernoLabel</value>
-  </data>
-  <data name="$this.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
-    <value>Center</value>
-  </data>
-  <data name="codigoempresaLabel.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Century Gothic, 9pt</value>
-  </data>
-  <data name="&gt;&gt;codigoempresaComboBox.ZOrder" xml:space="preserve">
-    <value>3</value>
+  <data name="$this.StartPosition" type="System.Windows.Forms.FormStartPosition, System.Windows.Forms">
+    <value>CenterScreen</value>
   </data>
   <data name="$this.Text" xml:space="preserve">
     <value>Cadastro Funcionário</value>
   </data>
-  <data name="statusfuncionarioLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>45, 17</value>
-  </data>
-  <data name="statusfuncionarioLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 57</value>
-  </data>
-  <data name="&gt;&gt;funcionariointernoTextBox.Name" xml:space="preserve">
-    <value>funcionariointernoTextBox</value>
-  </data>
-  <data name="nomeempresaTextBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>199, 22</value>
-  </data>
-  <data name="&gt;&gt;funcionarioexternoTextBox.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;statusfuncionarioLabel.Name" xml:space="preserve">
-    <value>statusfuncionarioLabel</value>
-  </data>
-  <data name="incluirfuncionarioButton.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAK
-        8AAACvABQqw0mAAAAAd0SU1FB9MKBhQKNYDWpFkAAAM+SURBVDhPTdN7bEtRHAfwI2zW0RKGLEKZeUT4
-        AxHxCOYxRPAHknlMlg1bY6QibJiY2FTnNW9GvTY6Sbd2rLKxtmu3Tmtru9lGsGHT1mrtlhUxrfj69Xr1
-        JJ/k3nPz+57fPedeFrbTks3WGfxHC0x4+bIZ9Y0vOHW2Bpie1aHK+BRPtHpoNBocvFACFqf3hy2TnWSM
-        RZB+LCSh2scmnccpmRaB8cHugNVWD1t9AyxWG2rrLHje2IQejwsn88sRsSYHgjVKHxWv40JCE41g0/KQ
-        I9NxAX6/H11dXeju7obL5YLdbud4PjkhvaXGKLEB/OX3QcXZJIr1T6wBm3UDOdcruIA3La2o1BtgqKrm
-        BK7rLFZ0frRDKnsIYZoFgiUFgYBcMpGFbXsKNu8Osq89pnIfenp64Ha70dnZiY6ODm71trY2uBztOH7t
-        Acbst4C/5G4g4CwXwNtmQt/Fhci6WoYf37/geVMzKjRaaHWV0FXqiQHmZ7VwfnhHi5QgKsNGAVwH5/51
-        wFupgPS6Gn6vE589dnztcuKLx4luVxvcjlbY3zbD2dKAnLwiTDhcD8HSoABeigkR61WYISrBot1KLBAX
-        I2aPEgv30P0+FWLSHmDxgVLEHipFTKYGU7MaIIi99z8gPNmMkfFqjIh/hEGbyhAW9xjh8VoIEg0YnGzE
-        UJEJw3eZEZ1uxWRafbq0kTrg9uBPgMgMYVIZIhMrsP6wChqdHoUKFU6cvYKs03S8l/NxU14MYVwuxiXL
-        sejia/CXBnUwUFSLcSlPELldh125pUjIeAi2QoktEjUsNTq0v3/LHa9w611qvwmpKjt4wZvITzFjkrgS
-        o1OrsEMix8aMYvDoNVLzauB49wq9vb1U3otRSfmYKmmGSOlAeGzQMYasLi0YkaTFRDpfseQGNkjKwRdb
-        cUDZQoU/4fP58Kn9FaLFRZh5oRV7tW6Ex9z+RsW/PyQ2gBcZOv1YAZst+zh3baZHLs/3yovUXl1Vtddk
-        NHoVCsXXwjtX0WdKurvvrEsdg+ZcdPQZNl9OxUdIFGGhJJpsJplESk6QwB/312lyhgTmJeQgWUWGEG6E
-        kGFkLAmEjf9jQhBql5sLPBcSKmb9fgHDOi22JMhcvwAAAABJRU5ErkJggg==
-</value>
-  </data>
-  <data name="codigoempresaLabel.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="funcionarioexternoLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 22</value>
-  </data>
-  <data name="&gt;&gt;codigoempresaComboBox.Name" xml:space="preserve">
-    <value>codigoempresaComboBox</value>
-  </data>
-  <data name="codigoempresaLabel.Text" xml:space="preserve">
-    <value>Código Empresa</value>
-  </data>
-  <data name="&gt;&gt;codigoempresaLabel.Name" xml:space="preserve">
-    <value>codigoempresaLabel</value>
-  </data>
-  <data name="nomeempresaTextBox.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Century Gothic, 9pt</value>
-  </data>
-  <data name="funcionariointernoTextBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>49, 22</value>
-  </data>
-  <data name="cadastrofuncionarioGroupBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>331, 155</value>
-  </data>
-  <data name="&gt;&gt;funcionarioexternoLabel.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="nomeempresaTextBox.Enabled" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="&gt;&gt;nomeempresaLabel.Parent" xml:space="preserve">
-    <value>cadastrofuncionarioGroupBox</value>
-  </data>
-  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>347, 170</value>
-  </data>
-  <data name="nomeempresaTextBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>124, 36</value>
+  <data name="&gt;&gt;$this.Name" xml:space="preserve">
+    <value>CadastrarfuncionarioForm</value>
   </data>
   <data name="&gt;&gt;$this.Type" xml:space="preserve">
     <value>System.Windows.Forms.Form, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="nomeempresaLabel.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="&gt;&gt;funcionarioexternoLabel.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="&gt;&gt;cadastrofuncionarioGroupBox.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="incluirfuncionarioButton.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Century Gothic, 9pt</value>
-  </data>
-  <data name="&gt;&gt;codigoempresaComboBox.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;statusfuncionarioLabel.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;funcionarioGroupBox.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="funcionarioexternoTextBox.MaxLength" type="System.Int32, mscorlib">
-    <value>6</value>
-  </data>
-  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
 </root>

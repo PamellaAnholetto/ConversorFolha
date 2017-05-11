@@ -45,13 +45,9 @@ namespace ConversorFolhaDePonto.UI
                 Empresa objEmpresa = DataBaseBLL.BuscarEmpresaPorId(codigoempresaComboBox.Text);
                 Layout objLayout = DataBaseBLL.BuscarLayoutPorNome(nomelayoutComboBox.Text);
 
-                List<string> lArquivoConvertido = ConversorBLL.ConverterArquivo(aArquivoOriginal, objEmpresa, objLayout);
-
-                if (lArquivoConvertido.Count > 0)
-                    File.WriteAllLines(diretoriogravarTextBox.Text, lArquivoConvertido, Encoding.Default);
-                else
-                    MessageBox.Show("Arquivo inválido.", ParametroInfo.SistemaVersao, MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                ConversorBLL.ConverterArquivo(aArquivoOriginal, objEmpresa, objLayout, diretoriogravarTextBox.Text);
                 MessageBox.Show("Arquivo gerado com sucesso!", ParametroInfo.SistemaVersao, MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+
             }
             catch (Exception ex)
             {

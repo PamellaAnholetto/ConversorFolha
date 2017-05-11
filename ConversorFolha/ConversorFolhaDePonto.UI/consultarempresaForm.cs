@@ -40,7 +40,7 @@ namespace ConversorFolhaDePonto.UI
         {
             try
             {
-                if (consultaempresaGridView.SelectedRows.Count == 0) throw new Exception("Selecione pelo menos uma empresa.");
+                if (consultaempresaGridView.SelectedRows.Count == 0) throw new Exception("Selecione uma empresa.");
                 ManutencaoempresaForm objForm = new ManutencaoempresaForm(consultaempresaGridView.SelectedRows[0].Cells, codigoempresaComboBox, nomeempresaTextBox);
                 objForm.Show();
             }

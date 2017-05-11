@@ -4,14 +4,28 @@ using System.Linq;
 using System.Windows.Forms;
 using ConversorFolhaDePonto.BLL;
 using ConversorFolhaDePonto.Modelo;
+using System.Drawing;
 
 namespace ConversorFolhaDePonto.UI
 {
     public partial class CadastrarlayoutForm : Form
     {
+        private DataGridViewCellCollection linhaSelecionada;
         public CadastrarlayoutForm()
         {
             InitializeComponent();
+            excluirlayoutButton.Visible = false;
+            alterarlayoutButton.Visible = false;
+        }
+
+        public CadastrarlayoutForm(DataGridViewCellCollection LinhaSelecionada, ComboBox NomeLayout)
+        {
+            InitializeComponent();
+            incluirlayoutButton.Visible = false;
+            alterarlayoutButton.Location = new Point(186, 188);
+            excluirlayoutButton.Location = new Point(261, 188);
+            nomelayoutTextBox.Text = NomeLayout.Text;
+            linhaSelecionada = LinhaSelecionada;
         }
 
         private static IEnumerable<ComboBox> ConteudoComboBoxes;
@@ -32,10 +46,9 @@ namespace ConversorFolhaDePonto.UI
                         controle.Items.AddRange(Utilities.CarregarItensPosicao().ToArray<string>());
                         controle.SelectedIndexChanged += Inicio_SelectedIndexChanged;
                         break;
-                    case "3"://Tamamnho
+                    case "3"://Tamanho
                         controle.Items.AddRange(Utilities.CarregarItensPosicao().ToArray<string>());
                         controle.SelectedIndexChanged += TamanhoComboBoxes_SelectedIndexChanged;
-                        //controle.TextChanged += TamanhoComboBoxes_TextChanged;
                         break;
                     default:
                         break;
@@ -53,6 +66,49 @@ namespace ConversorFolhaDePonto.UI
                                 where combobox.AccessibleName == "3"
                                 orderby combobox.TabIndex
                                 select combobox;
+
+            if (linhaSelecionada != null)
+            {
+                Dictionary<string, object> ordem = new Dictionary<string, object>()
+                {
+                    { "Empresa", linhaSelecionada["inicioEmpresaDataGridViewTextBoxColumn"].Value },
+                    { "Evento", linhaSelecionada["inicioEventoDataGridViewTextBoxColumn"].Value },
+                    { "Funcionario", linhaSelecionada["inicioFuncionarioDataGridViewTextBoxColumn"].Value },
+                    { "Horas", linhaSelecionada["inicioHorasDataGridViewTextBoxColumn"].Value }
+
+                }.OrderBy(pair => pair.Value).ToDictionary(pair => pair.Key, pair => pair.Value);
+
+                for (int i = 0; i < InicioComboBoxes.Count(); i++)
+                {
+                    if (ordem.Keys.ElementAt(i) == "Empresa")
+                    {
+                        InicioComboBoxes.ElementAt(i).SelectedIndex = (int)ordem["Empresa"];
+                        ConteudoComboBoxes.ElementAt(i).SelectedIndex = 1;
+                        TamanhoComboBoxes.ElementAt(i).SelectedIndex = (int)linhaSelecionada["tamanhoEmpresaDataGridViewTextBoxColumn"].Value;
+                    }
+                    else
+                    if (ordem.Keys.ElementAt(i) == "Funcionario")
+                    {
+                        InicioComboBoxes.ElementAt(i).SelectedIndex = (int)ordem["Funcionario"];
+                        ConteudoComboBoxes.ElementAt(i).SelectedIndex = 2; 
+                        TamanhoComboBoxes.ElementAt(i).SelectedIndex = (int)linhaSelecionada["tamanhoFuncionarioDataGridViewTextBoxColumn"].Value;
+                    }
+                    else
+                    if (ordem.Keys.ElementAt(i) == "Evento")
+                    {
+                        InicioComboBoxes.ElementAt(i).SelectedIndex = (int)ordem["Evento"];
+                        ConteudoComboBoxes.ElementAt(i).SelectedIndex = 3;
+                        TamanhoComboBoxes.ElementAt(i).SelectedIndex = (int)linhaSelecionada["tamanhoEventoDataGridViewTextBoxColumn"].Value;
+                    }
+                    else
+                    if (ordem.Keys.ElementAt(i) == "Horas")
+                    {
+                        InicioComboBoxes.ElementAt(i).SelectedIndex = (int)ordem["Horas"];
+                        ConteudoComboBoxes.ElementAt(i).SelectedIndex = 4;
+                        TamanhoComboBoxes.ElementAt(i).SelectedIndex = (int)linhaSelecionada["tamanhoHorasDataGridViewTextBoxColumn"].Value;
+                    }
+                }
+            }
         }
 
         private void Inicio_SelectedIndexChanged(object sender, EventArgs e)
@@ -72,11 +128,6 @@ namespace ConversorFolhaDePonto.UI
             else
                 InicioComboBoxes.ElementAt(int.Parse(newsender.AccessibleDescription)).Enabled = false;
         }
-
-        //private void TamanhoComboBoxes_TextChanged(object sender, EventArgs e)
-        //{
-        //    ValidarTela(ref ConteudoComboBoxes, ref InicioComboBoxes, ref TamanhoComboBoxes);
-        //}
 
         private void TamanhoComboBoxes_SelectedIndexChanged(object sender, EventArgs e)
         {

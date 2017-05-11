@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ConsultafuncionarioForm));
             this.consultafuncionarioGridView = new System.Windows.Forms.DataGridView();
             this.idEmpresaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -61,14 +61,14 @@
             this.consultafuncionarioGridView.AutoGenerateColumns = false;
             this.consultafuncionarioGridView.BackgroundColor = System.Drawing.SystemColors.Menu;
             this.consultafuncionarioGridView.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.consultafuncionarioGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle15.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle15.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle15.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle15.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle15.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle15.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.consultafuncionarioGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle15;
             this.consultafuncionarioGridView.ColumnHeadersHeight = 60;
             this.consultafuncionarioGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.consultafuncionarioGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -81,8 +81,8 @@
             this.consultafuncionarioGridView.Name = "consultafuncionarioGridView";
             this.consultafuncionarioGridView.ReadOnly = true;
             this.consultafuncionarioGridView.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.consultafuncionarioGridView.RowsDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle16.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.consultafuncionarioGridView.RowsDefaultCellStyle = dataGridViewCellStyle16;
             this.consultafuncionarioGridView.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.consultafuncionarioGridView.Size = new System.Drawing.Size(481, 350);
             this.consultafuncionarioGridView.TabIndex = 4;
@@ -139,7 +139,7 @@
             this.consultafuncionarioGroupBox.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.consultafuncionarioGroupBox.Location = new System.Drawing.Point(12, 12);
             this.consultafuncionarioGroupBox.Name = "consultafuncionarioGroupBox";
-            this.consultafuncionarioGroupBox.Size = new System.Drawing.Size(500, 456);
+            this.consultafuncionarioGroupBox.Size = new System.Drawing.Size(498, 457);
             this.consultafuncionarioGroupBox.TabIndex = 12;
             this.consultafuncionarioGroupBox.TabStop = false;
             // 
@@ -170,7 +170,7 @@
             this.incluirfuncionarioButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.incluirfuncionarioButton.Location = new System.Drawing.Point(329, 424);
             this.incluirfuncionarioButton.Name = "incluirfuncionarioButton";
-            this.incluirfuncionarioButton.Size = new System.Drawing.Size(70, 26);
+            this.incluirfuncionarioButton.Size = new System.Drawing.Size(69, 26);
             this.incluirfuncionarioButton.TabIndex = 22;
             this.incluirfuncionarioButton.Text = "Incluir";
             this.incluirfuncionarioButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -185,7 +185,7 @@
             this.codigoempresaComboBox.FormattingEnabled = true;
             this.codigoempresaComboBox.Location = new System.Drawing.Point(9, 38);
             this.codigoempresaComboBox.Name = "codigoempresaComboBox";
-            this.codigoempresaComboBox.Size = new System.Drawing.Size(68, 25);
+            this.codigoempresaComboBox.Size = new System.Drawing.Size(70, 25);
             this.codigoempresaComboBox.TabIndex = 14;
             this.codigoempresaComboBox.ValueMember = "Nome";
             this.codigoempresaComboBox.SelectedIndexChanged += new System.EventHandler(this.CodigoempresaComboBox_SelectedIndexChanged);
@@ -198,7 +198,7 @@
             // 
             this.nomeempresaLabel.AutoSize = true;
             this.nomeempresaLabel.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.nomeempresaLabel.Location = new System.Drawing.Point(126, 21);
+            this.nomeempresaLabel.Location = new System.Drawing.Point(126, 18);
             this.nomeempresaLabel.Name = "nomeempresaLabel";
             this.nomeempresaLabel.Size = new System.Drawing.Size(97, 17);
             this.nomeempresaLabel.TabIndex = 9;
@@ -210,7 +210,7 @@
             this.nomeempresaTextBox.Enabled = false;
             this.nomeempresaTextBox.Location = new System.Drawing.Point(129, 41);
             this.nomeempresaTextBox.Name = "nomeempresaTextBox";
-            this.nomeempresaTextBox.Size = new System.Drawing.Size(268, 22);
+            this.nomeempresaTextBox.Size = new System.Drawing.Size(269, 22);
             this.nomeempresaTextBox.TabIndex = 10;
             // 
             // codigoempresaLabel

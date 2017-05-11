@@ -30,6 +30,8 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(cadastrareventoForm));
             this.cadastroeventoGroupBox = new System.Windows.Forms.GroupBox();
+            this.excluireventoButton = new System.Windows.Forms.Button();
+            this.alterareventoButton = new System.Windows.Forms.Button();
             this.incluireventoButton = new System.Windows.Forms.Button();
             this.codigoempresaComboBox = new System.Windows.Forms.ComboBox();
             this.nomeempresaTextBox = new System.Windows.Forms.TextBox();
@@ -48,6 +50,8 @@
             // 
             // cadastroeventoGroupBox
             // 
+            this.cadastroeventoGroupBox.Controls.Add(this.excluireventoButton);
+            this.cadastroeventoGroupBox.Controls.Add(this.alterareventoButton);
             this.cadastroeventoGroupBox.Controls.Add(this.incluireventoButton);
             this.cadastroeventoGroupBox.Controls.Add(this.codigoempresaComboBox);
             this.cadastroeventoGroupBox.Controls.Add(this.nomeempresaTextBox);
@@ -56,9 +60,41 @@
             this.cadastroeventoGroupBox.Controls.Add(this.eventoGroupBox);
             this.cadastroeventoGroupBox.Location = new System.Drawing.Point(12, 12);
             this.cadastroeventoGroupBox.Name = "cadastroeventoGroupBox";
-            this.cadastroeventoGroupBox.Size = new System.Drawing.Size(333, 160);
+            this.cadastroeventoGroupBox.Size = new System.Drawing.Size(321, 172);
             this.cadastroeventoGroupBox.TabIndex = 20;
             this.cadastroeventoGroupBox.TabStop = false;
+            // 
+            // excluireventoButton
+            // 
+            this.excluireventoButton.BackColor = System.Drawing.Color.Transparent;
+            this.excluireventoButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.excluireventoButton.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.excluireventoButton.ForeColor = System.Drawing.Color.Black;
+            this.excluireventoButton.Image = ((System.Drawing.Image)(resources.GetObject("excluireventoButton.Image")));
+            this.excluireventoButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.excluireventoButton.Location = new System.Drawing.Point(240, 106);
+            this.excluireventoButton.Name = "excluireventoButton";
+            this.excluireventoButton.Size = new System.Drawing.Size(73, 26);
+            this.excluireventoButton.TabIndex = 24;
+            this.excluireventoButton.Text = "Excluir";
+            this.excluireventoButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.excluireventoButton.UseVisualStyleBackColor = false;
+            // 
+            // alterareventoButton
+            // 
+            this.alterareventoButton.BackColor = System.Drawing.Color.Transparent;
+            this.alterareventoButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.alterareventoButton.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.alterareventoButton.ForeColor = System.Drawing.Color.Black;
+            this.alterareventoButton.Image = ((System.Drawing.Image)(resources.GetObject("alterareventoButton.Image")));
+            this.alterareventoButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.alterareventoButton.Location = new System.Drawing.Point(240, 76);
+            this.alterareventoButton.Name = "alterareventoButton";
+            this.alterareventoButton.Size = new System.Drawing.Size(73, 26);
+            this.alterareventoButton.TabIndex = 23;
+            this.alterareventoButton.Text = "Alterar";
+            this.alterareventoButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.alterareventoButton.UseVisualStyleBackColor = false;
             // 
             // incluireventoButton
             // 
@@ -68,9 +104,9 @@
             this.incluireventoButton.ForeColor = System.Drawing.SystemColors.ControlText;
             this.incluireventoButton.Image = ((System.Drawing.Image)(resources.GetObject("incluireventoButton.Image")));
             this.incluireventoButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.incluireventoButton.Location = new System.Drawing.Point(248, 124);
+            this.incluireventoButton.Location = new System.Drawing.Point(240, 138);
             this.incluireventoButton.Name = "incluireventoButton";
-            this.incluireventoButton.Size = new System.Drawing.Size(72, 26);
+            this.incluireventoButton.Size = new System.Drawing.Size(73, 26);
             this.incluireventoButton.TabIndex = 21;
             this.incluireventoButton.Text = "Incluir";
             this.incluireventoButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -94,10 +130,10 @@
             this.nomeempresaTextBox.AccessibleName = "Nome da Empresa";
             this.nomeempresaTextBox.Enabled = false;
             this.nomeempresaTextBox.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.nomeempresaTextBox.Location = new System.Drawing.Point(130, 39);
+            this.nomeempresaTextBox.Location = new System.Drawing.Point(120, 39);
             this.nomeempresaTextBox.MaxLength = 200;
             this.nomeempresaTextBox.Name = "nomeempresaTextBox";
-            this.nomeempresaTextBox.Size = new System.Drawing.Size(195, 22);
+            this.nomeempresaTextBox.Size = new System.Drawing.Size(193, 22);
             this.nomeempresaTextBox.TabIndex = 9;
             // 
             // codigoempresaLabel
@@ -114,7 +150,7 @@
             // 
             this.nomeempresaLabel.AutoSize = true;
             this.nomeempresaLabel.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.nomeempresaLabel.Location = new System.Drawing.Point(127, 16);
+            this.nomeempresaLabel.Location = new System.Drawing.Point(117, 16);
             this.nomeempresaLabel.Name = "nomeempresaLabel";
             this.nomeempresaLabel.Size = new System.Drawing.Size(97, 17);
             this.nomeempresaLabel.TabIndex = 7;
@@ -130,9 +166,9 @@
             this.eventoGroupBox.Controls.Add(this.eventointernoLabel);
             this.eventoGroupBox.Enabled = false;
             this.eventoGroupBox.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.eventoGroupBox.Location = new System.Drawing.Point(9, 67);
+            this.eventoGroupBox.Location = new System.Drawing.Point(9, 68);
             this.eventoGroupBox.Name = "eventoGroupBox";
-            this.eventoGroupBox.Size = new System.Drawing.Size(225, 87);
+            this.eventoGroupBox.Size = new System.Drawing.Size(225, 96);
             this.eventoGroupBox.TabIndex = 6;
             this.eventoGroupBox.TabStop = false;
             this.eventoGroupBox.Text = "Evento";
@@ -160,7 +196,7 @@
             // eventointernoTextBox
             // 
             this.eventointernoTextBox.AccessibleName = "Evento BuddyWin";
-            this.eventointernoTextBox.Location = new System.Drawing.Point(169, 19);
+            this.eventointernoTextBox.Location = new System.Drawing.Point(169, 15);
             this.eventointernoTextBox.MaxLength = 4;
             this.eventointernoTextBox.Name = "eventointernoTextBox";
             this.eventointernoTextBox.Size = new System.Drawing.Size(49, 22);
@@ -169,7 +205,7 @@
             // eventoexternoLabel
             // 
             this.eventoexternoLabel.AutoSize = true;
-            this.eventoexternoLabel.Location = new System.Drawing.Point(6, 22);
+            this.eventoexternoLabel.Location = new System.Drawing.Point(6, 18);
             this.eventoexternoLabel.Name = "eventoexternoLabel";
             this.eventoexternoLabel.Size = new System.Drawing.Size(52, 17);
             this.eventoexternoLabel.TabIndex = 0;
@@ -178,7 +214,7 @@
             // eventoexternoTextBox
             // 
             this.eventoexternoTextBox.AccessibleName = "Evento Externo";
-            this.eventoexternoTextBox.Location = new System.Drawing.Point(64, 19);
+            this.eventoexternoTextBox.Location = new System.Drawing.Point(64, 15);
             this.eventoexternoTextBox.MaxLength = 3;
             this.eventoexternoTextBox.Name = "eventoexternoTextBox";
             this.eventoexternoTextBox.Size = new System.Drawing.Size(49, 22);
@@ -187,7 +223,7 @@
             // eventointernoLabel
             // 
             this.eventointernoLabel.AutoSize = true;
-            this.eventointernoLabel.Location = new System.Drawing.Point(119, 22);
+            this.eventointernoLabel.Location = new System.Drawing.Point(117, 18);
             this.eventointernoLabel.Name = "eventointernoLabel";
             this.eventointernoLabel.Size = new System.Drawing.Size(50, 17);
             this.eventointernoLabel.TabIndex = 2;
@@ -197,7 +233,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(351, 177);
+            this.ClientSize = new System.Drawing.Size(342, 187);
             this.Controls.Add(this.cadastroeventoGroupBox);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -228,5 +264,7 @@
         private System.Windows.Forms.TextBox eventoexternoTextBox;
         private System.Windows.Forms.Label eventointernoLabel;
         private System.Windows.Forms.Button incluireventoButton;
+        private System.Windows.Forms.Button excluireventoButton;
+        private System.Windows.Forms.Button alterareventoButton;
     }
 }

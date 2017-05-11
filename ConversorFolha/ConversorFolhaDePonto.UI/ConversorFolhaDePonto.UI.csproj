@@ -70,23 +70,11 @@
     <Compile Include="manterempresaForm.Designer.cs">
       <DependentUpon>manterempresaForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="manterfuncionarioForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="manterfuncionarioForm.Designer.cs">
-      <DependentUpon>manterfuncionarioForm.cs</DependentUpon>
-    </Compile>
     <Compile Include="cadastrargeralForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="cadastrargeralForm.Designer.cs">
       <DependentUpon>cadastrargeralForm.cs</DependentUpon>
-    </Compile>
-    <Compile Include="mantereventoForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="mantereventoForm.Designer.cs">
-      <DependentUpon>mantereventoForm.cs</DependentUpon>
     </Compile>
     <Compile Include="cadastrarlayoutForm.cs">
       <SubType>Form</SubType>
@@ -124,12 +112,6 @@
     <Compile Include="consultarlayoutForm.Designer.cs">
       <DependentUpon>consultarlayoutForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="manterlayoutForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="manterlayoutForm.Designer.cs">
-      <DependentUpon>manterlayoutForm.cs</DependentUpon>
-    </Compile>
     <Compile Include="menuForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -154,14 +136,8 @@
     <EmbeddedResource Include="manterempresaForm.resx">
       <DependentUpon>manterempresaForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="manterfuncionarioForm.resx">
-      <DependentUpon>manterfuncionarioForm.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="cadastrargeralForm.resx">
       <DependentUpon>cadastrargeralForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="mantereventoForm.resx">
-      <DependentUpon>mantereventoForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="cadastrarlayoutForm.resx">
       <DependentUpon>cadastrarlayoutForm.cs</DependentUpon>
@@ -180,9 +156,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="consultarlayoutForm.resx">
       <DependentUpon>consultarlayoutForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="manterlayoutForm.resx">
-      <DependentUpon>manterlayoutForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="menuForm.resx">
       <DependentUpon>menuForm.cs</DependentUpon>
