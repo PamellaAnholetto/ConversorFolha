@@ -54,7 +54,6 @@ namespace ConversorFolhaDePonto.UI
         {
             try
             {
-                if (consultaeventoGridView.SelectedRows.Count == 0) throw new Exception("Selecione uma empresa.");
                 cadastrareventoForm objForm = new cadastrareventoForm(codigoempresaComboBox, nomeempresaTextBox);
                 objForm.Show();
             }

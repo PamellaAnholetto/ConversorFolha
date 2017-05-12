@@ -1,6 +1,6 @@
 ﻿namespace ConversorFolhaDePonto.UI
 {
-    partial class CadastrarfuncionarioForm
+    partial class cadastrarfuncionarioForm
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CadastrarfuncionarioForm));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(cadastrarfuncionarioForm));
             this.cadastrofuncionarioGroupBox = new System.Windows.Forms.GroupBox();
             this.excluirfuncionarioButton = new System.Windows.Forms.Button();
             this.alterarfuncionarioButton = new System.Windows.Forms.Button();
@@ -76,6 +76,7 @@
             this.alterarfuncionarioButton.ForeColor = System.Drawing.Color.Black;
             this.alterarfuncionarioButton.Name = "alterarfuncionarioButton";
             this.alterarfuncionarioButton.UseVisualStyleBackColor = false;
+            this.alterarfuncionarioButton.Click += new System.EventHandler(this.AlterarfuncionarioButton_Click);
             // 
             // incluirfuncionarioButton
             // 
@@ -84,6 +85,7 @@
             this.incluirfuncionarioButton.ForeColor = System.Drawing.SystemColors.ControlText;
             this.incluirfuncionarioButton.Name = "incluirfuncionarioButton";
             this.incluirfuncionarioButton.UseVisualStyleBackColor = false;
+            this.incluirfuncionarioButton.Click += new System.EventHandler(this.IncluirfuncionarioButton_Click);
             // 
             // codigoempresaLabel
             // 
@@ -120,6 +122,7 @@
             // 
             resources.ApplyResources(this.funcionarioexternoTextBox, "funcionarioexternoTextBox");
             this.funcionarioexternoTextBox.Name = "funcionarioexternoTextBox";
+            this.funcionarioexternoTextBox.Validated += new System.EventHandler(this.Funcionarioexterno_Validated);
             // 
             // funcionariointernoLabel
             // 
@@ -146,14 +149,14 @@
             resources.ApplyResources(this.nomeempresaTextBox, "nomeempresaTextBox");
             this.nomeempresaTextBox.Name = "nomeempresaTextBox";
             // 
-            // CadastrarfuncionarioForm
+            // cadastrarfuncionarioForm
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.cadastrofuncionarioGroupBox);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.MaximizeBox = false;
-            this.Name = "CadastrarfuncionarioForm";
+            this.Name = "cadastrarfuncionarioForm";
             this.cadastrofuncionarioGroupBox.ResumeLayout(false);
             this.cadastrofuncionarioGroupBox.PerformLayout();
             this.funcionarioGroupBox.ResumeLayout(false);

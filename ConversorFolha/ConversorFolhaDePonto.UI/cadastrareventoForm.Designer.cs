@@ -79,10 +79,12 @@
             this.excluireventoButton.Text = "Excluir";
             this.excluireventoButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.excluireventoButton.UseVisualStyleBackColor = false;
+            this.excluireventoButton.Click += new System.EventHandler(this.excluireventoButton_Click);
             // 
             // alterareventoButton
             // 
             this.alterareventoButton.BackColor = System.Drawing.Color.Transparent;
+            this.alterareventoButton.Enabled = false;
             this.alterareventoButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.alterareventoButton.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.alterareventoButton.ForeColor = System.Drawing.Color.Black;
@@ -95,6 +97,8 @@
             this.alterareventoButton.Text = "Alterar";
             this.alterareventoButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.alterareventoButton.UseVisualStyleBackColor = false;
+            this.alterareventoButton.TextChanged += new System.EventHandler(this.AlterareventoButton_Click);
+            this.alterareventoButton.Click += new System.EventHandler(this.AlterareventoButton_Click);
             // 
             // incluireventoButton
             // 
@@ -111,6 +115,7 @@
             this.incluireventoButton.Text = "Incluir";
             this.incluireventoButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.incluireventoButton.UseVisualStyleBackColor = false;
+            this.incluireventoButton.Click += new System.EventHandler(this.IncluireventoButton_Click);
             // 
             // codigoempresaComboBox
             // 
@@ -219,6 +224,7 @@
             this.eventoexternoTextBox.Name = "eventoexternoTextBox";
             this.eventoexternoTextBox.Size = new System.Drawing.Size(49, 22);
             this.eventoexternoTextBox.TabIndex = 1;
+            this.eventoexternoTextBox.Validated += new System.EventHandler(this.EventoexternoTextBox_Validated);
             // 
             // eventointernoLabel
             // 

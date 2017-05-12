@@ -41,7 +41,7 @@ namespace ConversorFolhaDePonto.UI
             try
             {
                 if (consultafuncionarioGridView.SelectedRows.Count == 0) throw new Exception("Selecione uma empresa.");
-                CadastrarfuncionarioForm objForm = new CadastrarfuncionarioForm(consultafuncionarioGridView.SelectedRows[0].Cells, codigoempresaComboBox, nomeempresaTextBox);
+                cadastrarfuncionarioForm objForm = new cadastrarfuncionarioForm(consultafuncionarioGridView.SelectedRows[0].Cells, codigoempresaComboBox, nomeempresaTextBox);
                 objForm.Show();
             }
             catch (Exception ex)
@@ -54,8 +54,7 @@ namespace ConversorFolhaDePonto.UI
         {
             try
             {
-                if (consultafuncionarioGridView.SelectedRows.Count == 0) throw new Exception("Selecione uma empresa.");
-                CadastrarfuncionarioForm objForm = new CadastrarfuncionarioForm(codigoempresaComboBox, nomeempresaTextBox);
+                cadastrarfuncionarioForm objForm = new cadastrarfuncionarioForm(codigoempresaComboBox, nomeempresaTextBox);
                 objForm.Show();
             }
             catch (Exception ex)

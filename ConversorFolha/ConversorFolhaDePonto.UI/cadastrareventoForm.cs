@@ -14,7 +14,8 @@ using ConversorFolhaDePonto.Modelo;
 namespace ConversorFolhaDePonto.UI
 {
     public partial class cadastrareventoForm : Form
-    {  
+    {
+        public DataGridViewCellCollection linhaSelecionada;
         public cadastrareventoForm(ComboBox CodigoEmpresa, TextBox NomeEmpresa)
         {
             InitializeComponent();
@@ -39,6 +40,7 @@ namespace ConversorFolhaDePonto.UI
             eventoexternoTextBox.Text = LinhaSelecionada["externoDataGridViewTextBoxColumn"].Value.ToString();
             eventointernoTextBox.Text = LinhaSelecionada["internoDataGridViewTextBoxColumn"].Value.ToString();
             eventotrensferivelCheckBox.Checked = (bool)LinhaSelecionada["transferivelDataGridViewCheckBoxColumn"].Value;
+            linhaSelecionada = LinhaSelecionada;
         }
 
         private void CodigoempresaComboBox_SelectedIndexChanged(object sender, EventArgs e)
@@ -55,10 +57,7 @@ namespace ConversorFolhaDePonto.UI
             }
         }
 
-    }
-}
-
-        /*private void IncluireventoButton_Click(object sender, EventArgs e)
+        private void IncluireventoButton_Click(object sender, EventArgs e)
         {
             try
             {
@@ -102,4 +101,65 @@ namespace ConversorFolhaDePonto.UI
                     statuseventoLabel.Text = "Não foi possível incluir...";
                 }
             }
-        }*/
+        }
+
+        private void AlterareventoButton_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                statuseventoLabel.Text = "Processando...";
+                statuseventoLabel.Visible = true;
+                List<ErrosTela> ErrosTela = new List<ErrosTela>();
+                Utilities.ValidarTextBoxes(eventoGroupBox, ref ErrosTela);
+                if (ErrosTela.Count() > 0)
+                {
+                    string strCamposInvalidos = Utilities.CriarMensagemErro(eventoGroupBox, ErrosTela);
+                    statuseventoLabel.Text = "Não foi possível alterar...";
+                    MessageBox.Show("Preencher Campo(s):" + Environment.NewLine + strCamposInvalidos, ParametroInfo.SistemaVersao, MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                }
+                else
+                {
+                    DataBaseBLL.AlterarEvento(
+                        new Evento()
+                        {
+                            IdEmpresa = codigoempresaComboBox.Text,
+                            NomeEmpresa = nomeempresaTextBox.Text,
+                            Externo = eventoexternoTextBox.Text,
+                            Interno = eventointernoTextBox.Text,
+                            Transferivel = eventotrensferivelCheckBox.Checked,
+
+                        }, linhaSelecionada["externoDataGridViewTextBoxColumn"].Value.ToString()
+                    );
+                    statuseventoLabel.Text = "Evento alterado com sucesso.";
+                    Utilities.ResetarControles(eventoGroupBox);
+                    eventoexternoTextBox.Focus();
+
+                }
+            }
+            catch (Exception ex)
+            {
+                if (ex.Message == "23505")
+                {
+                    MessageBox.Show("Evento já cadastrado.", ParametroInfo.SistemaVersao, MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    statuseventoLabel.Text = "Não foi possível alterar...";
+                }
+                else
+                {
+                    MessageBox.Show(ex.Message, ParametroInfo.SistemaVersao, MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    statuseventoLabel.Text = "Não foi possível alterar...";
+                }
+            }
+        }
+
+        private void EventoexternoTextBox_Validated(object sender, EventArgs e)
+        {
+            alterareventoButton.Enabled = true;
+        }
+
+
+        private void excluireventoButton_Click(object sender, EventArgs e)
+        {
+
+        }
+    }
+}

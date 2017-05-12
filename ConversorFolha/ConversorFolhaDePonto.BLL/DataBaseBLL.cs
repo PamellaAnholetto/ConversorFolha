@@ -79,24 +79,30 @@ namespace ConversorFolhaDePonto.BLL
             objDAO.Execute(strComando, dicParametros);
         }
 
-        public void AlterarFuncionario(Funcionario ObjFuncionario)
+        public static void AlterarEmpresa(Empresa ObjEmpresa)
         {
-            string strComando = ("UPDATE funcionario SET externo = @newexterno, interno = @interno, transferivel = @transferivel WHERE idempresa = @idempresa AND externo = @oldexterno");
+            string strComando = ("UPDATE empresa SET  empresaid = @id, nome = @nome, inicioevento = @inicioevento, tamanhoevento = @tamanhoevento, iniciofuncionario = @iniciofuncionario, tamanhofuncionario = @tamanhofuncionario, " +
+                                                    "iniciohoras = @iniciohoras, tamanhohoras = @tamanhohoras WHERE idempresa = @idempresa");
+
+
 
             Dictionary<string, object> dicParametros = new Dictionary<string, object>()
             {
-                {"@newexterno", ObjFuncionario.Externo },
-                {"@idempresa", ObjFuncionario.IdEmpresa },
-                {"@interno", ObjFuncionario.Interno },
-                {"@nomeempresa", ObjFuncionario.NomeEmpresa}
+                {"@id", ObjEmpresa.Id },
+                {"@nome", ObjEmpresa.Nome },
+                {"@inicioevento", ObjEmpresa.InicioEvento },
+                {"@tamanhoevento", ObjEmpresa.TamanhoEvento },
+                {"@iniciofuncionario", ObjEmpresa.InicioFuncionario },
+                {"@tamanhofuncionario", ObjEmpresa.TamanhoFuncionario },
+                {"@iniciohoras", ObjEmpresa.InicioHoras },
+                {"@tamanhohoras", ObjEmpresa.TamanhoHoras }
             };
-
             objDAO.Execute(strComando, dicParametros);
         }
 
-        public void AlterarEvento(Evento ObjEvento)
+        public static void AlterarEvento(Evento ObjEvento, string strOldExterno)
         {
-            string strComando = ("UPDATE evento SET externo = @newexterno, interno = @interno, WHERE idempresa = @idempresa AND externo = @oldexterno");
+            string strComando = ("UPDATE evento SET externo = @newexterno, interno = @interno, transferivel = @transferivel WHERE idempresa = @idempresa AND externo = @oldexterno");
 
             Dictionary<string, object> dicParametros = new Dictionary<string, object>()
             {
@@ -104,12 +110,27 @@ namespace ConversorFolhaDePonto.BLL
                 {"@idempresa", ObjEvento.IdEmpresa },
                 {"@interno", ObjEvento.Interno },
                 {"@transferivel", ObjEvento.Transferivel },
-                {"@nomeempresa", ObjEvento.NomeEmpresa}
+                {"@nomeempresa", ObjEvento.NomeEmpresa},
+                {"@oldexterno", strOldExterno}
             };
             objDAO.Execute(strComando, dicParametros);
         }
 
-        
+        public static void AlterarFuncionario(Funcionario ObjFuncionario, string strOldExterno)
+        {
+            string strComando = ("UPDATE funcionario SET externo = @newexterno, interno = @interno WHERE idempresa = @idempresa AND externo = @oldexterno");
+
+            Dictionary<string, object> dicParametros = new Dictionary<string, object>()
+            {
+                {"@newexterno", ObjFuncionario.Externo },
+                {"@idempresa", ObjFuncionario.IdEmpresa },
+                {"@interno", ObjFuncionario.Interno },
+                {"@nomeempresa", ObjFuncionario.NomeEmpresa},
+                {"@oldexterno",strOldExterno }
+            };
+            objDAO.Execute(strComando, dicParametros);
+        }
+
         public static List<Empresa> CarregarEmpresasComboBox()
         {
             string strComando = "SELECT id, nome FROM empresa ORDER BY id";
