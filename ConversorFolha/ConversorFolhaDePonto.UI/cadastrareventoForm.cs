@@ -1,11 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using ConversorFolhaDePonto.BLL;
 using ConversorFolhaDePonto.Modelo;
@@ -16,7 +12,8 @@ namespace ConversorFolhaDePonto.UI
     public partial class cadastrareventoForm : Form
     {
         public DataGridViewCellCollection linhaSelecionada;
-        public cadastrareventoForm(ComboBox CodigoEmpresa, TextBox NomeEmpresa)
+        private DataGridView consultaeventoGridView;
+        public cadastrareventoForm(ComboBox CodigoEmpresa, TextBox NomeEmpresa, ref DataGridView ConsultaeventoGridView)
         {
             InitializeComponent();
             codigoempresaComboBox.DataSource = CodigoEmpresa.DataSource;
@@ -25,9 +22,10 @@ namespace ConversorFolhaDePonto.UI
             excluireventoButton.Visible = false;
             alterareventoButton.Visible = false;
             nomeempresaTextBox.Text = NomeEmpresa.Text;
+            consultaeventoGridView = ConsultaeventoGridView;
         }
 
-        public cadastrareventoForm(DataGridViewCellCollection LinhaSelecionada, ComboBox CodigoEmpresa, TextBox NomeEmpresa)
+        public cadastrareventoForm(DataGridViewCellCollection LinhaSelecionada, ComboBox CodigoEmpresa, TextBox NomeEmpresa, ref DataGridView ConsultaeventoGridView)
         {
             InitializeComponent();
             codigoempresaComboBox.DataSource = CodigoEmpresa.DataSource;
@@ -41,6 +39,7 @@ namespace ConversorFolhaDePonto.UI
             eventointernoTextBox.Text = LinhaSelecionada["internoDataGridViewTextBoxColumn"].Value.ToString();
             eventotrensferivelCheckBox.Checked = (bool)LinhaSelecionada["transferivelDataGridViewCheckBoxColumn"].Value;
             linhaSelecionada = LinhaSelecionada;
+            consultaeventoGridView = ConsultaeventoGridView;
         }
 
         private void CodigoempresaComboBox_SelectedIndexChanged(object sender, EventArgs e)
@@ -86,6 +85,7 @@ namespace ConversorFolhaDePonto.UI
                     statuseventoLabel.Text = "Evento incluido com sucesso.";
                     Utilities.ResetarControles(eventoGroupBox);
                     eventoexternoTextBox.Focus();
+                    Close();
                 }
             }
             catch (Exception ex)
@@ -133,7 +133,7 @@ namespace ConversorFolhaDePonto.UI
                     statuseventoLabel.Text = "Evento alterado com sucesso.";
                     Utilities.ResetarControles(eventoGroupBox);
                     eventoexternoTextBox.Focus();
-
+                    Close();
                 }
             }
             catch (Exception ex)
@@ -156,10 +156,9 @@ namespace ConversorFolhaDePonto.UI
             alterareventoButton.Enabled = true;
         }
 
-
-        private void excluireventoButton_Click(object sender, EventArgs e)
+        private void cadastrareventoForm_FormClosing(object sender, FormClosingEventArgs e)
         {
-
+            consultaeventoGridView.DataSource = DataBaseBLL.CarregarEventoGrid(codigoempresaComboBox.Text);
         }
     }
 }

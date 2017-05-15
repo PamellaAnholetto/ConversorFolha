@@ -5,9 +5,9 @@ using ConversorFolhaDePonto.BLL;
 
 namespace ConversorFolhaDePonto.UI
 {
-    public partial class ConsultaeventoForm : Form
+    public partial class consultaeventoForm : Form
     {
-        public ConsultaeventoForm ()
+        public consultaeventoForm ()
         {
             InitializeComponent();
         }
@@ -16,7 +16,7 @@ namespace ConversorFolhaDePonto.UI
         {
             codigoempresaComboBox.DataSource = DataBaseBLL.CarregarEmpresasComboBox();
             nomeempresaTextBox.Text = codigoempresaComboBox.SelectedValue.ToString();
-            consultaeventoGridView.DataSource = DataBaseBLL.CarregarEventoGrid(codigoempresaComboBox.SelectedText);
+            //consultaeventoGridView.DataSource = DataBaseBLL.CarregarEventoGrid(codigoempresaComboBox.SelectedText);
         }
 
         private void CodigoempresaComboBox_SelectedIndexChanged(object sender, EventArgs e)
@@ -41,7 +41,7 @@ namespace ConversorFolhaDePonto.UI
             try
             {
                 if (consultaeventoGridView.SelectedRows.Count == 0) throw new Exception("Selecione uma empresa.");
-                cadastrareventoForm objForm = new cadastrareventoForm(consultaeventoGridView.SelectedRows[0].Cells, codigoempresaComboBox, nomeempresaTextBox);
+                cadastrareventoForm objForm = new cadastrareventoForm(consultaeventoGridView.SelectedRows[0].Cells, codigoempresaComboBox, nomeempresaTextBox, ref consultaeventoGridView);
                 objForm.Show();
             }
             catch (Exception ex)
@@ -54,7 +54,7 @@ namespace ConversorFolhaDePonto.UI
         {
             try
             {
-                cadastrareventoForm objForm = new cadastrareventoForm(codigoempresaComboBox, nomeempresaTextBox);
+                cadastrareventoForm objForm = new cadastrareventoForm(codigoempresaComboBox, nomeempresaTextBox, ref consultaeventoGridView);
                 objForm.Show();
             }
             catch (Exception ex)

@@ -1,11 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using ConversorFolhaDePonto.Modelo;
 using ConversorFolhaDePonto.BLL;
@@ -15,7 +11,8 @@ namespace ConversorFolhaDePonto.UI
     public partial class cadastrarfuncionarioForm : Form
     {
         public DataGridViewCellCollection linhaSelecionada;
-        public cadastrarfuncionarioForm(ComboBox CodigoEmpresa, TextBox NomeEmpresa)
+        private DataGridView consultafuncionarioGridView;
+        public cadastrarfuncionarioForm(ComboBox CodigoEmpresa, TextBox NomeEmpresa, ref DataGridView ConsultafuncionarioGridView)
         {
             InitializeComponent();
             codigoempresaComboBox.DataSource = CodigoEmpresa.DataSource;
@@ -24,9 +21,10 @@ namespace ConversorFolhaDePonto.UI
             excluirfuncionarioButton.Visible = false;
             alterarfuncionarioButton.Visible = false;
             nomeempresaTextBox.Text = NomeEmpresa.Text;
+            consultafuncionarioGridView = ConsultafuncionarioGridView;
         }
 
-        public cadastrarfuncionarioForm(DataGridViewCellCollection LinhaSelecionada, ComboBox CodigoEmpresa, TextBox NomeEmpresa)
+        public cadastrarfuncionarioForm(DataGridViewCellCollection LinhaSelecionada, ComboBox CodigoEmpresa, TextBox NomeEmpresa, ref DataGridView ConsultafuncionarioGridView)
         {
             InitializeComponent();
             codigoempresaComboBox.DataSource = CodigoEmpresa.DataSource;
@@ -39,6 +37,7 @@ namespace ConversorFolhaDePonto.UI
             funcionarioexternoTextBox.Text = LinhaSelecionada["externoDataGridViewTextBoxColumn"].Value.ToString();
             funcionariointernoTextBox.Text = LinhaSelecionada["internoDataGridViewTextBoxColumn"].Value.ToString();
             linhaSelecionada = LinhaSelecionada;
+            consultafuncionarioGridView = ConsultafuncionarioGridView;
         }
 
         private void CodigoempresaComboBox_SelectedIndexChanged(object sender, EventArgs e)
@@ -83,6 +82,7 @@ namespace ConversorFolhaDePonto.UI
                     statusfuncionarioLabel.Text = "Funcionário incluido com sucesso.";
                     Utilities.ResetarControles(funcionarioGroupBox);
                     funcionarioexternoTextBox.Focus();
+                    Close();
                 }
             }
             catch (Exception ex)
@@ -129,6 +129,7 @@ namespace ConversorFolhaDePonto.UI
                     statusfuncionarioLabel.Text = "Funcionário alterado com sucesso.";
                     Utilities.ResetarControles(funcionarioGroupBox);
                     funcionarioexternoTextBox.Focus();
+                    Close();
                 }
             }
             catch (Exception ex)
@@ -145,9 +146,15 @@ namespace ConversorFolhaDePonto.UI
                 }
             }
         }
+
         private void Funcionarioexterno_Validated(object sender, EventArgs e)
         {
             alterarfuncionarioButton.Enabled = true;
+        }
+
+        private void cadastrarfuncionarioForm_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            consultafuncionarioGridView.DataSource = DataBaseBLL.CarregarFuncionarioGrid(codigoempresaComboBox.Text);
         }
     }
 }

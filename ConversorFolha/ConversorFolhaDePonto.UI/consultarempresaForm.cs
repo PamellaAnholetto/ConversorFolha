@@ -16,7 +16,7 @@ namespace ConversorFolhaDePonto.UI
         {
             codigoempresaComboBox.DataSource = DataBaseBLL.CarregarEmpresasComboBox();
             nomeempresaTextBox.Text = codigoempresaComboBox.SelectedValue.ToString();
-            consultaempresaGridView.DataSource = DataBaseBLL.CarregarEmpresaGrid(codigoempresaComboBox.SelectedText);
+            //consultaempresaGridView.DataSource = DataBaseBLL.CarregarEmpresaGrid(codigoempresaComboBox.SelectedText);
         }
 
         private void CodigoempresaComboBox_SelectedIndexChanged(object sender, EventArgs e)
@@ -41,7 +41,7 @@ namespace ConversorFolhaDePonto.UI
             try
             {
                 if (consultaempresaGridView.SelectedRows.Count == 0) throw new Exception("Selecione uma empresa.");
-                ManutencaoempresaForm objForm = new ManutencaoempresaForm(consultaempresaGridView.SelectedRows[0].Cells, codigoempresaComboBox, nomeempresaTextBox);
+                manutencaoempresaForm objForm = new manutencaoempresaForm(consultaempresaGridView.SelectedRows[0].Cells, codigoempresaComboBox, nomeempresaTextBox, ref consultaempresaGridView);
                 objForm.Show();
             }
             catch (Exception ex)

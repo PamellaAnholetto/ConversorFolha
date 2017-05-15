@@ -15,7 +15,7 @@ namespace ConversorFolhaDePonto.UI
          private void LayoutmanutencaoForm_Load(object sender, EventArgs e)
         {
             nomelayoutComboBox.DataSource = DataBaseBLL.CarregarLayoutComboBox();
-            consultalayoutGridView.DataSource = DataBaseBLL.CarregarLayoutGrid(nomelayoutComboBox.SelectedText); 
+            //consultalayoutGridView.DataSource = DataBaseBLL.CarregarLayoutGrid(nomelayoutComboBox.SelectedText); 
         }
 
         private void NomelayoutComboBox_SelectedIndexChanged(object sender, EventArgs e)
@@ -37,7 +37,7 @@ namespace ConversorFolhaDePonto.UI
             try
             {
                 if (consultalayoutGridView.SelectedRows.Count == 0) throw new Exception("Selecione uma empresa.");
-                CadastrarlayoutForm objForm = new CadastrarlayoutForm(consultalayoutGridView.SelectedRows[0].Cells, nomelayoutComboBox);
+                cadastrarlayoutForm objForm = new cadastrarlayoutForm(consultalayoutGridView.SelectedRows[0].Cells, nomelayoutComboBox, ref consultalayoutGridView);
                 objForm.Show();
             }
             catch (Exception ex)

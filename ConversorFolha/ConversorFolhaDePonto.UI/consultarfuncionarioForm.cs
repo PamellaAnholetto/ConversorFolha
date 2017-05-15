@@ -5,9 +5,9 @@ using ConversorFolhaDePonto.BLL;
 
 namespace ConversorFolhaDePonto.UI
 {
-    public partial class ConsultafuncionarioForm : Form
+    public partial class consultafuncionarioForm : Form
     {
-        public ConsultafuncionarioForm()
+        public consultafuncionarioForm()
         {
             InitializeComponent();
         }
@@ -16,7 +16,7 @@ namespace ConversorFolhaDePonto.UI
         {
             codigoempresaComboBox.DataSource = DataBaseBLL.CarregarEmpresasComboBox();
             nomeempresaTextBox.Text = codigoempresaComboBox.SelectedValue.ToString();
-            consultafuncionarioGridView.DataSource = DataBaseBLL.CarregarFuncionarioGrid(codigoempresaComboBox.SelectedText);
+           //consultafuncionarioGridView.DataSource = DataBaseBLL.CarregarFuncionarioGrid(codigoempresaComboBox.SelectedText);
         }
 
         private void CodigoempresaComboBox_SelectedIndexChanged(object sender, EventArgs e)
@@ -41,7 +41,7 @@ namespace ConversorFolhaDePonto.UI
             try
             {
                 if (consultafuncionarioGridView.SelectedRows.Count == 0) throw new Exception("Selecione uma empresa.");
-                cadastrarfuncionarioForm objForm = new cadastrarfuncionarioForm(consultafuncionarioGridView.SelectedRows[0].Cells, codigoempresaComboBox, nomeempresaTextBox);
+                cadastrarfuncionarioForm objForm = new cadastrarfuncionarioForm(consultafuncionarioGridView.SelectedRows[0].Cells, codigoempresaComboBox, nomeempresaTextBox, ref consultafuncionarioGridView);
                 objForm.Show();
             }
             catch (Exception ex)
@@ -54,7 +54,7 @@ namespace ConversorFolhaDePonto.UI
         {
             try
             {
-                cadastrarfuncionarioForm objForm = new cadastrarfuncionarioForm(codigoempresaComboBox, nomeempresaTextBox);
+                cadastrarfuncionarioForm objForm = new cadastrarfuncionarioForm(codigoempresaComboBox, nomeempresaTextBox, ref consultafuncionarioGridView);
                 objForm.Show();
             }
             catch (Exception ex)

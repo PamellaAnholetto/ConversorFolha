@@ -157,6 +157,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.MaximizeBox = false;
             this.Name = "cadastrarfuncionarioForm";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.cadastrarfuncionarioForm_FormClosing);
             this.cadastrofuncionarioGroupBox.ResumeLayout(false);
             this.cadastrofuncionarioGroupBox.PerformLayout();
             this.funcionarioGroupBox.ResumeLayout(false);

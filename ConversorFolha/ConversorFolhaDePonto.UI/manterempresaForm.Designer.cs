@@ -1,6 +1,6 @@
 ﻿namespace ConversorFolhaDePonto.UI
 {
-    partial class ManutencaoempresaForm
+    partial class manutencaoempresaForm
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ManutencaoempresaForm));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(manutencaoempresaForm));
             this.empresaGroupBox = new System.Windows.Forms.GroupBox();
             this.codigoempresaComboBox = new System.Windows.Forms.ComboBox();
             this.excluirempresaButton = new System.Windows.Forms.Button();
@@ -109,6 +109,7 @@
             // alterarempresaButton
             // 
             this.alterarempresaButton.BackColor = System.Drawing.Color.Transparent;
+            this.alterarempresaButton.Enabled = false;
             this.alterarempresaButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.alterarempresaButton.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.alterarempresaButton.ForeColor = System.Drawing.Color.Black;
@@ -121,6 +122,7 @@
             this.alterarempresaButton.Text = "Alterar";
             this.alterarempresaButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.alterarempresaButton.UseVisualStyleBackColor = false;
+            this.alterarempresaButton.Click += new System.EventHandler(this.AlterarempresaButton_Click);
             // 
             // layoutempresaGroupBox
             // 
@@ -226,6 +228,7 @@
             this.inicioeventoTextBox.Name = "inicioeventoTextBox";
             this.inicioeventoTextBox.Size = new System.Drawing.Size(47, 22);
             this.inicioeventoTextBox.TabIndex = 1;
+            this.inicioeventoTextBox.Validated += new System.EventHandler(this.inicioeventoTextBox_Validated);
             // 
             // tamanhoeventoTextBox
             // 
@@ -323,7 +326,7 @@
             this.nomeempresaLabel.TabIndex = 2;
             this.nomeempresaLabel.Text = "Nome Empresa";
             // 
-            // ManutencaoempresaForm
+            // manutencaoempresaForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -332,9 +335,10 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
-            this.Name = "ManutencaoempresaForm";
+            this.Name = "manutencaoempresaForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Manutenção Empresa ";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.manutencaoempresaForm_FormClosing);
             this.empresaGroupBox.ResumeLayout(false);
             this.empresaGroupBox.PerformLayout();
             this.layoutempresaGroupBox.ResumeLayout(false);

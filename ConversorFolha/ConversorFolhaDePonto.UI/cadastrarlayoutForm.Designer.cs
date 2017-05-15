@@ -1,6 +1,6 @@
 ﻿namespace ConversorFolhaDePonto.UI
 {
-    partial class CadastrarlayoutForm
+    partial class cadastrarlayoutForm
     {
         /// <summary>
         /// Required designer variable.
@@ -28,10 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CadastrarlayoutForm));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(cadastrarlayoutForm));
             this.nomelayoutTextBox = new System.Windows.Forms.TextBox();
             this.nomelayoutLabel = new System.Windows.Forms.Label();
             this.cadastrolayoutGroupBox = new System.Windows.Forms.GroupBox();
+            this.excluirlayoutButton = new System.Windows.Forms.Button();
+            this.alterarlayoutButton = new System.Windows.Forms.Button();
             this.incluirlayoutButton = new System.Windows.Forms.Button();
             this.conteudoGroupBox = new System.Windows.Forms.GroupBox();
             this.tamanho3ComboBox = new System.Windows.Forms.ComboBox();
@@ -49,8 +51,6 @@
             this.tamanho4ComboBox = new System.Windows.Forms.ComboBox();
             this.inicio3ComboBox = new System.Windows.Forms.ComboBox();
             this.inicio4ComboBox = new System.Windows.Forms.ComboBox();
-            this.excluirlayoutButton = new System.Windows.Forms.Button();
-            this.alterarlayoutButton = new System.Windows.Forms.Button();
             this.cadastrolayoutGroupBox.SuspendLayout();
             this.conteudoGroupBox.SuspendLayout();
             this.SuspendLayout();
@@ -87,6 +87,40 @@
             this.cadastrolayoutGroupBox.Size = new System.Drawing.Size(340, 220);
             this.cadastrolayoutGroupBox.TabIndex = 0;
             this.cadastrolayoutGroupBox.TabStop = false;
+            // 
+            // excluirlayoutButton
+            // 
+            this.excluirlayoutButton.BackColor = System.Drawing.Color.Transparent;
+            this.excluirlayoutButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.excluirlayoutButton.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.excluirlayoutButton.ForeColor = System.Drawing.Color.Black;
+            this.excluirlayoutButton.Image = ((System.Drawing.Image)(resources.GetObject("excluirlayoutButton.Image")));
+            this.excluirlayoutButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.excluirlayoutButton.Location = new System.Drawing.Point(186, 188);
+            this.excluirlayoutButton.Name = "excluirlayoutButton";
+            this.excluirlayoutButton.Size = new System.Drawing.Size(69, 26);
+            this.excluirlayoutButton.TabIndex = 28;
+            this.excluirlayoutButton.Text = "Excluir";
+            this.excluirlayoutButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.excluirlayoutButton.UseVisualStyleBackColor = false;
+            // 
+            // alterarlayoutButton
+            // 
+            this.alterarlayoutButton.BackColor = System.Drawing.Color.Transparent;
+            this.alterarlayoutButton.Enabled = false;
+            this.alterarlayoutButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.alterarlayoutButton.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.alterarlayoutButton.ForeColor = System.Drawing.Color.Black;
+            this.alterarlayoutButton.Image = ((System.Drawing.Image)(resources.GetObject("alterarlayoutButton.Image")));
+            this.alterarlayoutButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.alterarlayoutButton.Location = new System.Drawing.Point(107, 188);
+            this.alterarlayoutButton.Name = "alterarlayoutButton";
+            this.alterarlayoutButton.Size = new System.Drawing.Size(73, 26);
+            this.alterarlayoutButton.TabIndex = 27;
+            this.alterarlayoutButton.Text = "Alterar";
+            this.alterarlayoutButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.alterarlayoutButton.UseVisualStyleBackColor = false;
+            this.alterarlayoutButton.Click += new System.EventHandler(this.AlterarlayoutButton_Click);
             // 
             // incluirlayoutButton
             // 
@@ -253,6 +287,7 @@
             this.conteudo1ComboBox.Name = "conteudo1ComboBox";
             this.conteudo1ComboBox.Size = new System.Drawing.Size(128, 21);
             this.conteudo1ComboBox.TabIndex = 3;
+            this.conteudo1ComboBox.Validated += new System.EventHandler(this.Conteudo1ComboBox_Validated);
             // 
             // conteudoLabel
             // 
@@ -302,38 +337,6 @@
             this.inicio4ComboBox.Size = new System.Drawing.Size(54, 21);
             this.inicio4ComboBox.TabIndex = 13;
             // 
-            // excluirlayoutButton
-            // 
-            this.excluirlayoutButton.BackColor = System.Drawing.Color.Transparent;
-            this.excluirlayoutButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.excluirlayoutButton.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.excluirlayoutButton.ForeColor = System.Drawing.Color.Black;
-            this.excluirlayoutButton.Image = ((System.Drawing.Image)(resources.GetObject("excluirlayoutButton.Image")));
-            this.excluirlayoutButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.excluirlayoutButton.Location = new System.Drawing.Point(186, 188);
-            this.excluirlayoutButton.Name = "excluirlayoutButton";
-            this.excluirlayoutButton.Size = new System.Drawing.Size(69, 26);
-            this.excluirlayoutButton.TabIndex = 28;
-            this.excluirlayoutButton.Text = "Excluir";
-            this.excluirlayoutButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.excluirlayoutButton.UseVisualStyleBackColor = false;
-            // 
-            // alterarlayoutButton
-            // 
-            this.alterarlayoutButton.BackColor = System.Drawing.Color.Transparent;
-            this.alterarlayoutButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.alterarlayoutButton.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.alterarlayoutButton.ForeColor = System.Drawing.Color.Black;
-            this.alterarlayoutButton.Image = ((System.Drawing.Image)(resources.GetObject("alterarlayoutButton.Image")));
-            this.alterarlayoutButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.alterarlayoutButton.Location = new System.Drawing.Point(107, 188);
-            this.alterarlayoutButton.Name = "alterarlayoutButton";
-            this.alterarlayoutButton.Size = new System.Drawing.Size(73, 26);
-            this.alterarlayoutButton.TabIndex = 27;
-            this.alterarlayoutButton.Text = "Alterar";
-            this.alterarlayoutButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.alterarlayoutButton.UseVisualStyleBackColor = false;
-            // 
             // CadastrarlayoutForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -346,6 +349,7 @@
             this.Name = "CadastrarlayoutForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Cadastro Layout";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.CadastrarlayoutForm_FormClosing);
             this.Load += new System.EventHandler(this.CadastrolayoutForm_Load);
             this.cadastrolayoutGroupBox.ResumeLayout(false);
             this.cadastrolayoutGroupBox.PerformLayout();

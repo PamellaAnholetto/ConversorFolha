@@ -79,23 +79,56 @@ namespace ConversorFolhaDePonto.BLL
             objDAO.Execute(strComando, dicParametros);
         }
 
-        public static void AlterarEmpresa(Empresa ObjEmpresa)
+        public static void AlterarLayout(Layout ObjLayout, string oldnome)
         {
-            string strComando = ("UPDATE empresa SET  empresaid = @id, nome = @nome, inicioevento = @inicioevento, tamanhoevento = @tamanhoevento, iniciofuncionario = @iniciofuncionario, tamanhofuncionario = @tamanhofuncionario, " +
-                                                    "iniciohoras = @iniciohoras, tamanhohoras = @tamanhohoras WHERE idempresa = @idempresa");
-
-
+            string strComando = ("UPDATE layout SET nome = @newnome, " +
+                                                   "inicioempresa = @inicioempresa, " +
+                                                   "tamanhoempresa = @tamanhoempresa, " +
+                                                   "inicioevento = @inicioevento, " +
+                                                   "tamanhoevento = @tamanhoevento, " +
+                                                   "iniciofuncionario = @iniciofuncionario, " +
+                                                   "tamanhofuncionario = @tamanhofuncionario, " +
+                                                   "iniciohoras = @iniciohoras, " +
+                                                   "tamanhohoras = @tamanhohoras " +
+                                 "WHERE nome = @oldnome");
 
             Dictionary<string, object> dicParametros = new Dictionary<string, object>()
             {
-                {"@id", ObjEmpresa.Id },
+                {"@oldnome", oldnome },
+                {"@newnome", ObjLayout.Nome },
+                {"@inicioempresa", ObjLayout.InicioEmpresa },
+                {"@tamanhoempresa",ObjLayout.TamanhoEmpresa },
+                {"@inicioevento", ObjLayout.InicioEvento },
+                {"@tamanhoevento", ObjLayout.TamanhoEvento },
+                {"@iniciofuncionario", ObjLayout.InicioFuncionario },
+                {"@tamanhofuncionario", ObjLayout.TamanhoFuncionario },
+                {"@iniciohoras", ObjLayout.InicioHoras },
+                {"@tamanhohoras", ObjLayout.TamanhoHoras }
+            };
+            objDAO.Execute(strComando, dicParametros);
+        }
+
+        public static void AlterarEmpresa(Empresa ObjEmpresa)
+        {
+            string strComando = ("UPDATE empresa SET nome = @nome, " +
+                                                    "inicioevento = @inicioevento, " +
+                                                    "tamanhoevento = @tamanhoevento, " +
+                                                    "iniciofuncionario = @iniciofuncionario, " +
+                                                    "tamanhofuncionario = @tamanhofuncionario, " +
+                                                    "iniciohoras = @iniciohoras, " +
+                                                    "tamanhohoras = @tamanhohoras " +
+                                                    "WHERE id = @idempresa");
+
+            Dictionary<string, object> dicParametros = new Dictionary<string, object>()
+            {
+                {"@idempresa", ObjEmpresa.Id },
                 {"@nome", ObjEmpresa.Nome },
                 {"@inicioevento", ObjEmpresa.InicioEvento },
                 {"@tamanhoevento", ObjEmpresa.TamanhoEvento },
                 {"@iniciofuncionario", ObjEmpresa.InicioFuncionario },
                 {"@tamanhofuncionario", ObjEmpresa.TamanhoFuncionario },
                 {"@iniciohoras", ObjEmpresa.InicioHoras },
-                {"@tamanhohoras", ObjEmpresa.TamanhoHoras }
+                {"@tamanhohoras", ObjEmpresa.TamanhoHoras }        
             };
             objDAO.Execute(strComando, dicParametros);
         }
@@ -158,13 +191,12 @@ namespace ConversorFolhaDePonto.BLL
             }
             return lLayouts;
         }
-        public static List<Layout> CarregarLayoutGrid(string strIdLayout)
+        public static List<Layout> CarregarLayoutGrid(string strNomeLayout)
         {
             string strComando = string.Empty;
-            if (string.IsNullOrEmpty(strIdLayout))
-            {      
-                strComando = "SELECT nome, inicioempresa, tamanhoempresa, inicioevento, tamanhoevento, iniciofuncionario, tamanhofuncionario, iniciohoras, tamanhohoras  " +
-                             "FROM layout";
+            if (string.IsNullOrEmpty(strNomeLayout))
+            {
+                return null;
             }
             else
             {
@@ -173,7 +205,7 @@ namespace ConversorFolhaDePonto.BLL
                              "WHERE nome=@nome";
             }
 
-            Dictionary<string, object> dicParametros = new Dictionary<string, object>() { { "@nome", strIdLayout } };
+            Dictionary<string, object> dicParametros = new Dictionary<string, object>() { { "@nome", strNomeLayout } };
             var vLinhas = objDAO.Query(strComando, dicParametros);
             List<Layout> lLayouts = new List<Layout>();
             foreach (var vLinha in vLinhas)
@@ -189,8 +221,6 @@ namespace ConversorFolhaDePonto.BLL
                     TamanhoFuncionario = int.Parse(vLinha["tamanhofuncionario"]),
                     InicioHoras = int.Parse(vLinha["iniciohoras"]),
                     TamanhoHoras = int.Parse(vLinha["tamanhohoras"])
-
-
                 });
             }
             return lLayouts;
@@ -199,9 +229,14 @@ namespace ConversorFolhaDePonto.BLL
         public static List<Empresa> CarregarEmpresaGrid(string strIdEmpresa)
         {
             string strComando = string.Empty;
-            if (string.IsNullOrEmpty(strIdEmpresa)) strComando = "SELECT id, nome, inicioevento, tamanhoevento, iniciofuncionario, tamanhofuncionario, iniciohoras, tamanhohoras  FROM empresa";
-            else strComando = "SELECT id, nome, inicioevento, tamanhoevento, iniciofuncionario, tamanhofuncionario, iniciohoras, tamanhohoras FROM empresa WHERE id=@id";
-
+            if (string.IsNullOrEmpty(strIdEmpresa))
+            {
+                return null;
+            }
+            else
+            {
+                strComando = "SELECT id, nome, inicioevento, tamanhoevento, iniciofuncionario, tamanhofuncionario, iniciohoras, tamanhohoras FROM empresa WHERE id=@id";
+            }
             Dictionary<string, object> dicParametros = new Dictionary<string, object>() { { "@id", strIdEmpresa } };
             var vLinhas = objDAO.Query(strComando, dicParametros);
             List<Empresa> lEmpresas = new List<Empresa>();
@@ -227,8 +262,7 @@ namespace ConversorFolhaDePonto.BLL
             string strComando = string.Empty;
             if (string.IsNullOrEmpty(strIdEvento))
             {
-                strComando = "SELECT  idempresa, nomeempresa, externo, interno, CAST(transferivel AS CHARACTER VARYING) " +
-                             "FROM evento";
+                return null;
             }
             else
             {
@@ -259,8 +293,7 @@ namespace ConversorFolhaDePonto.BLL
             string strComando = string.Empty;
             if (string.IsNullOrEmpty(strIdFuncionario))
             {
-                strComando = "SELECT idempresa, nomeempresa, externo, interno " +
-                             "FROM funcionario";
+                return null;
             }
             else
             {

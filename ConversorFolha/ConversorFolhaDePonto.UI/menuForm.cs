@@ -24,13 +24,13 @@ namespace ConversorFolhaDePonto.UI
 
         private void eventoStripMenuItem_Click(object sender, EventArgs e)
         {
-           ConsultaeventoForm objForm = new ConsultaeventoForm();
+           consultaeventoForm objForm = new consultaeventoForm();
             objForm.Show();
         }
 
         private void funcionarioStripMenuItem_Click(object sender, EventArgs e)
         {
-            ConsultafuncionarioForm objForm = new ConsultafuncionarioForm();
+            consultafuncionarioForm objForm = new consultafuncionarioForm();
             objForm.Show();
         }
 
@@ -47,7 +47,7 @@ namespace ConversorFolhaDePonto.UI
 
         private void layoutToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            CadastrarlayoutForm objForm = new CadastrarlayoutForm();
+            cadastrarlayoutForm objForm = new cadastrarlayoutForm();
             objForm.Show();
         }
 

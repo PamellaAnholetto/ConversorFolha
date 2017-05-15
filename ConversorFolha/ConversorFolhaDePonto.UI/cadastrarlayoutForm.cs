@@ -1,24 +1,25 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Linq;
 using System.Windows.Forms;
 using ConversorFolhaDePonto.BLL;
 using ConversorFolhaDePonto.Modelo;
-using System.Drawing;
 
 namespace ConversorFolhaDePonto.UI
 {
-    public partial class CadastrarlayoutForm : Form
+    public partial class cadastrarlayoutForm : Form
     {
         private DataGridViewCellCollection linhaSelecionada;
-        public CadastrarlayoutForm()
+        private DataGridView consultaLayoutGridView;
+        public cadastrarlayoutForm()
         {
             InitializeComponent();
             excluirlayoutButton.Visible = false;
             alterarlayoutButton.Visible = false;
         }
 
-        public CadastrarlayoutForm(DataGridViewCellCollection LinhaSelecionada, ComboBox NomeLayout)
+        public cadastrarlayoutForm(DataGridViewCellCollection LinhaSelecionada, ComboBox NomeLayout, ref DataGridView ConsultaLayoutGridView)
         {
             InitializeComponent();
             incluirlayoutButton.Visible = false;
@@ -26,6 +27,7 @@ namespace ConversorFolhaDePonto.UI
             excluirlayoutButton.Location = new Point(261, 188);
             nomelayoutTextBox.Text = NomeLayout.Text;
             linhaSelecionada = LinhaSelecionada;
+            consultaLayoutGridView = ConsultaLayoutGridView;
         }
 
         private static IEnumerable<ComboBox> ConteudoComboBoxes;
@@ -242,6 +244,70 @@ namespace ConversorFolhaDePonto.UI
             {
                 MessageBox.Show(ex.Message, ParametroInfo.SistemaVersao, MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
+        }
+
+        private void AlterarlayoutButton_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (string.IsNullOrEmpty(nomelayoutTextBox.Text))
+                    throw new Exception("Favor preencher o nome do layout.");
+                Layout ObjLayout = new Layout() { Nome = nomelayoutTextBox.Text };
+                for (int i = 0; i < ConteudoComboBoxes.Count(); i++)
+                {
+                    switch (ConteudoComboBoxes.ElementAt(i).SelectedIndex)
+                    {
+                        case 1://Código Empresa
+                            if (!string.IsNullOrEmpty(InicioComboBoxes.ElementAt(i).Text))
+                                ObjLayout.InicioEmpresa = int.Parse(InicioComboBoxes.ElementAt(i).Text);
+                            if (!string.IsNullOrEmpty(TamanhoComboBoxes.ElementAt(i).Text))
+                                ObjLayout.TamanhoEmpresa = int.Parse(TamanhoComboBoxes.ElementAt(i).Text);
+                            break;
+                        case 2://Código Funcionário
+                            if (!string.IsNullOrEmpty(InicioComboBoxes.ElementAt(i).Text))
+                                ObjLayout.InicioFuncionario = int.Parse(InicioComboBoxes.ElementAt(i).Text);
+                            if (!string.IsNullOrEmpty(TamanhoComboBoxes.ElementAt(i).Text))
+                                ObjLayout.TamanhoFuncionario = int.Parse(TamanhoComboBoxes.ElementAt(i).Text);
+                            break;
+                        case 3://Código Evento
+                            if (!string.IsNullOrEmpty(InicioComboBoxes.ElementAt(i).Text))
+                                ObjLayout.InicioEvento = int.Parse(InicioComboBoxes.ElementAt(i).Text);
+                            if (!string.IsNullOrEmpty(TamanhoComboBoxes.ElementAt(i).Text))
+                                ObjLayout.TamanhoEvento = int.Parse(TamanhoComboBoxes.ElementAt(i).Text);
+                            break;
+                        case 4://Horas
+                            if (!string.IsNullOrEmpty(InicioComboBoxes.ElementAt(i).Text))
+                                ObjLayout.InicioHoras = int.Parse(InicioComboBoxes.ElementAt(i).Text);
+                            if (!string.IsNullOrEmpty(TamanhoComboBoxes.ElementAt(i).Text))
+                                ObjLayout.TamanhoHoras = int.Parse(TamanhoComboBoxes.ElementAt(i).Text);
+                            break;
+                    }
+                }
+                VerificarLayoutVazio(ObjLayout);
+                DataBaseBLL.AlterarLayout(ObjLayout, linhaSelecionada["nomeDataGridViewTextBoxColumn"].Value.ToString());
+                MessageBox.Show("Layout alterado com sucesso!", ParametroInfo.SistemaVersao, MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                Close();
+            }
+            catch (Exception ex)
+            {
+                if (ex.Message == "23505")
+                {
+                    MessageBox.Show("Layout já cadastrado.", ParametroInfo.SistemaVersao, MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                }
+                else
+                {
+                    MessageBox.Show(ex.Message, ParametroInfo.SistemaVersao, MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                }
+            }
+        }
+        private void CadastrarlayoutForm_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            consultaLayoutGridView.DataSource = DataBaseBLL.CarregarLayoutGrid(nomelayoutTextBox.Text);
+        }
+
+        private void Conteudo1ComboBox_Validated(object sender, EventArgs e)
+        {
+            alterarlayoutButton.Enabled = true;
         }
     }
 }
