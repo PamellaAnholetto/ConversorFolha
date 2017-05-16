@@ -156,9 +156,20 @@ namespace ConversorFolhaDePonto.UI
             alterareventoButton.Enabled = true;
         }
 
-        private void cadastrareventoForm_FormClosing(object sender, FormClosingEventArgs e)
+        private void CadastrareventoForm_FormClosing(object sender, FormClosingEventArgs e)
         {
             consultaeventoGridView.DataSource = DataBaseBLL.CarregarEventoGrid(codigoempresaComboBox.Text);
+        }
+
+        private void ExcluireventoButton_Click(object sender, EventArgs e)
+        {
+           /* foreach (var row in dataGridView1.Rows)
+            {
+                foreach (var cell in row.Cells)
+                {
+                    cell.Value = ""; // ou qualquer outro valor que signifique 'limpar' no seu contexto
+                }
+            }*/
         }
     }
 }

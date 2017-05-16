@@ -301,7 +301,6 @@
             // nomeempresaTextBox
             // 
             this.nomeempresaTextBox.AccessibleName = "Nome Empresa";
-            this.nomeempresaTextBox.Enabled = false;
             this.nomeempresaTextBox.Location = new System.Drawing.Point(169, 39);
             this.nomeempresaTextBox.MaxLength = 200;
             this.nomeempresaTextBox.Name = "nomeempresaTextBox";

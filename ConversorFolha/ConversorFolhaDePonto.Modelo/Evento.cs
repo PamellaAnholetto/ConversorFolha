@@ -7,5 +7,6 @@
         public string Interno { get; set; }
         public bool Transferivel { get; set; }
         public string NomeEmpresa { get; set; }
+        public bool Inativos { get; set;}
     }
 }

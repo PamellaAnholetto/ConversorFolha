@@ -164,6 +164,68 @@ namespace ConversorFolhaDePonto.BLL
             objDAO.Execute(strComando, dicParametros);
         }
 
+        public static void ExcluirLayout (Layout ObjLayout) 
+        {
+            string strComando = ("DELETE layout " +
+                                    "SET inativos = @inativos," +
+                                  "WHERE nome = @nome");
+
+            Dictionary<string, object> dicParametros = new Dictionary<string, object>()
+            {
+                {"@inativos", ObjLayout.Inativos },
+                {"@nome", ObjLayout.Nome }
+                
+            };
+            objDAO.Execute(strComando, dicParametros);
+        }
+
+        public static void ExcluirEmpresa(Empresa ObjEmpresa)
+        {
+            string strComando = ("DELETE empresa " +
+                                    "SET inativos = @inativos," +
+                                  "WHERE id = @idempresa");
+
+            Dictionary<string, object> dicParametros = new Dictionary<string, object>()
+            {
+                {"@inativos", ObjEmpresa.Inativos },
+                {"@idempresa", ObjEmpresa.Id }
+
+            };
+            objDAO.Execute(strComando, dicParametros);
+        }
+
+        public static void ExcluirEvento(Evento ObjEvento)
+        {
+            string strComando = ("DELETE evento " +
+                                    "SET inativos = @inativos," +
+                                  "WHERE idempresa = @idempresa AND externo = @externo");
+
+            Dictionary<string, object> dicParametros = new Dictionary<string, object>()
+            {
+                {"@inativos", ObjEvento.Inativos },
+                {"@externo", ObjEvento.Externo },
+                {"@idempresa", ObjEvento.IdEmpresa },
+
+            };
+            objDAO.Execute(strComando, dicParametros);
+        }
+
+        public static void ExcluirFuncionaro(Funcionario ObjFuncionario)
+        {
+            string strComando = ("DELETE funcionario " +
+                                    "SET inativos = @inativos," +
+                                  "WHERE idempresa = @idempresa  AND externo = @externo");
+
+            Dictionary<string, object> dicParametros = new Dictionary<string, object>()
+            {
+                {"@inativos", ObjFuncionario.Inativos },
+                {"@externo", ObjFuncionario.Externo },
+                {"@idempresa", ObjFuncionario.IdEmpresa },
+
+            };
+            objDAO.Execute(strComando, dicParametros);
+        }
+
         public static List<Empresa> CarregarEmpresasComboBox()
         {
             string strComando = "SELECT id, nome FROM empresa ORDER BY id";

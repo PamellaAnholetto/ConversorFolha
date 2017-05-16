@@ -28,8 +28,8 @@ namespace ConversorFolhaDePonto.UI
 
         private void CodigoempresaComboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
-            nomeempresaTextBox.Text = codigoempresaComboBox.SelectedValue.ToString();
-            Empresa empresaSelecionada = (Empresa)codigoempresaComboBox.SelectedItem;
+            //nomeempresaTextBox.Text = codigoempresaComboBox.SelectedValue.ToString();
+            //Empresa empresaSelecionada = (Empresa)codigoempresaComboBox.SelectedItem;
             if (string.IsNullOrEmpty(codigoempresaComboBox.Text))
             {
                 layoutempresaGroupBox.Enabled = false;

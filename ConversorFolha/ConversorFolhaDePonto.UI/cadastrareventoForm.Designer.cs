@@ -79,6 +79,7 @@
             this.excluireventoButton.Text = "Excluir";
             this.excluireventoButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.excluireventoButton.UseVisualStyleBackColor = false;
+            this.excluireventoButton.Click += new System.EventHandler(this.ExcluireventoButton_Click);
             // 
             // alterareventoButton
             // 
@@ -246,7 +247,7 @@
             this.Name = "cadastrareventoForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Cadastro Evento";
-            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.cadastrareventoForm_FormClosing);
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.CadastrareventoForm_FormClosing);
             this.cadastroeventoGroupBox.ResumeLayout(false);
             this.cadastroeventoGroupBox.PerformLayout();
             this.eventoGroupBox.ResumeLayout(false);

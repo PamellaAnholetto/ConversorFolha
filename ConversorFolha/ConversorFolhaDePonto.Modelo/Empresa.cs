@@ -10,5 +10,6 @@
         public int TamanhoFuncionario { get; set; }
         public int InicioHoras { get; set; }
         public int TamanhoHoras { get; set; }
+        public bool Inativos { get; set; }
     }
 }
