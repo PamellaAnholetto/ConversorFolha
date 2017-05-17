@@ -105,6 +105,7 @@
             this.excluirempresaButton.Text = "Excluir";
             this.excluirempresaButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.excluirempresaButton.UseVisualStyleBackColor = false;
+            this.excluirempresaButton.Click += new System.EventHandler(this.ExcluirempresaButton_Click);
             // 
             // alterarempresaButton
             // 
@@ -228,7 +229,7 @@
             this.inicioeventoTextBox.Name = "inicioeventoTextBox";
             this.inicioeventoTextBox.Size = new System.Drawing.Size(47, 22);
             this.inicioeventoTextBox.TabIndex = 1;
-            this.inicioeventoTextBox.Validated += new System.EventHandler(this.inicioeventoTextBox_Validated);
+            this.inicioeventoTextBox.Validated += new System.EventHandler(this.InicioeventoTextBox_Validated);
             // 
             // tamanhoeventoTextBox
             // 
@@ -337,7 +338,7 @@
             this.Name = "manutencaoempresaForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Manutenção Empresa ";
-            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.manutencaoempresaForm_FormClosing);
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.ManutencaoempresaForm_FormClosing);
             this.empresaGroupBox.ResumeLayout(false);
             this.empresaGroupBox.PerformLayout();
             this.layoutempresaGroupBox.ResumeLayout(false);

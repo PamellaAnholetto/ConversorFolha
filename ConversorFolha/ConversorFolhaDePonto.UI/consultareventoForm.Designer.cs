@@ -48,7 +48,6 @@
             this.externoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.internoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.transferivelDataGridViewCheckBoxColumn = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.Inativos = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.consultaeventoGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.eventoBindingSource)).BeginInit();
             this.consultaeventoGroupBox.SuspendLayout();
@@ -79,8 +78,7 @@
             this.nomeEmpresaDataGridViewTextBoxColumn,
             this.externoDataGridViewTextBoxColumn,
             this.internoDataGridViewTextBoxColumn,
-            this.transferivelDataGridViewCheckBoxColumn,
-            this.Inativos});
+            this.transferivelDataGridViewCheckBoxColumn});
             this.consultaeventoGridView.DataSource = this.eventoBindingSource;
             this.consultaeventoGridView.Location = new System.Drawing.Point(9, 69);
             this.consultaeventoGridView.MultiSelect = false;
@@ -98,7 +96,7 @@
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             this.consultaeventoGridView.RowsDefaultCellStyle = dataGridViewCellStyle3;
             this.consultaeventoGridView.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.consultaeventoGridView.Size = new System.Drawing.Size(658, 345);
+            this.consultaeventoGridView.Size = new System.Drawing.Size(556, 345);
             this.consultaeventoGridView.TabIndex = 5;
             // 
             // eventoBindingSource
@@ -117,7 +115,7 @@
             this.consultaeventoGroupBox.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.consultaeventoGroupBox.Location = new System.Drawing.Point(13, 12);
             this.consultaeventoGroupBox.Name = "consultaeventoGroupBox";
-            this.consultaeventoGroupBox.Size = new System.Drawing.Size(675, 452);
+            this.consultaeventoGroupBox.Size = new System.Drawing.Size(574, 452);
             this.consultaeventoGroupBox.TabIndex = 12;
             this.consultaeventoGroupBox.TabStop = false;
             // 
@@ -129,7 +127,7 @@
             this.incluireventoButton.ForeColor = System.Drawing.Color.Black;
             this.incluireventoButton.Image = ((System.Drawing.Image)(resources.GetObject("incluireventoButton.Image")));
             this.incluireventoButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.incluireventoButton.Location = new System.Drawing.Point(507, 420);
+            this.incluireventoButton.Location = new System.Drawing.Point(405, 420);
             this.incluireventoButton.Name = "incluireventoButton";
             this.incluireventoButton.Size = new System.Drawing.Size(69, 26);
             this.incluireventoButton.TabIndex = 23;
@@ -146,7 +144,7 @@
             this.detalheseventoButton.ForeColor = System.Drawing.Color.Black;
             this.detalheseventoButton.Image = ((System.Drawing.Image)(resources.GetObject("detalheseventoButton.Image")));
             this.detalheseventoButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.detalheseventoButton.Location = new System.Drawing.Point(582, 420);
+            this.detalheseventoButton.Location = new System.Drawing.Point(480, 420);
             this.detalheseventoButton.Name = "detalheseventoButton";
             this.detalheseventoButton.Size = new System.Drawing.Size(85, 26);
             this.detalheseventoButton.TabIndex = 21;
@@ -245,18 +243,11 @@
             this.transferivelDataGridViewCheckBoxColumn.ReadOnly = true;
             this.transferivelDataGridViewCheckBoxColumn.Width = 80;
             // 
-            // Inativos
-            // 
-            this.Inativos.DataPropertyName = "Inativos";
-            this.Inativos.HeaderText = "Inativos";
-            this.Inativos.Name = "Inativos";
-            this.Inativos.ReadOnly = true;
-            // 
             // consultaeventoForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(694, 471);
+            this.ClientSize = new System.Drawing.Size(595, 471);
             this.Controls.Add(this.consultaeventoGroupBox);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -291,6 +282,5 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn externoDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn internoDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewCheckBoxColumn transferivelDataGridViewCheckBoxColumn;
-        private System.Windows.Forms.DataGridViewCheckBoxColumn Inativos;
     }
 }

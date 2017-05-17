@@ -92,7 +92,7 @@ namespace ConversorFolhaDePonto.UI
                     if (ordem.Keys.ElementAt(i) == "Funcionario")
                     {
                         InicioComboBoxes.ElementAt(i).SelectedIndex = (int)ordem["Funcionario"];
-                        ConteudoComboBoxes.ElementAt(i).SelectedIndex = 2; 
+                        ConteudoComboBoxes.ElementAt(i).SelectedIndex = 2;
                         TamanhoComboBoxes.ElementAt(i).SelectedIndex = (int)linhaSelecionada["tamanhoFuncionarioDataGridViewTextBoxColumn"].Value;
                     }
                     else
@@ -309,6 +309,14 @@ namespace ConversorFolhaDePonto.UI
         {
             alterarlayoutButton.Enabled = true;
         }
+
+        private void ExcluirlayoutButton_Click(object sender, EventArgs e)
+        { 
+           if (MessageBox.Show("Deseja excluir essa empresa??", ParametroInfo.SistemaVersao, MessageBoxButtons.YesNo, MessageBoxIcon.Error) == DialogResult.Yes)
+           {
+              DataBaseBLL.ExcluirLayout(new Layout() { Nome = nomelayoutTextBox.Text });
+
+           }
+        }
     }
 }
-

@@ -91,14 +91,45 @@ namespace ConversorFolhaDePonto.UI
             }
         }
 
-        private void inicioeventoTextBox_Validated(object sender, EventArgs e)
+        private void InicioeventoTextBox_Validated(object sender, EventArgs e)
         {
             alterarempresaButton.Enabled = true;
         }
 
-        private void manutencaoempresaForm_FormClosing(object sender, FormClosingEventArgs e)
+        private void ManutencaoempresaForm_FormClosing(object sender, FormClosingEventArgs e)
         {
             consultaempresaGridView.DataSource = DataBaseBLL.CarregarEmpresaGrid(codigoempresaComboBox.Text);
+        }
+
+        private void ExcluirempresaButton_Click(object sender, EventArgs e)
+        {  
+            try
+            {           
+                
+                statusempresaLabel.Text = "Processando...";
+                statusempresaLabel.Visible = true;
+                List<ErrosTela> ErrosTela = new List<ErrosTela>();
+                Utilities.ValidarTextBoxes(layoutempresaGroupBox, ref ErrosTela);
+                if (ErrosTela.Count() > 0)
+                {
+                    string strCamposInvalidos = Utilities.CriarMensagemErro(layoutempresaGroupBox, ErrosTela);
+                    statusempresaLabel.Text = "Não foi possível alterar...";
+                    MessageBox.Show("Preencher Campo(s):" + Environment.NewLine + strCamposInvalidos, ParametroInfo.SistemaVersao, MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                }
+                else
+                {
+                    DataBaseBLL.ExcluirEmpresa(new Empresa() { Id = codigoempresaComboBox.Text });
+
+                    statusempresaLabel.Text = "Empresa alterada com sucesso.";
+                    Utilities.ResetarControles(layoutempresaGroupBox);
+                    inicioeventoTextBox.Focus();
+                    Close();
+                }
+            }
+            catch (Exception ex)
+            {  
+                MessageBox.Show(ex.Message, ParametroInfo.SistemaVersao, MessageBoxButtons.OK, MessageBoxIcon.Exclamation);     
+            }
         }
     }
 }

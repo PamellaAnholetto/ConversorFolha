@@ -163,13 +163,8 @@ namespace ConversorFolhaDePonto.UI
 
         private void ExcluireventoButton_Click(object sender, EventArgs e)
         {
-           /* foreach (var row in dataGridView1.Rows)
-            {
-                foreach (var cell in row.Cells)
-                {
-                    cell.Value = ""; // ou qualquer outro valor que signifique 'limpar' no seu contexto
-                }
-            }*/
+            DataBaseBLL.ExcluirFuncionario(new Funcionario() { IdEmpresa = codigoempresaComboBox.Text ,  Externo = eventoexternoTextBox.Text});
+
         }
     }
 }

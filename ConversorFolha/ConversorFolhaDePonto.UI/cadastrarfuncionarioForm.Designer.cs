@@ -68,6 +68,7 @@
             this.excluirfuncionarioButton.ForeColor = System.Drawing.Color.Black;
             this.excluirfuncionarioButton.Name = "excluirfuncionarioButton";
             this.excluirfuncionarioButton.UseVisualStyleBackColor = false;
+            this.excluirfuncionarioButton.Click += new System.EventHandler(this.ExcluirfuncionarioButton_Click);
             // 
             // alterarfuncionarioButton
             // 
@@ -157,7 +158,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.MaximizeBox = false;
             this.Name = "cadastrarfuncionarioForm";
-            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.cadastrarfuncionarioForm_FormClosing);
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.CadastrarfuncionarioForm_FormClosing);
             this.cadastrofuncionarioGroupBox.ResumeLayout(false);
             this.cadastrofuncionarioGroupBox.PerformLayout();
             this.funcionarioGroupBox.ResumeLayout(false);

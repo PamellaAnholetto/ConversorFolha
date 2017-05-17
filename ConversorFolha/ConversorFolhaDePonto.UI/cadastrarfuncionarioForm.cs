@@ -152,9 +152,14 @@ namespace ConversorFolhaDePonto.UI
             alterarfuncionarioButton.Enabled = true;
         }
 
-        private void cadastrarfuncionarioForm_FormClosing(object sender, FormClosingEventArgs e)
+        private void CadastrarfuncionarioForm_FormClosing(object sender, FormClosingEventArgs e)
         {
             consultafuncionarioGridView.DataSource = DataBaseBLL.CarregarFuncionarioGrid(codigoempresaComboBox.Text);
+        }
+
+        private void ExcluirfuncionarioButton_Click(object sender, EventArgs e)
+        {
+            DataBaseBLL.ExcluirFuncionario(new Funcionario() { IdEmpresa = codigoempresaComboBox.Text, Externo = funcionarioexternoTextBox.Text });
         }
     }
 }
