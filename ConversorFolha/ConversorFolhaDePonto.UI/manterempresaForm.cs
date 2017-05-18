@@ -44,36 +44,41 @@ namespace ConversorFolhaDePonto.UI
         {
             try
             {
-                statusempresaLabel.Text = "Processando...";
-                statusempresaLabel.Visible = true;
-                List<ErrosTela> ErrosTela = new List<ErrosTela>();
-                Utilities.ValidarTextBoxes(layoutempresaGroupBox, ref ErrosTela);
-                if (ErrosTela.Count() > 0)
+                if (MessageBox.Show("Deseja alterar essa empresa ?", ParametroInfo.SistemaVersao, MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                 {
-                    string strCamposInvalidos = Utilities.CriarMensagemErro(layoutempresaGroupBox, ErrosTela);
-                    statusempresaLabel.Text = "Não foi possível alterar...";
-                    MessageBox.Show("Preencher Campo(s):" + Environment.NewLine + strCamposInvalidos, ParametroInfo.SistemaVersao, MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-                }
-                else
-                {
-                    DataBaseBLL.AlterarEmpresa(
-                        new Empresa()
-                        {
-                            Id = codigoempresaComboBox.Text,
-                            Nome = nomeempresaTextBox.Text,
-                            InicioEvento = int.Parse(inicioeventoTextBox.Text),
-                            TamanhoEvento = int.Parse(tamanhoeventoTextBox.Text),
-                            InicioFuncionario = int.Parse(iniciofuncionarioTextBox.Text),
-                            TamanhoFuncionario = int.Parse(tamanhofuncionarioTextBox.Text),
-                            InicioHoras = int.Parse(iniciohorasTextBox.Text),
-                            TamanhoHoras = int.Parse(tamanhohorasTextBox.Text)
 
-                        }
-                    );
-                    statusempresaLabel.Text = "Empresa alterada com sucesso.";
-                    Utilities.ResetarControles(layoutempresaGroupBox);
-                    inicioeventoTextBox.Focus();
-                    Close();
+                    statusempresaLabel.Text = "Processando...";
+                    statusempresaLabel.Visible = true;
+                    List<ErrosTela> ErrosTela = new List<ErrosTela>();
+                    Utilities.ValidarTextBoxes(layoutempresaGroupBox, ref ErrosTela);
+                    if (ErrosTela.Count() > 0)
+                    {
+                        string strCamposInvalidos = Utilities.CriarMensagemErro(layoutempresaGroupBox, ErrosTela);
+                        statusempresaLabel.Text = "Não foi possível alterar...";
+                        MessageBox.Show("Preencher Campo(s):" + Environment.NewLine + strCamposInvalidos, ParametroInfo.SistemaVersao, MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    }
+                    else
+                    {
+                        DataBaseBLL.AlterarEmpresa(
+                            new Empresa()
+                            {
+                                Id = codigoempresaComboBox.Text,
+                                Nome = nomeempresaTextBox.Text,
+                                InicioEvento = int.Parse(inicioeventoTextBox.Text),
+                                TamanhoEvento = int.Parse(tamanhoeventoTextBox.Text),
+                                InicioFuncionario = int.Parse(iniciofuncionarioTextBox.Text),
+                                TamanhoFuncionario = int.Parse(tamanhofuncionarioTextBox.Text),
+                                InicioHoras = int.Parse(iniciohorasTextBox.Text),
+                                TamanhoHoras = int.Parse(tamanhohorasTextBox.Text)
+
+                            }
+                        );
+                        statusempresaLabel.Text = "Empresa alterada com sucesso.";
+                        MessageBox.Show("Empresa alterado com sucesso!", ParametroInfo.SistemaVersao, MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                        Utilities.ResetarControles(layoutempresaGroupBox);
+                        inicioeventoTextBox.Focus();
+                        Close();
+                    }
                 }
             }
             catch (Exception ex)
@@ -102,33 +107,36 @@ namespace ConversorFolhaDePonto.UI
         }
 
         private void ExcluirempresaButton_Click(object sender, EventArgs e)
-        {  
+        {
             try
-            {           
-                
-                statusempresaLabel.Text = "Processando...";
-                statusempresaLabel.Visible = true;
-                List<ErrosTela> ErrosTela = new List<ErrosTela>();
-                Utilities.ValidarTextBoxes(layoutempresaGroupBox, ref ErrosTela);
-                if (ErrosTela.Count() > 0)
-                {
-                    string strCamposInvalidos = Utilities.CriarMensagemErro(layoutempresaGroupBox, ErrosTela);
-                    statusempresaLabel.Text = "Não foi possível alterar...";
-                    MessageBox.Show("Preencher Campo(s):" + Environment.NewLine + strCamposInvalidos, ParametroInfo.SistemaVersao, MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-                }
-                else
+            {
+
+                if (MessageBox.Show("Deseja excluir a empresa ?", ParametroInfo.SistemaVersao, MessageBoxButtons.YesNo, MessageBoxIcon.Error) == DialogResult.Yes)
                 {
                     DataBaseBLL.ExcluirEmpresa(new Empresa() { Id = codigoempresaComboBox.Text });
 
-                    statusempresaLabel.Text = "Empresa alterada com sucesso.";
-                    Utilities.ResetarControles(layoutempresaGroupBox);
-                    inicioeventoTextBox.Focus();
-                    Close();
+                    statusempresaLabel.Text = "Processando...";
+                    statusempresaLabel.Visible = true;
+                    List<ErrosTela> ErrosTela = new List<ErrosTela>();
+                    Utilities.ValidarTextBoxes(layoutempresaGroupBox, ref ErrosTela);
+                    if (ErrosTela.Count() > 0)
+                    {
+                        string strCamposInvalidos = Utilities.CriarMensagemErro(layoutempresaGroupBox, ErrosTela);
+                        statusempresaLabel.Text = "Não foi possível excluir...";
+                        MessageBox.Show("Preencher Campo(s):" + Environment.NewLine + strCamposInvalidos, ParametroInfo.SistemaVersao, MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    }
+                    else
+                    {
+                        statusempresaLabel.Text = "Empresa excluída com sucesso.";
+                        Utilities.ResetarControles(layoutempresaGroupBox);
+                        inicioeventoTextBox.Focus();
+                        Close();
+                    }
                 }
             }
             catch (Exception ex)
-            {  
-                MessageBox.Show(ex.Message, ParametroInfo.SistemaVersao, MessageBoxButtons.OK, MessageBoxIcon.Exclamation);     
+            {
+                MessageBox.Show(ex.Message, ParametroInfo.SistemaVersao, MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
         }
     }

@@ -12,6 +12,7 @@ namespace ConversorFolhaDePonto.UI
     {
         private DataGridViewCellCollection linhaSelecionada;
         private DataGridView consultaLayoutGridView;
+        
         public cadastrarlayoutForm()
         {
             InitializeComponent();
@@ -23,8 +24,8 @@ namespace ConversorFolhaDePonto.UI
         {
             InitializeComponent();
             incluirlayoutButton.Visible = false;
-            alterarlayoutButton.Location = new Point(186, 188);
-            excluirlayoutButton.Location = new Point(261, 188);
+            alterarlayoutButton.Location = new Point(204, 198);
+            excluirlayoutButton.Location = new Point(279, 198);
             nomelayoutTextBox.Text = NomeLayout.Text;
             linhaSelecionada = LinhaSelecionada;
             consultaLayoutGridView = ConsultaLayoutGridView;
@@ -250,43 +251,63 @@ namespace ConversorFolhaDePonto.UI
         {
             try
             {
-                if (string.IsNullOrEmpty(nomelayoutTextBox.Text))
-                    throw new Exception("Favor preencher o nome do layout.");
-                Layout ObjLayout = new Layout() { Nome = nomelayoutTextBox.Text };
-                for (int i = 0; i < ConteudoComboBoxes.Count(); i++)
+                if (MessageBox.Show("Deseja alterar o layout ? ", ParametroInfo.SistemaVersao, MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                 {
-                    switch (ConteudoComboBoxes.ElementAt(i).SelectedIndex)
+                    statuslayoutLabel.Text = "Processando...";
+                    statuslayoutLabel.Visible = true;
+                    List<ErrosTela> ErrosTela = new List<ErrosTela>();
+                    Utilities.ValidarTextBoxes(conteudoGroupBox, ref ErrosTela);
+                    if (ErrosTela.Count() > 0)
                     {
-                        case 1://Código Empresa
-                            if (!string.IsNullOrEmpty(InicioComboBoxes.ElementAt(i).Text))
-                                ObjLayout.InicioEmpresa = int.Parse(InicioComboBoxes.ElementAt(i).Text);
-                            if (!string.IsNullOrEmpty(TamanhoComboBoxes.ElementAt(i).Text))
-                                ObjLayout.TamanhoEmpresa = int.Parse(TamanhoComboBoxes.ElementAt(i).Text);
-                            break;
-                        case 2://Código Funcionário
-                            if (!string.IsNullOrEmpty(InicioComboBoxes.ElementAt(i).Text))
-                                ObjLayout.InicioFuncionario = int.Parse(InicioComboBoxes.ElementAt(i).Text);
-                            if (!string.IsNullOrEmpty(TamanhoComboBoxes.ElementAt(i).Text))
-                                ObjLayout.TamanhoFuncionario = int.Parse(TamanhoComboBoxes.ElementAt(i).Text);
-                            break;
-                        case 3://Código Evento
-                            if (!string.IsNullOrEmpty(InicioComboBoxes.ElementAt(i).Text))
-                                ObjLayout.InicioEvento = int.Parse(InicioComboBoxes.ElementAt(i).Text);
-                            if (!string.IsNullOrEmpty(TamanhoComboBoxes.ElementAt(i).Text))
-                                ObjLayout.TamanhoEvento = int.Parse(TamanhoComboBoxes.ElementAt(i).Text);
-                            break;
-                        case 4://Horas
-                            if (!string.IsNullOrEmpty(InicioComboBoxes.ElementAt(i).Text))
-                                ObjLayout.InicioHoras = int.Parse(InicioComboBoxes.ElementAt(i).Text);
-                            if (!string.IsNullOrEmpty(TamanhoComboBoxes.ElementAt(i).Text))
-                                ObjLayout.TamanhoHoras = int.Parse(TamanhoComboBoxes.ElementAt(i).Text);
-                            break;
+                        string strCamposInvalidos = Utilities.CriarMensagemErro(conteudoGroupBox, ErrosTela);
+                        statuslayoutLabel.Text = "Não foi possível alterar...";
+                        MessageBox.Show("Preencher Campo(s):" + Environment.NewLine + strCamposInvalidos, ParametroInfo.SistemaVersao, MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    }
+                    else
+                    {
+
+                        if (string.IsNullOrEmpty(nomelayoutTextBox.Text))
+                            throw new Exception("Favor preencher o nome do layout.");
+                        Layout ObjLayout = new Layout() { Nome = nomelayoutTextBox.Text };
+                        for (int i = 0; i < ConteudoComboBoxes.Count(); i++)
+                        {
+                            switch (ConteudoComboBoxes.ElementAt(i).SelectedIndex)
+                            {
+                                case 1://Código Empresa
+                                    if (!string.IsNullOrEmpty(InicioComboBoxes.ElementAt(i).Text))
+                                        ObjLayout.InicioEmpresa = int.Parse(InicioComboBoxes.ElementAt(i).Text);
+                                    if (!string.IsNullOrEmpty(TamanhoComboBoxes.ElementAt(i).Text))
+                                        ObjLayout.TamanhoEmpresa = int.Parse(TamanhoComboBoxes.ElementAt(i).Text);
+                                    break;
+                                case 2://Código Funcionário
+                                    if (!string.IsNullOrEmpty(InicioComboBoxes.ElementAt(i).Text))
+                                        ObjLayout.InicioFuncionario = int.Parse(InicioComboBoxes.ElementAt(i).Text);
+                                    if (!string.IsNullOrEmpty(TamanhoComboBoxes.ElementAt(i).Text))
+                                        ObjLayout.TamanhoFuncionario = int.Parse(TamanhoComboBoxes.ElementAt(i).Text);
+                                    break;
+                                case 3://Código Evento
+                                    if (!string.IsNullOrEmpty(InicioComboBoxes.ElementAt(i).Text))
+                                        ObjLayout.InicioEvento = int.Parse(InicioComboBoxes.ElementAt(i).Text);
+                                    if (!string.IsNullOrEmpty(TamanhoComboBoxes.ElementAt(i).Text))
+                                        ObjLayout.TamanhoEvento = int.Parse(TamanhoComboBoxes.ElementAt(i).Text);
+                                    break;
+                                case 4://Horas
+                                    if (!string.IsNullOrEmpty(InicioComboBoxes.ElementAt(i).Text))
+                                        ObjLayout.InicioHoras = int.Parse(InicioComboBoxes.ElementAt(i).Text);
+                                    if (!string.IsNullOrEmpty(TamanhoComboBoxes.ElementAt(i).Text))
+                                        ObjLayout.TamanhoHoras = int.Parse(TamanhoComboBoxes.ElementAt(i).Text);
+                                    break;
+                            }
+                        }
+
+
+                        statuslayoutLabel.Text = "Layout alterada com sucesso.";
+                        DataBaseBLL.AlterarLayout(ObjLayout, linhaSelecionada["nomeDataGridViewTextBoxColumn"].Value.ToString());
+                        MessageBox.Show("Layout alterado com sucesso!", ParametroInfo.SistemaVersao, MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                        VerificarLayoutVazio(ObjLayout);
+                        Close();
                     }
                 }
-                VerificarLayoutVazio(ObjLayout);
-                DataBaseBLL.AlterarLayout(ObjLayout, linhaSelecionada["nomeDataGridViewTextBoxColumn"].Value.ToString());
-                MessageBox.Show("Layout alterado com sucesso!", ParametroInfo.SistemaVersao, MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-                Close();
             }
             catch (Exception ex)
             {
@@ -311,12 +332,37 @@ namespace ConversorFolhaDePonto.UI
         }
 
         private void ExcluirlayoutButton_Click(object sender, EventArgs e)
-        { 
-           if (MessageBox.Show("Deseja excluir essa empresa??", ParametroInfo.SistemaVersao, MessageBoxButtons.YesNo, MessageBoxIcon.Error) == DialogResult.Yes)
-           {
-              DataBaseBLL.ExcluirLayout(new Layout() { Nome = nomelayoutTextBox.Text });
+        {
+            try
+            {
 
-           }
+                if (MessageBox.Show("Deseja excluir o layout ?", ParametroInfo.SistemaVersao, MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                {
+                    DataBaseBLL.ExcluirLayout(new Layout() { Nome = nomelayoutTextBox.Text });
+
+                    statuslayoutLabel.Text = "Processando...";
+                    statuslayoutLabel.Visible = true;
+                    List<ErrosTela> ErrosTela = new List<ErrosTela>();
+                    Utilities.ValidarTextBoxes(conteudoGroupBox, ref ErrosTela);
+                    if (ErrosTela.Count() > 0)
+                    {
+                        string strCamposInvalidos = Utilities.CriarMensagemErro(conteudoGroupBox, ErrosTela);
+                        statuslayoutLabel.Text = "Não foi possível alterar...";
+                        MessageBox.Show("Preencher Campo(s):" + Environment.NewLine + strCamposInvalidos, ParametroInfo.SistemaVersao, MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    }
+                    else
+                    {
+                        statuslayoutLabel.Text = "Layout excluído com sucesso.";
+                        Utilities.ResetarControles(conteudoGroupBox);
+                        nomelayoutTextBox.Focus();
+                        Close();
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, ParametroInfo.SistemaVersao, MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            }        
         }
     }
 }

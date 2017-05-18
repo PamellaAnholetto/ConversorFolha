@@ -37,7 +37,7 @@ namespace ConversorFolhaDePonto.UI
             try
             {
                 if (consultalayoutGridView.SelectedRows.Count == 0) throw new Exception("Selecione uma empresa.");
-                cadastrarlayoutForm objForm = new cadastrarlayoutForm(consultalayoutGridView.SelectedRows[0].Cells, nomelayoutComboBox, ref consultalayoutGridView);
+                cadastrarlayoutForm objForm = new cadastrarlayoutForm(consultalayoutGridView.SelectedRows[0].Cells, nomelayoutComboBox, ref consultalayoutGridView );
                 objForm.Show();
             }
             catch (Exception ex)
