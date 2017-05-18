@@ -36,6 +36,7 @@
             this.alterarlayoutButton = new System.Windows.Forms.Button();
             this.incluirlayoutButton = new System.Windows.Forms.Button();
             this.conteudoGroupBox = new System.Windows.Forms.GroupBox();
+            this.statuslayoutLabel = new System.Windows.Forms.Label();
             this.tamanho3ComboBox = new System.Windows.Forms.ComboBox();
             this.tamanho2ComboBox = new System.Windows.Forms.ComboBox();
             this.tamanho1ComboBox = new System.Windows.Forms.ComboBox();
@@ -51,7 +52,6 @@
             this.tamanho4ComboBox = new System.Windows.Forms.ComboBox();
             this.inicio3ComboBox = new System.Windows.Forms.ComboBox();
             this.inicio4ComboBox = new System.Windows.Forms.ComboBox();
-            this.statuslayoutLabel = new System.Windows.Forms.Label();
             this.cadastrolayoutGroupBox.SuspendLayout();
             this.conteudoGroupBox.SuspendLayout();
             this.SuspendLayout();
@@ -85,7 +85,7 @@
             this.cadastrolayoutGroupBox.Controls.Add(this.nomelayoutLabel);
             this.cadastrolayoutGroupBox.Location = new System.Drawing.Point(12, 7);
             this.cadastrolayoutGroupBox.Name = "cadastrolayoutGroupBox";
-            this.cadastrolayoutGroupBox.Size = new System.Drawing.Size(359, 231);
+            this.cadastrolayoutGroupBox.Size = new System.Drawing.Size(343, 231);
             this.cadastrolayoutGroupBox.TabIndex = 0;
             this.cadastrolayoutGroupBox.TabStop = false;
             // 
@@ -97,7 +97,7 @@
             this.excluirlayoutButton.ForeColor = System.Drawing.Color.Black;
             this.excluirlayoutButton.Image = ((System.Drawing.Image)(resources.GetObject("excluirlayoutButton.Image")));
             this.excluirlayoutButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.excluirlayoutButton.Location = new System.Drawing.Point(204, 198);
+            this.excluirlayoutButton.Location = new System.Drawing.Point(186, 198);
             this.excluirlayoutButton.Name = "excluirlayoutButton";
             this.excluirlayoutButton.Size = new System.Drawing.Size(69, 26);
             this.excluirlayoutButton.TabIndex = 28;
@@ -115,7 +115,7 @@
             this.alterarlayoutButton.ForeColor = System.Drawing.Color.Black;
             this.alterarlayoutButton.Image = ((System.Drawing.Image)(resources.GetObject("alterarlayoutButton.Image")));
             this.alterarlayoutButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.alterarlayoutButton.Location = new System.Drawing.Point(124, 198);
+            this.alterarlayoutButton.Location = new System.Drawing.Point(106, 198);
             this.alterarlayoutButton.Name = "alterarlayoutButton";
             this.alterarlayoutButton.Size = new System.Drawing.Size(73, 26);
             this.alterarlayoutButton.TabIndex = 27;
@@ -131,7 +131,7 @@
             this.incluirlayoutButton.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.incluirlayoutButton.Image = ((System.Drawing.Image)(resources.GetObject("incluirlayoutButton.Image")));
             this.incluirlayoutButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.incluirlayoutButton.Location = new System.Drawing.Point(279, 198);
+            this.incluirlayoutButton.Location = new System.Drawing.Point(261, 198);
             this.incluirlayoutButton.Name = "incluirlayoutButton";
             this.incluirlayoutButton.Size = new System.Drawing.Size(72, 26);
             this.incluirlayoutButton.TabIndex = 5;
@@ -160,9 +160,19 @@
             this.conteudoGroupBox.Controls.Add(this.inicio4ComboBox);
             this.conteudoGroupBox.Location = new System.Drawing.Point(9, 39);
             this.conteudoGroupBox.Name = "conteudoGroupBox";
-            this.conteudoGroupBox.Size = new System.Drawing.Size(341, 153);
+            this.conteudoGroupBox.Size = new System.Drawing.Size(323, 153);
             this.conteudoGroupBox.TabIndex = 2;
             this.conteudoGroupBox.TabStop = false;
+            // 
+            // statuslayoutLabel
+            // 
+            this.statuslayoutLabel.AutoSize = true;
+            this.statuslayoutLabel.Location = new System.Drawing.Point(14, 135);
+            this.statuslayoutLabel.Name = "statuslayoutLabel";
+            this.statuslayoutLabel.Size = new System.Drawing.Size(37, 13);
+            this.statuslayoutLabel.TabIndex = 15;
+            this.statuslayoutLabel.Text = "Status";
+            this.statuslayoutLabel.Visible = false;
             // 
             // tamanho3ComboBox
             // 
@@ -340,21 +350,11 @@
             this.inicio4ComboBox.Size = new System.Drawing.Size(54, 21);
             this.inicio4ComboBox.TabIndex = 13;
             // 
-            // statuslayoutLabel
-            // 
-            this.statuslayoutLabel.AutoSize = true;
-            this.statuslayoutLabel.Location = new System.Drawing.Point(14, 135);
-            this.statuslayoutLabel.Name = "statuslayoutLabel";
-            this.statuslayoutLabel.Size = new System.Drawing.Size(37, 13);
-            this.statuslayoutLabel.TabIndex = 15;
-            this.statuslayoutLabel.Text = "Status";
-            this.statuslayoutLabel.Visible = false;
-            // 
             // cadastrarlayoutForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(384, 249);
+            this.ClientSize = new System.Drawing.Size(362, 249);
             this.Controls.Add(this.cadastrolayoutGroupBox);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));

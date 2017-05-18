@@ -41,7 +41,7 @@ namespace ConversorFolhaDePonto.UI
             try
             {
                 if (consultaempresaGridView.SelectedRows.Count == 0) throw new Exception("Selecione uma empresa.");
-                manutencaoempresaForm objForm = new manutencaoempresaForm(consultaempresaGridView.SelectedRows[0].Cells, codigoempresaComboBox, nomeempresaTextBox, ref consultaempresaGridView);
+                manutencaoempresaForm objForm = new manutencaoempresaForm(consultaempresaGridView.SelectedRows[0].Cells, codigoempresaComboBox, nomeempresaTextBox, ref consultaempresaGridView, ref codigoempresaComboBox);
                 objForm.Show();
             }
             catch (Exception ex)

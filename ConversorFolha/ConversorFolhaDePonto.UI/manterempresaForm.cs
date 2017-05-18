@@ -10,7 +10,8 @@ namespace ConversorFolhaDePonto.UI
     public partial class manutencaoempresaForm : Form
     {
         private DataGridView consultaempresaGridView;
-        public manutencaoempresaForm(DataGridViewCellCollection LinhaSelecionada, ComboBox CodigoEmpresa, TextBox NomeEmpresa, ref DataGridView ConsultaempresaGridView)
+        private ComboBox empresaComboBox;
+        public manutencaoempresaForm(DataGridViewCellCollection LinhaSelecionada, ComboBox CodigoEmpresa, TextBox NomeEmpresa, ref DataGridView ConsultaempresaGridView, ref ComboBox CodigoEmpresaComboBox)
         {
             InitializeComponent();
             codigoempresaComboBox.DataSource = CodigoEmpresa.DataSource;
@@ -24,6 +25,7 @@ namespace ConversorFolhaDePonto.UI
             iniciohorasTextBox.Text = LinhaSelecionada["inicioHorasDataGridViewTextBoxColumn"].Value.ToString();
             tamanhohorasTextBox.Text = LinhaSelecionada["tamanhoHorasDataGridViewTextBoxColumn"].Value.ToString();
             consultaempresaGridView = ConsultaempresaGridView;
+            empresaComboBox = CodigoEmpresaComboBox;
         }
 
         private void CodigoempresaComboBox_SelectedIndexChanged(object sender, EventArgs e)
@@ -44,7 +46,7 @@ namespace ConversorFolhaDePonto.UI
         {
             try
             {
-                if (MessageBox.Show("Deseja alterar essa empresa ?", ParametroInfo.SistemaVersao, MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                if (MessageBox.Show("Deseja alterar a empresa ?", ParametroInfo.SistemaVersao, MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                 {
 
                     statusempresaLabel.Text = "Processando...";
@@ -74,7 +76,7 @@ namespace ConversorFolhaDePonto.UI
                             }
                         );
                         statusempresaLabel.Text = "Empresa alterada com sucesso.";
-                        MessageBox.Show("Empresa alterado com sucesso!", ParametroInfo.SistemaVersao, MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                        MessageBox.Show("Empresa alterada com sucesso!", ParametroInfo.SistemaVersao, MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                         Utilities.ResetarControles(layoutempresaGroupBox);
                         inicioeventoTextBox.Focus();
                         Close();
@@ -103,6 +105,7 @@ namespace ConversorFolhaDePonto.UI
 
         private void ManutencaoempresaForm_FormClosing(object sender, FormClosingEventArgs e)
         {
+            empresaComboBox.DataSource = DataBaseBLL.CarregarEmpresasComboBox();
             consultaempresaGridView.DataSource = DataBaseBLL.CarregarEmpresaGrid(codigoempresaComboBox.Text);
         }
 
@@ -110,8 +113,7 @@ namespace ConversorFolhaDePonto.UI
         {
             try
             {
-
-                if (MessageBox.Show("Deseja excluir a empresa ?", ParametroInfo.SistemaVersao, MessageBoxButtons.YesNo, MessageBoxIcon.Error) == DialogResult.Yes)
+                if (MessageBox.Show("Deseja excluir a empresa ?", ParametroInfo.SistemaVersao, MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                 {
                     DataBaseBLL.ExcluirEmpresa(new Empresa() { Id = codigoempresaComboBox.Text });
 
@@ -128,6 +130,7 @@ namespace ConversorFolhaDePonto.UI
                     else
                     {
                         statusempresaLabel.Text = "Empresa excluída com sucesso.";
+                        MessageBox.Show("Empresa excluída com sucesso!", ParametroInfo.SistemaVersao, MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                         Utilities.ResetarControles(layoutempresaGroupBox);
                         inicioeventoTextBox.Focus();
                         Close();

@@ -24,8 +24,8 @@ namespace ConversorFolhaDePonto.UI
         {
             InitializeComponent();
             incluirlayoutButton.Visible = false;
-            alterarlayoutButton.Location = new Point(204, 198);
-            excluirlayoutButton.Location = new Point(279, 198);
+            alterarlayoutButton.Location = new Point(186, 198);
+            excluirlayoutButton.Location = new Point(261, 198);
             nomelayoutTextBox.Text = NomeLayout.Text;
             linhaSelecionada = LinhaSelecionada;
             consultaLayoutGridView = ConsultaLayoutGridView;
@@ -301,7 +301,7 @@ namespace ConversorFolhaDePonto.UI
                         }
 
 
-                        statuslayoutLabel.Text = "Layout alterada com sucesso.";
+                        statuslayoutLabel.Text = "Layout alterado com sucesso.";
                         DataBaseBLL.AlterarLayout(ObjLayout, linhaSelecionada["nomeDataGridViewTextBoxColumn"].Value.ToString());
                         MessageBox.Show("Layout alterado com sucesso!", ParametroInfo.SistemaVersao, MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                         VerificarLayoutVazio(ObjLayout);
@@ -353,6 +353,7 @@ namespace ConversorFolhaDePonto.UI
                     else
                     {
                         statuslayoutLabel.Text = "Layout excluído com sucesso.";
+                        MessageBox.Show("Layout excluído com sucesso!", ParametroInfo.SistemaVersao, MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                         Utilities.ResetarControles(conteudoGroupBox);
                         nomelayoutTextBox.Focus();
                         Close();

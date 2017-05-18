@@ -58,31 +58,35 @@ namespace ConversorFolhaDePonto.UI
         {
             try
             {
-                statusfuncionarioLabel.Text = "Processando...";
-                statusfuncionarioLabel.Visible = true;
-                List<ErrosTela> ErrosTela = new List<ErrosTela>();
-                Utilities.ValidarTextBoxes(funcionarioGroupBox, ref ErrosTela);
-                if (ErrosTela.Count() > 0)
+                if (MessageBox.Show("Deseja incluir esse funcionário ?", ParametroInfo.SistemaVersao, MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                 {
-                    string strCamposInvalidos = Utilities.CriarMensagemErro(funcionarioGroupBox, ErrosTela);
-                    statusfuncionarioLabel.Text = "Não foi possível incluir...";
-                    MessageBox.Show("Preencher Campo(s):" + Environment.NewLine + strCamposInvalidos, ParametroInfo.SistemaVersao, MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-                }
-                else
-                {
-                    DataBaseBLL.GravarFuncionario(
-                                        new Funcionario()
-                                        {
-                                            IdEmpresa = codigoempresaComboBox.Text,
-                                            NomeEmpresa = nomeempresaTextBox.Text,
-                                            Externo = funcionarioexternoTextBox.Text,
-                                            Interno = funcionariointernoTextBox.Text,
-                                        }
-                    );
-                    statusfuncionarioLabel.Text = "Funcionário incluido com sucesso.";
-                    Utilities.ResetarControles(funcionarioGroupBox);
-                    funcionarioexternoTextBox.Focus();
-                    Close();
+                    statusfuncionarioLabel.Text = "Processando...";
+                    statusfuncionarioLabel.Visible = true;
+                    List<ErrosTela> ErrosTela = new List<ErrosTela>();
+                    Utilities.ValidarTextBoxes(funcionarioGroupBox, ref ErrosTela);
+                    if (ErrosTela.Count() > 0)
+                    {
+                        string strCamposInvalidos = Utilities.CriarMensagemErro(funcionarioGroupBox, ErrosTela);
+                        statusfuncionarioLabel.Text = "Não foi possível incluir...";
+                        MessageBox.Show("Preencher Campo(s):" + Environment.NewLine + strCamposInvalidos, ParametroInfo.SistemaVersao, MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    }
+                    else
+                    {
+                        DataBaseBLL.GravarFuncionario(
+                                            new Funcionario()
+                                            {
+                                                IdEmpresa = codigoempresaComboBox.Text,
+                                                NomeEmpresa = nomeempresaTextBox.Text,
+                                                Externo = funcionarioexternoTextBox.Text,
+                                                Interno = funcionariointernoTextBox.Text,
+                                            }
+                        );
+                        statusfuncionarioLabel.Text = "Funcionário incluido com sucesso.";
+                        MessageBox.Show("Funcionário incluido com sucesso!", ParametroInfo.SistemaVersao, MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                        Utilities.ResetarControles(funcionarioGroupBox);
+                        funcionarioexternoTextBox.Focus();
+                        Close();
+                    }
                 }
             }
             catch (Exception ex)
@@ -104,32 +108,36 @@ namespace ConversorFolhaDePonto.UI
         {
             try
             {
-                statusfuncionarioLabel.Text = "Processando...";
-                statusfuncionarioLabel.Visible = true;
-                List<ErrosTela> ErrosTela = new List<ErrosTela>();
-                Utilities.ValidarTextBoxes(funcionarioGroupBox, ref ErrosTela);
-                if (ErrosTela.Count() > 0)
+                if (MessageBox.Show("Deseja alterar esse funcionário ?", ParametroInfo.SistemaVersao, MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                 {
-                    string strCamposInvalidos = Utilities.CriarMensagemErro(funcionarioGroupBox, ErrosTela);
-                    statusfuncionarioLabel.Text = "Não foi possível alterar...";
-                    MessageBox.Show("Preencher Campo(s):" + Environment.NewLine + strCamposInvalidos, ParametroInfo.SistemaVersao, MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-                }
-                else
-                {
-                    DataBaseBLL.AlterarFuncionario(
-                               new Funcionario()
-                               {
-                                   IdEmpresa = codigoempresaComboBox.Text,
-                                   NomeEmpresa = nomeempresaTextBox.Text,
-                                   Externo = funcionarioexternoTextBox.Text,
-                                   Interno = funcionariointernoTextBox.Text,
+                    statusfuncionarioLabel.Text = "Processando...";
+                    statusfuncionarioLabel.Visible = true;
+                    List<ErrosTela> ErrosTela = new List<ErrosTela>();
+                    Utilities.ValidarTextBoxes(funcionarioGroupBox, ref ErrosTela);
+                    if (ErrosTela.Count() > 0)
+                    {
+                        string strCamposInvalidos = Utilities.CriarMensagemErro(funcionarioGroupBox, ErrosTela);
+                        statusfuncionarioLabel.Text = "Não foi possível alterar...";
+                        MessageBox.Show("Preencher Campo(s):" + Environment.NewLine + strCamposInvalidos, ParametroInfo.SistemaVersao, MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    }
+                    else
+                    {
+                        DataBaseBLL.AlterarFuncionario(
+                                   new Funcionario()
+                                   {
+                                       IdEmpresa = codigoempresaComboBox.Text,
+                                       NomeEmpresa = nomeempresaTextBox.Text,
+                                       Externo = funcionarioexternoTextBox.Text,
+                                       Interno = funcionariointernoTextBox.Text,
 
-                               }, linhaSelecionada["externoDataGridViewTextBoxColumn"].Value.ToString()
-                    );
-                    statusfuncionarioLabel.Text = "Funcionário alterado com sucesso.";
-                    Utilities.ResetarControles(funcionarioGroupBox);
-                    funcionarioexternoTextBox.Focus();
-                    Close();
+                                   }, linhaSelecionada["externoDataGridViewTextBoxColumn"].Value.ToString()
+                        );
+                        statusfuncionarioLabel.Text = "Funcionário alterado com sucesso.";
+                        MessageBox.Show("Funcionário alterado com sucesso!", ParametroInfo.SistemaVersao, MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                        Utilities.ResetarControles(funcionarioGroupBox);
+                        funcionarioexternoTextBox.Focus();
+                        Close();
+                    }
                 }
             }
             catch (Exception ex)
@@ -159,7 +167,36 @@ namespace ConversorFolhaDePonto.UI
 
         private void ExcluirfuncionarioButton_Click(object sender, EventArgs e)
         {
-            DataBaseBLL.ExcluirFuncionario(new Funcionario() { IdEmpresa = codigoempresaComboBox.Text, Externo = funcionarioexternoTextBox.Text });
+            try
+            {
+                if (MessageBox.Show("Deseja excluir esse funcionário ?", ParametroInfo.SistemaVersao, MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                {
+                    DataBaseBLL.ExcluirFuncionario(new Funcionario() { IdEmpresa = codigoempresaComboBox.Text, Externo = funcionarioexternoTextBox.Text });
+
+                    statusfuncionarioLabel.Text = "Processando...";
+                    statusfuncionarioLabel.Visible = true;
+                    List<ErrosTela> ErrosTela = new List<ErrosTela>();
+                    Utilities.ValidarTextBoxes(funcionarioGroupBox, ref ErrosTela);
+                    if (ErrosTela.Count() > 0)
+                    {
+                        string strCamposInvalidos = Utilities.CriarMensagemErro(funcionarioGroupBox, ErrosTela);
+                        statusfuncionarioLabel.Text = "Não foi possível excluir...";
+                        MessageBox.Show("Preencher Campo(s):" + Environment.NewLine + strCamposInvalidos, ParametroInfo.SistemaVersao, MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    }
+                    else
+                    {
+                        statusfuncionarioLabel.Text = "Funcionário excluído com sucesso.";
+                        MessageBox.Show("Funcionário excluído com sucesso!", ParametroInfo.SistemaVersao, MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                        Utilities.ResetarControles(funcionarioGroupBox);
+                        funcionarioexternoTextBox.Focus();
+                        Close();
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Funcionário já cadastrado.", ParametroInfo.SistemaVersao, MessageBoxButtons.OK, MessageBoxIcon.Exclamation);  
+            }
         }
     }
 }

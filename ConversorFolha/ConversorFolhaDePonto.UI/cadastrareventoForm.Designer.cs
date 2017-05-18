@@ -187,6 +187,7 @@
             this.eventotrensferivelCheckBox.TabIndex = 4;
             this.eventotrensferivelCheckBox.Text = "Evento Transferível";
             this.eventotrensferivelCheckBox.UseVisualStyleBackColor = true;
+            this.eventotrensferivelCheckBox.CheckedChanged += new System.EventHandler(this.eventotrensferivelCheckBox_CheckedChanged);
             // 
             // statuseventoLabel
             // 
@@ -206,6 +207,7 @@
             this.eventointernoTextBox.Name = "eventointernoTextBox";
             this.eventointernoTextBox.Size = new System.Drawing.Size(49, 22);
             this.eventointernoTextBox.TabIndex = 3;
+            this.eventointernoTextBox.TextChanged += new System.EventHandler(this.EventointernoTextBox_TextChanged);
             // 
             // eventoexternoLabel
             // 
@@ -224,7 +226,7 @@
             this.eventoexternoTextBox.Name = "eventoexternoTextBox";
             this.eventoexternoTextBox.Size = new System.Drawing.Size(49, 22);
             this.eventoexternoTextBox.TabIndex = 1;
-            this.eventoexternoTextBox.Validated += new System.EventHandler(this.EventoexternoTextBox_Validated);
+            this.eventoexternoTextBox.TextChanged += new System.EventHandler(this.EventoexternoTextBox_TextChanged);
             // 
             // eventointernoLabel
             // 
