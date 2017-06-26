@@ -35,6 +35,8 @@ namespace ConversorFolhaDePonto.UI
             {
                 if (string.IsNullOrEmpty(codigoempresaComboBox.Text))
                     throw new Exception("Favor informar a empresa.");
+                if (string.IsNullOrEmpty(nomelayoutComboBox.Text))
+                    throw new Exception("Favor informar o Layout.");
                 if (string.IsNullOrEmpty(lerdiretorioTextBox.Text))
                     throw new Exception("Favor informar o caminho de leitura.");
                 if (string.IsNullOrEmpty(diretoriogravarTextBox.Text))
