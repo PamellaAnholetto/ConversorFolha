@@ -40,7 +40,7 @@ namespace ConversorFolhaDePonto.UI
         {
             try
             {
-                if (consultaeventoGridView.SelectedRows.Count == 0) throw new Exception("Selecione uma empresa.");
+                if (consultaeventoGridView.SelectedRows.Count == 0) throw new Exception("Selecione uma evento.");
                 cadastrareventoForm objForm = new cadastrareventoForm(consultaeventoGridView.SelectedRows[0].Cells, codigoempresaComboBox, nomeempresaTextBox, ref consultaeventoGridView);
                 objForm.Show();
             }
