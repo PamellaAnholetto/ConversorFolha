@@ -60,7 +60,7 @@ namespace ConversorFolhaDePonto.UI
         {
             try
             {
-                if (MessageBox.Show("Deseja incluir esse evento ?", ParametroInfo.SistemaVersao, MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                if (MessageBox.Show("Deseja incluir esse evento?", ParametroInfo.SistemaVersao, MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                 {
                     statuseventoLabel.Text = "Processando...";
                     statuseventoLabel.Visible = true;
@@ -111,7 +111,7 @@ namespace ConversorFolhaDePonto.UI
         {
             try
             {
-                if (MessageBox.Show("Deseja alterar esse evento ?", ParametroInfo.SistemaVersao, MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                if (MessageBox.Show("Deseja alterar esse evento?", ParametroInfo.SistemaVersao, MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                 {
                     statuseventoLabel.Text = "Processando...";
                     statuseventoLabel.Visible = true;
@@ -188,7 +188,7 @@ namespace ConversorFolhaDePonto.UI
         {
             try
             {
-                if (MessageBox.Show("Deseja excluir esse evento ?", ParametroInfo.SistemaVersao, MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                if (MessageBox.Show("Deseja excluir esse evento?", ParametroInfo.SistemaVersao, MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                 {
                     DataBaseBLL.ExcluirEvento(new Evento() { IdEmpresa = codigoempresaComboBox.Text, Externo = eventoexternoTextBox.Text });
 

@@ -25,7 +25,7 @@ namespace ConversorFolhaDePonto.UI
             foreach (Control control in GroupBox.Controls)
             {
                 if (control is GroupBox) ValidarTextBoxes(control, ref ErrosTela);
-                if (control is TextBox || control is MaskedTextBox)
+                if (control is TextBox || control is MaskedTextBox || control is ComboBox)
                 {
                     if (string.IsNullOrEmpty(control.Text))
                     {

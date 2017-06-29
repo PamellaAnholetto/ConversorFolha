@@ -29,9 +29,7 @@ namespace ConversorFolhaDePonto.UI
         }
 
         private void CodigoempresaComboBox_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            //nomeempresaTextBox.Text = codigoempresaComboBox.SelectedValue.ToString();
-            //Empresa empresaSelecionada = (Empresa)codigoempresaComboBox.SelectedItem;
+        {            
             if (string.IsNullOrEmpty(codigoempresaComboBox.Text))
             {
                 layoutempresaGroupBox.Enabled = false;
@@ -46,7 +44,7 @@ namespace ConversorFolhaDePonto.UI
         {
             try
             {
-                if (MessageBox.Show("Deseja alterar a empresa ?", ParametroInfo.SistemaVersao, MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                if (MessageBox.Show("Deseja alterar a empresa?", ParametroInfo.SistemaVersao, MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                 {
 
                     statusempresaLabel.Text = "Processando...";
@@ -72,7 +70,6 @@ namespace ConversorFolhaDePonto.UI
                                 TamanhoFuncionario = int.Parse(tamanhofuncionarioTextBox.Text),
                                 InicioHoras = int.Parse(iniciohorasTextBox.Text),
                                 TamanhoHoras = int.Parse(tamanhohorasTextBox.Text)
-
                             }
                         );
                         statusempresaLabel.Text = "Empresa alterada com sucesso.";
@@ -83,6 +80,7 @@ namespace ConversorFolhaDePonto.UI
                     }
                 }
             }
+
             catch (Exception ex)
             {
                 if (ex.Message == "23505")
@@ -113,7 +111,7 @@ namespace ConversorFolhaDePonto.UI
         {
             try
             {
-                if (MessageBox.Show("Deseja excluir a empresa ?", ParametroInfo.SistemaVersao, MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                if (MessageBox.Show("Deseja excluir a empresa?", ParametroInfo.SistemaVersao, MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                 {
                     DataBaseBLL.ExcluirEmpresa(new Empresa() { Id = codigoempresaComboBox.Text });
 

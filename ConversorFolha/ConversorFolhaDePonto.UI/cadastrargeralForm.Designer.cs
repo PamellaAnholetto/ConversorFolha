@@ -165,7 +165,7 @@
             // 
             // tamanhofuncionarioTextBox
             // 
-            this.tamanhofuncionarioTextBox.AccessibleName = "Tamanho do Funcionário";
+            this.tamanhofuncionarioTextBox.AccessibleName = "Tamanho Funcionário";
             this.tamanhofuncionarioTextBox.Location = new System.Drawing.Point(76, 43);
             this.tamanhofuncionarioTextBox.MaxLength = 4;
             this.tamanhofuncionarioTextBox.Name = "tamanhofuncionarioTextBox";
@@ -183,7 +183,7 @@
             // 
             // iniciofuncionarioTextBox
             // 
-            this.iniciofuncionarioTextBox.AccessibleName = "Inicio do Funcionário";
+            this.iniciofuncionarioTextBox.AccessibleName = "Inicio Funcionário";
             this.iniciofuncionarioTextBox.Location = new System.Drawing.Point(76, 15);
             this.iniciofuncionarioTextBox.MaxLength = 4;
             this.iniciofuncionarioTextBox.Name = "iniciofuncionarioTextBox";
@@ -235,7 +235,7 @@
             // 
             // inicioeventoTextBox
             // 
-            this.inicioeventoTextBox.AccessibleName = "Inicio do Evento";
+            this.inicioeventoTextBox.AccessibleName = "Inicio Evento";
             this.inicioeventoTextBox.Location = new System.Drawing.Point(76, 16);
             this.inicioeventoTextBox.MaxLength = 4;
             this.inicioeventoTextBox.Name = "inicioeventoTextBox";
@@ -285,7 +285,7 @@
             // 
             // tamanhohorasTextBox
             // 
-            this.tamanhohorasTextBox.AccessibleName = "Tamanho da Horas";
+            this.tamanhohorasTextBox.AccessibleName = "Tamanho Horas";
             this.tamanhohorasTextBox.Location = new System.Drawing.Point(76, 43);
             this.tamanhohorasTextBox.MaxLength = 4;
             this.tamanhohorasTextBox.Name = "tamanhohorasTextBox";

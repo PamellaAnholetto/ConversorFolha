@@ -39,7 +39,7 @@
             this.eventosStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.empresasStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.funcionariosStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.ajudaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.ManualToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuMenuStrip.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -50,7 +50,7 @@
             this.cadastroStripMenuItem,
             this.conversaoStripMenuItem,
             this.ConsultaStripMenuItem,
-            this.ajudaToolStripMenuItem});
+            this.ManualToolStripMenuItem});
             this.menuMenuStrip.Location = new System.Drawing.Point(0, 0);
             this.menuMenuStrip.Name = "menuMenuStrip";
             this.menuMenuStrip.Size = new System.Drawing.Size(905, 25);
@@ -104,7 +104,7 @@
             // layoutToolStripMenuItem1
             // 
             this.layoutToolStripMenuItem1.Name = "layoutToolStripMenuItem1";
-            this.layoutToolStripMenuItem1.Size = new System.Drawing.Size(152, 22);
+            this.layoutToolStripMenuItem1.Size = new System.Drawing.Size(150, 22);
             this.layoutToolStripMenuItem1.Text = "Layout";
             this.layoutToolStripMenuItem1.ToolTipText = "Consulta dos layouts cadastrados";
             this.layoutToolStripMenuItem1.Click += new System.EventHandler(this.layoutToolStripMenuItem1_Click);
@@ -112,7 +112,7 @@
             // eventosStripMenuItem
             // 
             this.eventosStripMenuItem.Name = "eventosStripMenuItem";
-            this.eventosStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.eventosStripMenuItem.Size = new System.Drawing.Size(150, 22);
             this.eventosStripMenuItem.Text = "Eventos";
             this.eventosStripMenuItem.ToolTipText = "Consulta dos eventos cadastrados";
             this.eventosStripMenuItem.Click += new System.EventHandler(this.eventoStripMenuItem_Click);
@@ -120,7 +120,7 @@
             // empresasStripMenuItem
             // 
             this.empresasStripMenuItem.Name = "empresasStripMenuItem";
-            this.empresasStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.empresasStripMenuItem.Size = new System.Drawing.Size(150, 22);
             this.empresasStripMenuItem.Text = "Empresas";
             this.empresasStripMenuItem.ToolTipText = "Consulta das empresas cadastradas";
             this.empresasStripMenuItem.Click += new System.EventHandler(this.empresaStripMenuItem_Click);
@@ -128,17 +128,17 @@
             // funcionariosStripMenuItem
             // 
             this.funcionariosStripMenuItem.Name = "funcionariosStripMenuItem";
-            this.funcionariosStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.funcionariosStripMenuItem.Size = new System.Drawing.Size(150, 22);
             this.funcionariosStripMenuItem.Text = "Funcionários";
             this.funcionariosStripMenuItem.ToolTipText = "Consulta dos funcionários cadastrados";
             this.funcionariosStripMenuItem.Click += new System.EventHandler(this.funcionarioStripMenuItem_Click);
             // 
-            // ajudaToolStripMenuItem
+            // ManualToolStripMenuItem
             // 
-            this.ajudaToolStripMenuItem.Name = "ajudaToolStripMenuItem";
-            this.ajudaToolStripMenuItem.Size = new System.Drawing.Size(55, 21);
-            this.ajudaToolStripMenuItem.Text = "Ajuda";
-            this.ajudaToolStripMenuItem.Click += new System.EventHandler(this.ajudaToolStripMenuItem_Click);
+            this.ManualToolStripMenuItem.Name = "ManualToolStripMenuItem";
+            this.ManualToolStripMenuItem.Size = new System.Drawing.Size(64, 21);
+            this.ManualToolStripMenuItem.Text = "Manual";
+            this.ManualToolStripMenuItem.Click += new System.EventHandler(this.ManualToolStripMenuItem_Click);
             // 
             // menuForm
             // 
@@ -171,7 +171,7 @@
         private System.Windows.Forms.ToolStripMenuItem empresasStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem eventosStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem funcionariosStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem ajudaToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem ManualToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem cadastroStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem novaempresaToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem layoutToolStripMenuItem;

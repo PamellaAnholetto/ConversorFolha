@@ -58,7 +58,7 @@ namespace ConversorFolhaDePonto.UI
         {
             try
             {
-                if (MessageBox.Show("Deseja incluir esse funcionário ?", ParametroInfo.SistemaVersao, MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                if (MessageBox.Show("Deseja incluir esse funcionário?", ParametroInfo.SistemaVersao, MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                 {
                     statusfuncionarioLabel.Text = "Processando...";
                     statusfuncionarioLabel.Visible = true;
@@ -108,7 +108,7 @@ namespace ConversorFolhaDePonto.UI
         {
             try
             {
-                if (MessageBox.Show("Deseja alterar esse funcionário ?", ParametroInfo.SistemaVersao, MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                if (MessageBox.Show("Deseja alterar esse funcionário?", ParametroInfo.SistemaVersao, MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                 {
                     statusfuncionarioLabel.Text = "Processando...";
                     statusfuncionarioLabel.Visible = true;
@@ -155,7 +155,17 @@ namespace ConversorFolhaDePonto.UI
             }
         }
 
-        private void Funcionarioexterno_Validated(object sender, EventArgs e)
+        private void FuncionarioexternoTextBox_TextChanged(object sender, EventArgs e)
+        {
+            funcionarioexternoTextBox.TextChanged += FuncionarioAlterado;
+        }
+
+        private void FuncionariointernoTextBox_TextChanged(object sender, EventArgs e)
+        {
+            funcionariointernoTextBox.TextChanged += FuncionarioAlterado;
+        }
+
+        private void FuncionarioAlterado(object sender, EventArgs e)
         {
             alterarfuncionarioButton.Enabled = true;
         }
@@ -169,7 +179,7 @@ namespace ConversorFolhaDePonto.UI
         {
             try
             {
-                if (MessageBox.Show("Deseja excluir esse funcionário ?", ParametroInfo.SistemaVersao, MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                if (MessageBox.Show("Deseja excluir esse funcionário?", ParametroInfo.SistemaVersao, MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                 {
                     DataBaseBLL.ExcluirFuncionario(new Funcionario() { IdEmpresa = codigoempresaComboBox.Text, Externo = funcionarioexternoTextBox.Text });
 
@@ -195,7 +205,7 @@ namespace ConversorFolhaDePonto.UI
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Funcionário já cadastrado.", ParametroInfo.SistemaVersao, MessageBoxButtons.OK, MessageBoxIcon.Exclamation);  
+                MessageBox.Show(ex.Message, ParametroInfo.SistemaVersao, MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
         }
     }

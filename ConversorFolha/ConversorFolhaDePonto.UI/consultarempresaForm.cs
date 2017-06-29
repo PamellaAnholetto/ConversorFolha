@@ -26,13 +26,11 @@ namespace ConversorFolhaDePonto.UI
             consultaempresaGridView.DataSource = DataBaseBLL.CarregarEmpresaGrid(empresaSelecionada.Id);
             if(string.IsNullOrEmpty(codigoempresaComboBox.Text))
             {
-                detalhesempresaButton.Enabled = false;
-                
+                detalhesempresaButton.Enabled = false;                
             }
             else
             {
-                detalhesempresaButton.Enabled = true;
-                
+                detalhesempresaButton.Enabled = true;                
             }
         }
 

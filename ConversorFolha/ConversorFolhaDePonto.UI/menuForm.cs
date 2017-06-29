@@ -24,7 +24,7 @@ namespace ConversorFolhaDePonto.UI
 
         private void eventoStripMenuItem_Click(object sender, EventArgs e)
         {
-           consultaeventoForm objForm = new consultaeventoForm();
+            consultaeventoForm objForm = new consultaeventoForm();
             objForm.Show();
         }
 
@@ -40,9 +40,10 @@ namespace ConversorFolhaDePonto.UI
             objForm.Show();
         }
 
-        private void ajudaToolStripMenuItem_Click(object sender, EventArgs e)
+        private void ManualToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            System.Diagnostics.Process.Start(Application.StartupPath + "\\Manual_ConversorPonto_OFICIAL.pdf");
+            manualForm objForm = new manualForm();
+            objForm.Show();
         }
 
         private void layoutToolStripMenuItem_Click(object sender, EventArgs e)
@@ -53,7 +54,7 @@ namespace ConversorFolhaDePonto.UI
 
         private void layoutToolStripMenuItem1_Click(object sender, EventArgs e)
         {
-           consultarlayoutForm objForm = new consultarlayoutForm();
+            consultarlayoutForm objForm = new consultarlayoutForm();
             objForm.Show();
         }
     }

@@ -85,6 +85,7 @@
             // 
             // diretoriogravarTextBox
             // 
+            this.diretoriogravarTextBox.AccessibleName = "Caminho Gravação";
             this.diretoriogravarTextBox.Location = new System.Drawing.Point(138, 112);
             this.diretoriogravarTextBox.Name = "diretoriogravarTextBox";
             this.diretoriogravarTextBox.Size = new System.Drawing.Size(482, 22);
@@ -92,7 +93,7 @@
             // 
             // lerdiretorioTextBox
             // 
-            this.lerdiretorioTextBox.AccessibleName = "";
+            this.lerdiretorioTextBox.AccessibleName = "Caminho Leitura";
             this.lerdiretorioTextBox.Location = new System.Drawing.Point(138, 77);
             this.lerdiretorioTextBox.Name = "lerdiretorioTextBox";
             this.lerdiretorioTextBox.Size = new System.Drawing.Size(482, 22);
@@ -100,7 +101,8 @@
             // 
             // nomeempresaTextBox
             // 
-            this.nomeempresaTextBox.AccessibleName = "Nome da Empresa";
+            this.nomeempresaTextBox.AccessibleDescription = "";
+            this.nomeempresaTextBox.AccessibleName = "Nome Empresa";
             this.nomeempresaTextBox.Enabled = false;
             this.nomeempresaTextBox.Location = new System.Drawing.Point(138, 41);
             this.nomeempresaTextBox.Name = "nomeempresaTextBox";
@@ -141,6 +143,7 @@
             // 
             // nomelayoutComboBox
             // 
+            this.nomelayoutComboBox.AccessibleName = "Nome Layout";
             this.nomelayoutComboBox.DataSource = this.layoutBindingSource;
             this.nomelayoutComboBox.DisplayMember = "Nome";
             this.nomelayoutComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
@@ -167,6 +170,7 @@
             // 
             // codigoempresaComboBox
             // 
+            this.codigoempresaComboBox.AccessibleName = "Código Empresa";
             this.codigoempresaComboBox.DataSource = this.empresaBindingSource;
             this.codigoempresaComboBox.DisplayMember = "Id";
             this.codigoempresaComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
@@ -239,7 +243,7 @@
             // 
             this.gravarFolderBrowserDialog.Description = "Selecione diretório de gravação do novo arquivo.";
             // 
-            // conversorForm
+            // converterlayoutForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -249,7 +253,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
-            this.Name = "conversorForm";
+            this.Name = "converterlayoutForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Conversor";
             this.Load += new System.EventHandler(this.conversorForm_Load);

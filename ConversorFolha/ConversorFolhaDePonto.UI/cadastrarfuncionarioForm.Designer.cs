@@ -113,6 +113,7 @@
             // 
             resources.ApplyResources(this.funcionariointernoTextBox, "funcionariointernoTextBox");
             this.funcionariointernoTextBox.Name = "funcionariointernoTextBox";
+            this.funcionariointernoTextBox.TextChanged += new System.EventHandler(this.FuncionariointernoTextBox_TextChanged);
             // 
             // funcionarioexternoLabel
             // 
@@ -123,7 +124,7 @@
             // 
             resources.ApplyResources(this.funcionarioexternoTextBox, "funcionarioexternoTextBox");
             this.funcionarioexternoTextBox.Name = "funcionarioexternoTextBox";
-            this.funcionarioexternoTextBox.Validated += new System.EventHandler(this.Funcionarioexterno_Validated);
+            this.funcionarioexternoTextBox.TextChanged += new System.EventHandler(this.FuncionarioexternoTextBox_TextChanged);
             // 
             // funcionariointernoLabel
             // 

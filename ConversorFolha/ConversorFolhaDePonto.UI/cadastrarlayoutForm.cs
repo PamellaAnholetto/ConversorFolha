@@ -251,7 +251,7 @@ namespace ConversorFolhaDePonto.UI
         {
             try
             {
-                if (MessageBox.Show("Deseja alterar o layout ? ", ParametroInfo.SistemaVersao, MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                if (MessageBox.Show("Deseja alterar o layout? ", ParametroInfo.SistemaVersao, MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                 {
                     statuslayoutLabel.Text = "Processando...";
                     statuslayoutLabel.Visible = true;
@@ -321,8 +321,10 @@ namespace ConversorFolhaDePonto.UI
                 }
             }
         }
+
         private void CadastrarlayoutForm_FormClosing(object sender, FormClosingEventArgs e)
         {
+            if(consultaLayoutGridView != null)
             consultaLayoutGridView.DataSource = DataBaseBLL.CarregarLayoutGrid(nomelayoutTextBox.Text);
         }
 
@@ -336,7 +338,7 @@ namespace ConversorFolhaDePonto.UI
             try
             {
 
-                if (MessageBox.Show("Deseja excluir o layout ?", ParametroInfo.SistemaVersao, MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                if (MessageBox.Show("Deseja excluir o layout?", ParametroInfo.SistemaVersao, MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                 {
                     DataBaseBLL.ExcluirLayout(new Layout() { Nome = nomelayoutTextBox.Text });
 

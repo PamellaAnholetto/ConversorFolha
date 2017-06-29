@@ -20,6 +20,7 @@ namespace ConversorFolhaDePonto.UI
 
         private void NomelayoutComboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
+            
             Layout layoutSelecionado = (Layout)nomelayoutComboBox.SelectedItem;
             consultalayoutGridView.DataSource = DataBaseBLL.CarregarLayoutGrid(layoutSelecionado.Nome);
             if (string.IsNullOrEmpty(nomelayoutComboBox.Text))

@@ -33,23 +33,24 @@ namespace ConversorFolhaDePonto.UI
         {
             try
             {
-                if (string.IsNullOrEmpty(codigoempresaComboBox.Text))
-                    throw new Exception("Favor informar a empresa.");
-                if (string.IsNullOrEmpty(nomelayoutComboBox.Text))
-                    throw new Exception("Favor informar o Layout.");
-                if (string.IsNullOrEmpty(lerdiretorioTextBox.Text))
-                    throw new Exception("Favor informar o caminho de leitura.");
-                if (string.IsNullOrEmpty(diretoriogravarTextBox.Text))
-                    throw new Exception("Favor informar o caminho de gravação.");
-                string[] aArquivoOriginal = File.ReadAllLines(lerdiretorioTextBox.Text, Encoding.Default);
-                if (aArquivoOriginal.Length == 0)
-                    throw new Exception("Arquivo em branco.");
-                Empresa objEmpresa = DataBaseBLL.BuscarEmpresaPorId(codigoempresaComboBox.Text);
-                Layout objLayout = DataBaseBLL.BuscarLayoutPorNome(nomelayoutComboBox.Text);
+                List<ErrosTela> ErrosTela = new List<ErrosTela>();
+                Utilities.ValidarTextBoxes(codigopontoGroupBox, ref ErrosTela);
+                if (ErrosTela.Count > 0)
+                {
+                    string strCamposInvalidos = Utilities.CriarMensagemErro(codigopontoGroupBox, ErrosTela);
+                    MessageBox.Show("Preencher Campo(s):" + Environment.NewLine + strCamposInvalidos, ParametroInfo.SistemaVersao, MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                }
+                else
+                {
+                    string[] aArquivoOriginal = File.ReadAllLines(lerdiretorioTextBox.Text, Encoding.Default);
+                    if (aArquivoOriginal.Length == 0)
+                        throw new Exception("Arquivo em branco.");
+                    Empresa objEmpresa = DataBaseBLL.BuscarEmpresaPorId(codigoempresaComboBox.Text);
+                    Layout objLayout = DataBaseBLL.BuscarLayoutPorNome(nomelayoutComboBox.Text);
 
-                ConversorBLL.ConverterArquivo(aArquivoOriginal, objEmpresa, objLayout, diretoriogravarTextBox.Text);
-                MessageBox.Show("Arquivo gerado com sucesso!", ParametroInfo.SistemaVersao, MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-
+                    ConversorBLL.ConverterArquivo(aArquivoOriginal, objEmpresa, objLayout, diretoriogravarTextBox.Text);
+                    MessageBox.Show("Arquivo gerado com sucesso!", ParametroInfo.SistemaVersao, MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                }
             }
             catch (Exception ex)
             {
