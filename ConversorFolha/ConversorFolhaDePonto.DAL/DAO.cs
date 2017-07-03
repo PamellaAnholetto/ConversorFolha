@@ -17,7 +17,8 @@ namespace ConversorFolhaDePonto.DAL
         /// </summary>                        
         public DAO()
         {
-            npgslConnection = new NpgsqlConnection("Server=192.168.15.142;Port=5432;UserId=postgres;Password=postgres;Database=ConversorFolha");
+            //npgslConnection = new NpgsqlConnection("Server=192.168.15.142;Port=5432;UserId=postgres;Password=postgres;Database=ConversorFolha");
+            npgslConnection = new NpgsqlConnection("Server=158.69.236.233;Port=5432;UserId=postgres;Password=candinho@2017;Database=Folha");
         }
         /// <summary>
         /// Abre a conexão caso já não esteja.
