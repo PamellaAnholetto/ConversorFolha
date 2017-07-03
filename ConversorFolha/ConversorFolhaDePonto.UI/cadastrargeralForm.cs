@@ -163,14 +163,18 @@ namespace ConversorFolhaDePonto.UI
         {
             try
             {
+                statusempresaLabel.Text = "";
+                statusempresaLabel.Visible = true;
                 eventoGroupBox.Enabled = false;
                 funcionarioGroupBox.Enabled = false;
                 empresaGroupBox.Enabled = true;
                 Utilities.ResetarControles(this);
+                codigoempresaMaskedTextBox.Focus();
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message, ParametroInfo.SistemaVersao, MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+      
             }
         }
 

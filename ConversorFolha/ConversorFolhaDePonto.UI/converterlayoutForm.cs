@@ -33,8 +33,8 @@ namespace ConversorFolhaDePonto.UI
         {
             try
             {
-                List<ErrosTela> ErrosTela = new List<ErrosTela>();
-                Utilities.ValidarTextBoxes(codigopontoGroupBox, ref ErrosTela);
+                List<ErrosTela> ErrosTela = new List<ErrosTela>();                
+                Utilities.ValidarTextBoxes(codigopontoGroupBox, ref ErrosTela);                
                 if (ErrosTela.Count > 0)
                 {
                     string strCamposInvalidos = Utilities.CriarMensagemErro(codigopontoGroupBox, ErrosTela);
@@ -56,6 +56,7 @@ namespace ConversorFolhaDePonto.UI
             {
                 MessageBox.Show(ex.Message, ParametroInfo.SistemaVersao, MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
+            Utilities.ResetarControles(this);
         }
 
         private void conversorForm_Load(object sender, EventArgs e)

@@ -12,7 +12,8 @@ namespace ConversorFolhaDePonto.UI
     {
         private DataGridViewCellCollection linhaSelecionada;
         private DataGridView consultaLayoutGridView;
-        
+        private ComboBox nomelayoutComboBox;
+
         public cadastrarlayoutForm()
         {
             InitializeComponent();
@@ -20,7 +21,7 @@ namespace ConversorFolhaDePonto.UI
             alterarlayoutButton.Visible = false;
         }
 
-        public cadastrarlayoutForm(DataGridViewCellCollection LinhaSelecionada, ComboBox NomeLayout, ref DataGridView ConsultaLayoutGridView)
+        public cadastrarlayoutForm(DataGridViewCellCollection LinhaSelecionada, ref ComboBox NomeLayout, ref DataGridView ConsultaLayoutGridView)
         {
             InitializeComponent();
             incluirlayoutButton.Visible = false;
@@ -29,6 +30,7 @@ namespace ConversorFolhaDePonto.UI
             nomelayoutTextBox.Text = NomeLayout.Text;
             linhaSelecionada = LinhaSelecionada;
             consultaLayoutGridView = ConsultaLayoutGridView;
+            nomelayoutComboBox = NomeLayout;
         }
 
         private static IEnumerable<ComboBox> ConteudoComboBoxes;
@@ -43,15 +45,12 @@ namespace ConversorFolhaDePonto.UI
                 {
                     case "1"://Conteúdo
                         controle.Items.AddRange(Utilities.CarregarItensConteudo().ToArray<string>());
-                        controle.SelectedIndexChanged += Conteudo_SelectedIndexChanged;
                         break;
                     case "2"://Início
                         controle.Items.AddRange(Utilities.CarregarItensPosicao().ToArray<string>());
-                        controle.SelectedIndexChanged += Inicio_SelectedIndexChanged;
                         break;
                     case "3"://Tamanho
                         controle.Items.AddRange(Utilities.CarregarItensPosicao().ToArray<string>());
-                        controle.SelectedIndexChanged += TamanhoComboBoxes_SelectedIndexChanged;
                         break;
                     default:
                         break;
@@ -70,6 +69,7 @@ namespace ConversorFolhaDePonto.UI
                                 orderby combobox.TabIndex
                                 select combobox;
 
+            //pega item escolhido na tela anterior.
             if (linhaSelecionada != null)
             {
                 Dictionary<string, object> ordem = new Dictionary<string, object>()
@@ -112,6 +112,25 @@ namespace ConversorFolhaDePonto.UI
                     }
                 }
             }
+            CarregarValidacoes();
+        }
+
+        private void CarregarValidacoes()
+        {
+            conteudo1ComboBox.SelectedIndexChanged += Conteudo_SelectedIndexChanged;
+            conteudo2ComboBox.SelectedIndexChanged += Conteudo_SelectedIndexChanged;
+            conteudo3ComboBox.SelectedIndexChanged += Conteudo_SelectedIndexChanged;
+            conteudo4ComboBox.SelectedIndexChanged += Conteudo_SelectedIndexChanged;
+
+            inicio1ComboBox.SelectedIndexChanged += Inicio_SelectedIndexChanged;
+            inicio2ComboBox.SelectedIndexChanged += Inicio_SelectedIndexChanged;
+            inicio3ComboBox.SelectedIndexChanged += Inicio_SelectedIndexChanged;
+            inicio4ComboBox.SelectedIndexChanged += Inicio_SelectedIndexChanged;
+
+            tamanho1ComboBox.SelectedIndexChanged += TamanhoComboBoxes_SelectedIndexChanged;
+            tamanho2ComboBox.SelectedIndexChanged += TamanhoComboBoxes_SelectedIndexChanged;
+            tamanho3ComboBox.SelectedIndexChanged += TamanhoComboBoxes_SelectedIndexChanged;
+            tamanho4ComboBox.SelectedIndexChanged += TamanhoComboBoxes_SelectedIndexChanged;
         }
 
         private void Inicio_SelectedIndexChanged(object sender, EventArgs e)
@@ -121,6 +140,7 @@ namespace ConversorFolhaDePonto.UI
                 TamanhoComboBoxes.ElementAt(int.Parse(newsender.AccessibleDescription)).Enabled = true;
             else
                 TamanhoComboBoxes.ElementAt(int.Parse(newsender.AccessibleDescription)).Enabled = false;
+            alterarlayoutButton.Enabled = true;
         }
 
         private void Conteudo_SelectedIndexChanged(object sender, EventArgs e)
@@ -130,11 +150,13 @@ namespace ConversorFolhaDePonto.UI
                 InicioComboBoxes.ElementAt(int.Parse(newsender.AccessibleDescription)).Enabled = true;
             else
                 InicioComboBoxes.ElementAt(int.Parse(newsender.AccessibleDescription)).Enabled = false;
+            alterarlayoutButton.Enabled = true;
         }
 
         private void TamanhoComboBoxes_SelectedIndexChanged(object sender, EventArgs e)
         {
             ValidarTela(ref ConteudoComboBoxes, ref InicioComboBoxes, ref TamanhoComboBoxes);
+            alterarlayoutButton.Enabled = true;
         }
 
         public void VerificarLayoutVazio(Layout ObjLayout)
@@ -200,6 +222,7 @@ namespace ConversorFolhaDePonto.UI
                 DataBaseBLL.GravarLayout(ObjLayout);
                 MessageBox.Show("Layout cadastrado com sucesso!", ParametroInfo.SistemaVersao, MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 Utilities.ResetarControles(cadastrolayoutGroupBox);
+                nomelayoutTextBox.Focus();
             }
             catch (Exception ex)
             {
@@ -265,7 +288,6 @@ namespace ConversorFolhaDePonto.UI
                     }
                     else
                     {
-
                         if (string.IsNullOrEmpty(nomelayoutTextBox.Text))
                             throw new Exception("Favor preencher o nome do layout.");
                         Layout ObjLayout = new Layout() { Nome = nomelayoutTextBox.Text };
@@ -299,12 +321,14 @@ namespace ConversorFolhaDePonto.UI
                                     break;
                             }
                         }
-
-
                         statuslayoutLabel.Text = "Layout alterado com sucesso.";
                         DataBaseBLL.AlterarLayout(ObjLayout, linhaSelecionada["nomeDataGridViewTextBoxColumn"].Value.ToString());
                         MessageBox.Show("Layout alterado com sucesso!", ParametroInfo.SistemaVersao, MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                         VerificarLayoutVazio(ObjLayout);
+                        if (consultaLayoutGridView != null)
+                            consultaLayoutGridView.DataSource = DataBaseBLL.CarregarLayoutGrid(nomelayoutTextBox.Text);
+                        if (nomelayoutComboBox != null)
+                            nomelayoutComboBox.DataSource = DataBaseBLL.CarregarLayoutComboBox();
                         Close();
                     }
                 }
@@ -320,17 +344,6 @@ namespace ConversorFolhaDePonto.UI
                     MessageBox.Show(ex.Message, ParametroInfo.SistemaVersao, MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 }
             }
-        }
-
-        private void CadastrarlayoutForm_FormClosing(object sender, FormClosingEventArgs e)
-        {
-            if(consultaLayoutGridView != null)
-            consultaLayoutGridView.DataSource = DataBaseBLL.CarregarLayoutGrid(nomelayoutTextBox.Text);
-        }
-
-        private void Conteudo1ComboBox_Validated(object sender, EventArgs e)
-        {
-            alterarlayoutButton.Enabled = true;
         }
 
         private void ExcluirlayoutButton_Click(object sender, EventArgs e)
@@ -357,6 +370,10 @@ namespace ConversorFolhaDePonto.UI
                         statuslayoutLabel.Text = "Layout excluído com sucesso.";
                         MessageBox.Show("Layout excluído com sucesso!", ParametroInfo.SistemaVersao, MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                         Utilities.ResetarControles(conteudoGroupBox);
+                        if (consultaLayoutGridView != null)
+                            consultaLayoutGridView.DataSource = DataBaseBLL.CarregarLayoutGrid(nomelayoutTextBox.Text);
+                        if (nomelayoutComboBox != null)
+                            nomelayoutComboBox.DataSource = DataBaseBLL.CarregarLayoutComboBox();
                         nomelayoutTextBox.Focus();
                         Close();
                     }
@@ -365,7 +382,17 @@ namespace ConversorFolhaDePonto.UI
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message, ParametroInfo.SistemaVersao, MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-            }        
+            }
+        }
+
+        private void nomelayoutTextBox_TextChanged(object sender, EventArgs e)
+        {
+            nomelayoutTextBox.TextChanged += LayoutAlterado;
+        }
+
+        private void LayoutAlterado(object sender, EventArgs e)
+        {
+            alterarlayoutButton.Enabled = true;
         }
     }
 }

@@ -159,6 +159,7 @@
             this.tamanhofuncionarioTextBox.Name = "tamanhofuncionarioTextBox";
             this.tamanhofuncionarioTextBox.Size = new System.Drawing.Size(47, 22);
             this.tamanhofuncionarioTextBox.TabIndex = 3;
+            this.tamanhofuncionarioTextBox.TextChanged += new System.EventHandler(this.tamanhofuncionarioTextBox_TextChanged);
             // 
             // iniciofuncionarioLabel
             // 
@@ -177,6 +178,7 @@
             this.iniciofuncionarioTextBox.Name = "iniciofuncionarioTextBox";
             this.iniciofuncionarioTextBox.Size = new System.Drawing.Size(47, 22);
             this.iniciofuncionarioTextBox.TabIndex = 1;
+            this.iniciofuncionarioTextBox.TextChanged += new System.EventHandler(this.iniciofuncionarioTextBox_TextChanged);
             // 
             // tamanhofuncionarioLabel
             // 
@@ -229,7 +231,7 @@
             this.inicioeventoTextBox.Name = "inicioeventoTextBox";
             this.inicioeventoTextBox.Size = new System.Drawing.Size(47, 22);
             this.inicioeventoTextBox.TabIndex = 1;
-            this.inicioeventoTextBox.Validated += new System.EventHandler(this.InicioeventoTextBox_Validated);
+            this.inicioeventoTextBox.TextChanged += new System.EventHandler(this.inicioeventoTextBox_TextChanged);
             // 
             // tamanhoeventoTextBox
             // 
@@ -239,6 +241,7 @@
             this.tamanhoeventoTextBox.Name = "tamanhoeventoTextBox";
             this.tamanhoeventoTextBox.Size = new System.Drawing.Size(47, 22);
             this.tamanhoeventoTextBox.TabIndex = 3;
+            this.tamanhoeventoTextBox.TextChanged += new System.EventHandler(this.tamanhoeventoTextBox_TextChanged);
             // 
             // statusempresaLabel
             // 
@@ -271,6 +274,7 @@
             this.iniciohorasTextBox.Name = "iniciohorasTextBox";
             this.iniciohorasTextBox.Size = new System.Drawing.Size(47, 22);
             this.iniciohorasTextBox.TabIndex = 1;
+            this.iniciohorasTextBox.TextChanged += new System.EventHandler(this.iniciohorasTextBox_TextChanged);
             // 
             // tamanhohorasTextBox
             // 
@@ -280,6 +284,7 @@
             this.tamanhohorasTextBox.Name = "tamanhohorasTextBox";
             this.tamanhohorasTextBox.Size = new System.Drawing.Size(47, 22);
             this.tamanhohorasTextBox.TabIndex = 3;
+            this.tamanhohorasTextBox.TextChanged += new System.EventHandler(this.tamanhohorasTextBox_TextChanged);
             // 
             // iniciohorasLabel
             // 
@@ -307,6 +312,7 @@
             this.nomeempresaTextBox.Name = "nomeempresaTextBox";
             this.nomeempresaTextBox.Size = new System.Drawing.Size(325, 22);
             this.nomeempresaTextBox.TabIndex = 3;
+            this.nomeempresaTextBox.TextChanged += new System.EventHandler(this.nomeempresaTextBox_TextChanged);
             // 
             // codigoempresaLabel
             // 
@@ -338,7 +344,7 @@
             this.Name = "manutencaoempresaForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Manutenção Empresa ";
-            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.ManutencaoempresaForm_FormClosing);
+            this.Load += new System.EventHandler(this.manutencaoempresaForm_Load_1);
             this.empresaGroupBox.ResumeLayout(false);
             this.empresaGroupBox.PerformLayout();
             this.layoutempresaGroupBox.ResumeLayout(false);

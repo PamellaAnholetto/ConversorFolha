@@ -456,7 +456,7 @@
             // 
             // funcionariointernoTextBox
             // 
-            this.funcionariointernoTextBox.AccessibleName = "Funcionario Interno";
+            this.funcionariointernoTextBox.AccessibleName = "Funcionário Interno";
             this.funcionariointernoTextBox.Location = new System.Drawing.Point(64, 52);
             this.funcionariointernoTextBox.MaxLength = 6;
             this.funcionariointernoTextBox.Name = "funcionariointernoTextBox";
@@ -474,7 +474,7 @@
             // 
             // funcionarioexternoTextBox
             // 
-            this.funcionarioexternoTextBox.AccessibleName = "Funcionario Externo";
+            this.funcionarioexternoTextBox.AccessibleName = "Funcionário Externo";
             this.funcionarioexternoTextBox.Location = new System.Drawing.Point(64, 22);
             this.funcionarioexternoTextBox.MaxLength = 6;
             this.funcionarioexternoTextBox.Name = "funcionarioexternoTextBox";

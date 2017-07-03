@@ -250,6 +250,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Cadastro Evento";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.CadastrareventoForm_FormClosing);
+            this.Load += new System.EventHandler(this.cadastrareventoForm_Load_1);
             this.cadastroeventoGroupBox.ResumeLayout(false);
             this.cadastroeventoGroupBox.PerformLayout();
             this.eventoGroupBox.ResumeLayout(false);

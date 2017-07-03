@@ -15,12 +15,10 @@ namespace ConversorFolhaDePonto.UI
          private void LayoutmanutencaoForm_Load(object sender, EventArgs e)
         {
             nomelayoutComboBox.DataSource = DataBaseBLL.CarregarLayoutComboBox();
-            //consultalayoutGridView.DataSource = DataBaseBLL.CarregarLayoutGrid(nomelayoutComboBox.SelectedText); 
         }
 
         private void NomelayoutComboBox_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            
+        {            
             Layout layoutSelecionado = (Layout)nomelayoutComboBox.SelectedItem;
             consultalayoutGridView.DataSource = DataBaseBLL.CarregarLayoutGrid(layoutSelecionado.Nome);
             if (string.IsNullOrEmpty(nomelayoutComboBox.Text))
@@ -38,7 +36,7 @@ namespace ConversorFolhaDePonto.UI
             try
             {
                 if (consultalayoutGridView.SelectedRows.Count == 0) throw new Exception("Selecione um layout.");
-                cadastrarlayoutForm objForm = new cadastrarlayoutForm(consultalayoutGridView.SelectedRows[0].Cells, nomelayoutComboBox, ref consultalayoutGridView );
+                cadastrarlayoutForm objForm = new cadastrarlayoutForm(consultalayoutGridView.SelectedRows[0].Cells, ref nomelayoutComboBox, ref consultalayoutGridView);
                 objForm.Show();
             }
             catch (Exception ex)
