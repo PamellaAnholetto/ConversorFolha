@@ -85,7 +85,7 @@
             // 
             // diretoriogravarTextBox
             // 
-            this.diretoriogravarTextBox.AccessibleName = "Caminho Gravação";
+            this.diretoriogravarTextBox.AccessibleName = "Diretório Gravação";
             this.diretoriogravarTextBox.Location = new System.Drawing.Point(138, 112);
             this.diretoriogravarTextBox.Name = "diretoriogravarTextBox";
             this.diretoriogravarTextBox.Size = new System.Drawing.Size(482, 22);
@@ -93,7 +93,7 @@
             // 
             // lerdiretorioTextBox
             // 
-            this.lerdiretorioTextBox.AccessibleName = "Caminho Leitura";
+            this.lerdiretorioTextBox.AccessibleName = "Diretório Arquivo";
             this.lerdiretorioTextBox.Location = new System.Drawing.Point(138, 77);
             this.lerdiretorioTextBox.Name = "lerdiretorioTextBox";
             this.lerdiretorioTextBox.Size = new System.Drawing.Size(482, 22);
