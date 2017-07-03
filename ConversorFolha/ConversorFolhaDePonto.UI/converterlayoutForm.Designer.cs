@@ -235,7 +235,7 @@
             // 
             // lerOpenFileDialog
             // 
-            this.lerOpenFileDialog.Filter = "txt files (*.txt)|*.txt|All files (*.*)|*.*";
+            this.lerOpenFileDialog.Filter = "txt files (*.txt)|";
             this.lerOpenFileDialog.RestoreDirectory = true;
             this.lerOpenFileDialog.Title = "Abrir arquivo para conversão .txt";
             // 

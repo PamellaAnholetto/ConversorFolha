@@ -45,8 +45,7 @@ namespace ConversorFolhaDePonto.UI
             try
             {
                 if (MessageBox.Show("Deseja alterar a empresa?", ParametroInfo.SistemaVersao, MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
-                {
-
+                {                    
                     statusempresaLabel.Text = "Processando...";
                     statusempresaLabel.Visible = true;
                     List<ErrosTela> ErrosTela = new List<ErrosTela>();
@@ -96,15 +95,46 @@ namespace ConversorFolhaDePonto.UI
             }
         }
 
-        private void InicioeventoTextBox_Validated(object sender, EventArgs e)
-        {
-            alterarempresaButton.Enabled = true;
-        }
-
         private void ManutencaoempresaForm_FormClosing(object sender, FormClosingEventArgs e)
         {
             empresaComboBox.DataSource = DataBaseBLL.CarregarEmpresasComboBox();
-            consultaempresaGridView.DataSource = DataBaseBLL.CarregarEmpresaGrid(codigoempresaComboBox.Text);
+           // consultaempresaGridView.DataSource = DataBaseBLL.CarregarEmpresasComboBox();
+           // consultaempresaGridView.DataSource = DataBaseBLL.CarregarEmpresaGrid(codigoempresaComboBox.Text);
+        }
+
+        private void inicioeventoTextBox_TextChanged(object sender, EventArgs e)
+        {
+            inicioeventoTextBox.TextChanged += AlterarEmpresa;
+        }
+
+        private void tamanhoeventoTextBox_TextChanged(object sender, EventArgs e)
+        {
+            tamanhoeventoTextBox.TextChanged += AlterarEmpresa;
+        }
+
+        private void iniciohorasTextBox_TextChanged(object sender, EventArgs e)
+        {
+            iniciohorasTextBox.TextChanged += AlterarEmpresa;
+        }
+
+        private void tamanhohorasTextBox_TextChanged(object sender, EventArgs e)
+        {
+            tamanhoeventoTextBox.TextChanged += AlterarEmpresa;
+        }
+
+        private void iniciofuncionarioTextBox_TextChanged(object sender, EventArgs e)
+        {
+            iniciofuncionarioTextBox.TextChanged += AlterarEmpresa;
+        }
+
+        private void tamanhofuncionarioTextBox_TextChanged(object sender, EventArgs e)
+        {
+            tamanhofuncionarioTextBox.TextChanged += AlterarEmpresa;
+        }
+
+        private void AlterarEmpresa(object sender, EventArgs e)
+        {
+            alterarempresaButton.Enabled = true;
         }
 
         private void ExcluirempresaButton_Click(object sender, EventArgs e)
@@ -140,5 +170,7 @@ namespace ConversorFolhaDePonto.UI
                 MessageBox.Show(ex.Message, ParametroInfo.SistemaVersao, MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
         }
+
+
     }
 }

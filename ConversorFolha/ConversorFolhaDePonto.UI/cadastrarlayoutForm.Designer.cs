@@ -65,6 +65,7 @@
             this.nomelayoutTextBox.Name = "nomelayoutTextBox";
             this.nomelayoutTextBox.Size = new System.Drawing.Size(234, 20);
             this.nomelayoutTextBox.TabIndex = 1;
+            this.nomelayoutTextBox.TextChanged += new System.EventHandler(this.nomelayoutTextBox_TextChanged);
             // 
             // nomelayoutLabel
             // 
@@ -300,7 +301,6 @@
             this.conteudo1ComboBox.Name = "conteudo1ComboBox";
             this.conteudo1ComboBox.Size = new System.Drawing.Size(128, 21);
             this.conteudo1ComboBox.TabIndex = 3;
-            this.conteudo1ComboBox.Validated += new System.EventHandler(this.Conteudo1ComboBox_Validated);
             // 
             // conteudoLabel
             // 

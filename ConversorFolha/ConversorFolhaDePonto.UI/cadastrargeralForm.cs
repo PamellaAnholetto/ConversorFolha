@@ -171,6 +171,7 @@ namespace ConversorFolhaDePonto.UI
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message, ParametroInfo.SistemaVersao, MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+      
             }
         }
 
