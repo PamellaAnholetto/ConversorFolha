@@ -312,6 +312,7 @@
             this.nomeempresaTextBox.Name = "nomeempresaTextBox";
             this.nomeempresaTextBox.Size = new System.Drawing.Size(325, 22);
             this.nomeempresaTextBox.TabIndex = 3;
+            this.nomeempresaTextBox.TextChanged += new System.EventHandler(this.nomeempresaTextBox_TextChanged);
             // 
             // codigoempresaLabel
             // 
@@ -343,7 +344,7 @@
             this.Name = "manutencaoempresaForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Manutenção Empresa ";
-            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.ManutencaoempresaForm_FormClosing);
+            this.Load += new System.EventHandler(this.manutencaoempresaForm_Load_1);
             this.empresaGroupBox.ResumeLayout(false);
             this.empresaGroupBox.PerformLayout();
             this.layoutempresaGroupBox.ResumeLayout(false);

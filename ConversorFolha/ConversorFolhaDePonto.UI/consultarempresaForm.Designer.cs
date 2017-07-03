@@ -33,14 +33,6 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ConsultarempresaForm));
             this.consultaempresaGridView = new System.Windows.Forms.DataGridView();
-            this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nomeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.inicioEventoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tamanhoEventoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.inicioFuncionarioDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tamanhoFuncionarioDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.inicioHorasDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tamanhoHorasDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.empresaBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.consultaempresaGroupBox = new System.Windows.Forms.GroupBox();
             this.detalhesempresaButton = new System.Windows.Forms.Button();
@@ -48,6 +40,14 @@
             this.nomeempresaLabel = new System.Windows.Forms.Label();
             this.nomeempresaTextBox = new System.Windows.Forms.TextBox();
             this.codigoempresaLabel = new System.Windows.Forms.Label();
+            this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nomeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.inicioFuncionarioDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tamanhoFuncionarioDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.inicioEventoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tamanhoEventoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.inicioHorasDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tamanhoHorasDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.consultaempresaGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.empresaBindingSource)).BeginInit();
             this.consultaempresaGroupBox.SuspendLayout();
@@ -75,10 +75,10 @@
             this.consultaempresaGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.idDataGridViewTextBoxColumn,
             this.nomeDataGridViewTextBoxColumn,
-            this.inicioEventoDataGridViewTextBoxColumn,
-            this.tamanhoEventoDataGridViewTextBoxColumn,
             this.inicioFuncionarioDataGridViewTextBoxColumn,
             this.tamanhoFuncionarioDataGridViewTextBoxColumn,
+            this.inicioEventoDataGridViewTextBoxColumn,
+            this.tamanhoEventoDataGridViewTextBoxColumn,
             this.inicioHorasDataGridViewTextBoxColumn,
             this.tamanhoHorasDataGridViewTextBoxColumn});
             this.consultaempresaGridView.DataSource = this.empresaBindingSource;
@@ -91,70 +91,6 @@
             this.consultaempresaGridView.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.consultaempresaGridView.Size = new System.Drawing.Size(789, 315);
             this.consultaempresaGridView.TabIndex = 2;
-            // 
-            // idDataGridViewTextBoxColumn
-            // 
-            this.idDataGridViewTextBoxColumn.DataPropertyName = "Id";
-            this.idDataGridViewTextBoxColumn.HeaderText = "Código Empresa";
-            this.idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
-            this.idDataGridViewTextBoxColumn.ReadOnly = true;
-            this.idDataGridViewTextBoxColumn.Width = 80;
-            // 
-            // nomeDataGridViewTextBoxColumn
-            // 
-            this.nomeDataGridViewTextBoxColumn.DataPropertyName = "Nome";
-            this.nomeDataGridViewTextBoxColumn.HeaderText = "Nome Empresa";
-            this.nomeDataGridViewTextBoxColumn.Name = "nomeDataGridViewTextBoxColumn";
-            this.nomeDataGridViewTextBoxColumn.ReadOnly = true;
-            this.nomeDataGridViewTextBoxColumn.Width = 200;
-            // 
-            // inicioEventoDataGridViewTextBoxColumn
-            // 
-            this.inicioEventoDataGridViewTextBoxColumn.DataPropertyName = "InicioEvento";
-            this.inicioEventoDataGridViewTextBoxColumn.HeaderText = "Início Evento";
-            this.inicioEventoDataGridViewTextBoxColumn.Name = "inicioEventoDataGridViewTextBoxColumn";
-            this.inicioEventoDataGridViewTextBoxColumn.ReadOnly = true;
-            this.inicioEventoDataGridViewTextBoxColumn.Width = 65;
-            // 
-            // tamanhoEventoDataGridViewTextBoxColumn
-            // 
-            this.tamanhoEventoDataGridViewTextBoxColumn.DataPropertyName = "TamanhoEvento";
-            this.tamanhoEventoDataGridViewTextBoxColumn.HeaderText = "Tamanho Evento";
-            this.tamanhoEventoDataGridViewTextBoxColumn.Name = "tamanhoEventoDataGridViewTextBoxColumn";
-            this.tamanhoEventoDataGridViewTextBoxColumn.ReadOnly = true;
-            this.tamanhoEventoDataGridViewTextBoxColumn.Width = 80;
-            // 
-            // inicioFuncionarioDataGridViewTextBoxColumn
-            // 
-            this.inicioFuncionarioDataGridViewTextBoxColumn.DataPropertyName = "InicioFuncionario";
-            this.inicioFuncionarioDataGridViewTextBoxColumn.HeaderText = "Início Funcionário";
-            this.inicioFuncionarioDataGridViewTextBoxColumn.Name = "inicioFuncionarioDataGridViewTextBoxColumn";
-            this.inicioFuncionarioDataGridViewTextBoxColumn.ReadOnly = true;
-            this.inicioFuncionarioDataGridViewTextBoxColumn.Width = 80;
-            // 
-            // tamanhoFuncionarioDataGridViewTextBoxColumn
-            // 
-            this.tamanhoFuncionarioDataGridViewTextBoxColumn.DataPropertyName = "TamanhoFuncionario";
-            this.tamanhoFuncionarioDataGridViewTextBoxColumn.HeaderText = "Tamanho Funcionário";
-            this.tamanhoFuncionarioDataGridViewTextBoxColumn.Name = "tamanhoFuncionarioDataGridViewTextBoxColumn";
-            this.tamanhoFuncionarioDataGridViewTextBoxColumn.ReadOnly = true;
-            this.tamanhoFuncionarioDataGridViewTextBoxColumn.Width = 80;
-            // 
-            // inicioHorasDataGridViewTextBoxColumn
-            // 
-            this.inicioHorasDataGridViewTextBoxColumn.DataPropertyName = "InicioHoras";
-            this.inicioHorasDataGridViewTextBoxColumn.HeaderText = "Início Horas";
-            this.inicioHorasDataGridViewTextBoxColumn.Name = "inicioHorasDataGridViewTextBoxColumn";
-            this.inicioHorasDataGridViewTextBoxColumn.ReadOnly = true;
-            this.inicioHorasDataGridViewTextBoxColumn.Width = 60;
-            // 
-            // tamanhoHorasDataGridViewTextBoxColumn
-            // 
-            this.tamanhoHorasDataGridViewTextBoxColumn.DataPropertyName = "TamanhoHoras";
-            this.tamanhoHorasDataGridViewTextBoxColumn.HeaderText = "Tamanho Horas";
-            this.tamanhoHorasDataGridViewTextBoxColumn.Name = "tamanhoHorasDataGridViewTextBoxColumn";
-            this.tamanhoHorasDataGridViewTextBoxColumn.ReadOnly = true;
-            this.tamanhoHorasDataGridViewTextBoxColumn.Width = 80;
             // 
             // empresaBindingSource
             // 
@@ -234,6 +170,70 @@
             this.codigoempresaLabel.TabIndex = 1;
             this.codigoempresaLabel.Text = "Código Empresa";
             // 
+            // idDataGridViewTextBoxColumn
+            // 
+            this.idDataGridViewTextBoxColumn.DataPropertyName = "Id";
+            this.idDataGridViewTextBoxColumn.HeaderText = "Código Empresa";
+            this.idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
+            this.idDataGridViewTextBoxColumn.ReadOnly = true;
+            this.idDataGridViewTextBoxColumn.Width = 80;
+            // 
+            // nomeDataGridViewTextBoxColumn
+            // 
+            this.nomeDataGridViewTextBoxColumn.DataPropertyName = "Nome";
+            this.nomeDataGridViewTextBoxColumn.HeaderText = "Nome Empresa";
+            this.nomeDataGridViewTextBoxColumn.Name = "nomeDataGridViewTextBoxColumn";
+            this.nomeDataGridViewTextBoxColumn.ReadOnly = true;
+            this.nomeDataGridViewTextBoxColumn.Width = 200;
+            // 
+            // inicioFuncionarioDataGridViewTextBoxColumn
+            // 
+            this.inicioFuncionarioDataGridViewTextBoxColumn.DataPropertyName = "InicioFuncionario";
+            this.inicioFuncionarioDataGridViewTextBoxColumn.HeaderText = "Início Funcionário";
+            this.inicioFuncionarioDataGridViewTextBoxColumn.Name = "inicioFuncionarioDataGridViewTextBoxColumn";
+            this.inicioFuncionarioDataGridViewTextBoxColumn.ReadOnly = true;
+            this.inicioFuncionarioDataGridViewTextBoxColumn.Width = 80;
+            // 
+            // tamanhoFuncionarioDataGridViewTextBoxColumn
+            // 
+            this.tamanhoFuncionarioDataGridViewTextBoxColumn.DataPropertyName = "TamanhoFuncionario";
+            this.tamanhoFuncionarioDataGridViewTextBoxColumn.HeaderText = "Tamanho Funcionário";
+            this.tamanhoFuncionarioDataGridViewTextBoxColumn.Name = "tamanhoFuncionarioDataGridViewTextBoxColumn";
+            this.tamanhoFuncionarioDataGridViewTextBoxColumn.ReadOnly = true;
+            this.tamanhoFuncionarioDataGridViewTextBoxColumn.Width = 80;
+            // 
+            // inicioEventoDataGridViewTextBoxColumn
+            // 
+            this.inicioEventoDataGridViewTextBoxColumn.DataPropertyName = "InicioEvento";
+            this.inicioEventoDataGridViewTextBoxColumn.HeaderText = "Início Evento";
+            this.inicioEventoDataGridViewTextBoxColumn.Name = "inicioEventoDataGridViewTextBoxColumn";
+            this.inicioEventoDataGridViewTextBoxColumn.ReadOnly = true;
+            this.inicioEventoDataGridViewTextBoxColumn.Width = 65;
+            // 
+            // tamanhoEventoDataGridViewTextBoxColumn
+            // 
+            this.tamanhoEventoDataGridViewTextBoxColumn.DataPropertyName = "TamanhoEvento";
+            this.tamanhoEventoDataGridViewTextBoxColumn.HeaderText = "Tamanho Evento";
+            this.tamanhoEventoDataGridViewTextBoxColumn.Name = "tamanhoEventoDataGridViewTextBoxColumn";
+            this.tamanhoEventoDataGridViewTextBoxColumn.ReadOnly = true;
+            this.tamanhoEventoDataGridViewTextBoxColumn.Width = 80;
+            // 
+            // inicioHorasDataGridViewTextBoxColumn
+            // 
+            this.inicioHorasDataGridViewTextBoxColumn.DataPropertyName = "InicioHoras";
+            this.inicioHorasDataGridViewTextBoxColumn.HeaderText = "Início Horas";
+            this.inicioHorasDataGridViewTextBoxColumn.Name = "inicioHorasDataGridViewTextBoxColumn";
+            this.inicioHorasDataGridViewTextBoxColumn.ReadOnly = true;
+            this.inicioHorasDataGridViewTextBoxColumn.Width = 60;
+            // 
+            // tamanhoHorasDataGridViewTextBoxColumn
+            // 
+            this.tamanhoHorasDataGridViewTextBoxColumn.DataPropertyName = "TamanhoHoras";
+            this.tamanhoHorasDataGridViewTextBoxColumn.HeaderText = "Tamanho Horas";
+            this.tamanhoHorasDataGridViewTextBoxColumn.Name = "tamanhoHorasDataGridViewTextBoxColumn";
+            this.tamanhoHorasDataGridViewTextBoxColumn.ReadOnly = true;
+            this.tamanhoHorasDataGridViewTextBoxColumn.Width = 80;
+            // 
             // ConsultarempresaForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -267,10 +267,10 @@
         private System.Windows.Forms.Button detalhesempresaButton;
         private System.Windows.Forms.DataGridViewTextBoxColumn idDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn nomeDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn inicioEventoDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn tamanhoEventoDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn inicioFuncionarioDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn tamanhoFuncionarioDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn inicioEventoDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn tamanhoEventoDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn inicioHorasDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn tamanhoHorasDataGridViewTextBoxColumn;
     }

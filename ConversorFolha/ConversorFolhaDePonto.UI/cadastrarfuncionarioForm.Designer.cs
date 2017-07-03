@@ -160,6 +160,7 @@
             this.MaximizeBox = false;
             this.Name = "cadastrarfuncionarioForm";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.CadastrarfuncionarioForm_FormClosing);
+            this.Load += new System.EventHandler(this.cadastrarfuncionarioForm_Load_1);
             this.cadastrofuncionarioGroupBox.ResumeLayout(false);
             this.cadastrofuncionarioGroupBox.PerformLayout();
             this.funcionarioGroupBox.ResumeLayout(false);

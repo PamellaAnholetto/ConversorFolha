@@ -222,6 +222,7 @@ namespace ConversorFolhaDePonto.UI
                 DataBaseBLL.GravarLayout(ObjLayout);
                 MessageBox.Show("Layout cadastrado com sucesso!", ParametroInfo.SistemaVersao, MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 Utilities.ResetarControles(cadastrolayoutGroupBox);
+                nomelayoutTextBox.Focus();
             }
             catch (Exception ex)
             {
@@ -324,6 +325,10 @@ namespace ConversorFolhaDePonto.UI
                         DataBaseBLL.AlterarLayout(ObjLayout, linhaSelecionada["nomeDataGridViewTextBoxColumn"].Value.ToString());
                         MessageBox.Show("Layout alterado com sucesso!", ParametroInfo.SistemaVersao, MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                         VerificarLayoutVazio(ObjLayout);
+                        if (consultaLayoutGridView != null)
+                            consultaLayoutGridView.DataSource = DataBaseBLL.CarregarLayoutGrid(nomelayoutTextBox.Text);
+                        if (nomelayoutComboBox != null)
+                            nomelayoutComboBox.DataSource = DataBaseBLL.CarregarLayoutComboBox();
                         Close();
                     }
                 }
@@ -339,15 +344,6 @@ namespace ConversorFolhaDePonto.UI
                     MessageBox.Show(ex.Message, ParametroInfo.SistemaVersao, MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 }
             }
-        }
-
-        private void CadastrarlayoutForm_FormClosing(object sender, FormClosingEventArgs e)
-        {
-            if (consultaLayoutGridView != null)
-                consultaLayoutGridView.DataSource = DataBaseBLL.CarregarLayoutGrid(nomelayoutTextBox.Text);
-            if (nomelayoutComboBox != null)
-                nomelayoutComboBox.DataSource = DataBaseBLL.CarregarLayoutComboBox();
-
         }
 
         private void ExcluirlayoutButton_Click(object sender, EventArgs e)
@@ -374,6 +370,10 @@ namespace ConversorFolhaDePonto.UI
                         statuslayoutLabel.Text = "Layout excluído com sucesso.";
                         MessageBox.Show("Layout excluído com sucesso!", ParametroInfo.SistemaVersao, MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                         Utilities.ResetarControles(conteudoGroupBox);
+                        if (consultaLayoutGridView != null)
+                            consultaLayoutGridView.DataSource = DataBaseBLL.CarregarLayoutGrid(nomelayoutTextBox.Text);
+                        if (nomelayoutComboBox != null)
+                            nomelayoutComboBox.DataSource = DataBaseBLL.CarregarLayoutComboBox();
                         nomelayoutTextBox.Focus();
                         Close();
                     }

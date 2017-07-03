@@ -29,7 +29,7 @@ namespace ConversorFolhaDePonto.UI
         }
 
         private void CodigoempresaComboBox_SelectedIndexChanged(object sender, EventArgs e)
-        {            
+        {
             if (string.IsNullOrEmpty(codigoempresaComboBox.Text))
             {
                 layoutempresaGroupBox.Enabled = false;
@@ -45,7 +45,7 @@ namespace ConversorFolhaDePonto.UI
             try
             {
                 if (MessageBox.Show("Deseja alterar a empresa?", ParametroInfo.SistemaVersao, MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
-                {                    
+                {
                     statusempresaLabel.Text = "Processando...";
                     statusempresaLabel.Visible = true;
                     List<ErrosTela> ErrosTela = new List<ErrosTela>();
@@ -74,6 +74,7 @@ namespace ConversorFolhaDePonto.UI
                         statusempresaLabel.Text = "Empresa alterada com sucesso.";
                         MessageBox.Show("Empresa alterada com sucesso!", ParametroInfo.SistemaVersao, MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                         Utilities.ResetarControles(layoutempresaGroupBox);
+                        empresaComboBox.DataSource = DataBaseBLL.CarregarEmpresasComboBox();
                         inicioeventoTextBox.Focus();
                         Close();
                     }
@@ -95,11 +96,9 @@ namespace ConversorFolhaDePonto.UI
             }
         }
 
-        private void ManutencaoempresaForm_FormClosing(object sender, FormClosingEventArgs e)
+        private void nomeempresaTextBox_TextChanged(object sender, EventArgs e)
         {
-            empresaComboBox.DataSource = DataBaseBLL.CarregarEmpresasComboBox();
-           // consultaempresaGridView.DataSource = DataBaseBLL.CarregarEmpresasComboBox();
-           // consultaempresaGridView.DataSource = DataBaseBLL.CarregarEmpresaGrid(codigoempresaComboBox.Text);
+            nomeempresaTextBox.TextChanged += AlterarEmpresa;
         }
 
         private void inicioeventoTextBox_TextChanged(object sender, EventArgs e)
@@ -119,7 +118,7 @@ namespace ConversorFolhaDePonto.UI
 
         private void tamanhohorasTextBox_TextChanged(object sender, EventArgs e)
         {
-            tamanhoeventoTextBox.TextChanged += AlterarEmpresa;
+            tamanhohorasTextBox.TextChanged += AlterarEmpresa;
         }
 
         private void iniciofuncionarioTextBox_TextChanged(object sender, EventArgs e)
@@ -160,6 +159,7 @@ namespace ConversorFolhaDePonto.UI
                         statusempresaLabel.Text = "Empresa excluída com sucesso.";
                         MessageBox.Show("Empresa excluída com sucesso!", ParametroInfo.SistemaVersao, MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                         Utilities.ResetarControles(layoutempresaGroupBox);
+                        empresaComboBox.DataSource = DataBaseBLL.CarregarEmpresasComboBox();
                         inicioeventoTextBox.Focus();
                         Close();
                     }
@@ -171,6 +171,28 @@ namespace ConversorFolhaDePonto.UI
             }
         }
 
+        public void BindEventoKeyPress(Control ObjControle)
+        {
+            foreach (Control controle in ObjControle.Controls)
+            {
+                if (controle is GroupBox) BindEventoKeyPress(controle);
+                if (controle is TextBox && controle != nomeempresaTextBox) ((TextBox)(controle)).KeyPress += FormTextBoxes_KeyPress;
+            }
+        }
 
+        private void FormTextBoxes_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            CheckDigit(e);
+        }
+
+        private void CheckDigit(KeyPressEventArgs e)
+        {
+            if (e.KeyChar != '\b') if ((!char.IsDigit(e.KeyChar)) || (char.IsControl(e.KeyChar))) e.Handled = true;
+        }
+
+        private void manutencaoempresaForm_Load_1(object sender, EventArgs e)
+        {
+            BindEventoKeyPress(this);
+        }        
     }
 }

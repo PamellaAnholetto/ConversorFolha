@@ -217,5 +217,31 @@ namespace ConversorFolhaDePonto.UI
                 MessageBox.Show(ex.Message, ParametroInfo.SistemaVersao, MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
         }
+
+        private void cadastrareventoForm_Load_1(object sender, EventArgs e)
+        {
+            BindEventoKeyPress(this);
+        }
+
+        public void BindEventoKeyPress(Control ObjControle)
+        {
+            foreach (Control controle in ObjControle.Controls)
+            {
+                if (controle is GroupBox) BindEventoKeyPress(controle);
+                if (controle is TextBox && controle != nomeempresaTextBox) ((TextBox)(controle)).KeyPress += FormTextBoxes_KeyPress;
+            }
+        }
+
+        private void FormTextBoxes_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            CheckDigit(e);
+        }
+
+        private void CheckDigit(KeyPressEventArgs e)
+        {
+            if (e.KeyChar != '\b') if ((!char.IsDigit(e.KeyChar)) || (char.IsControl(e.KeyChar))) e.Handled = true;
+        }
+
+
     }
 }
