@@ -343,7 +343,7 @@
             this.MaximizeBox = false;
             this.Name = "manutencaoempresaForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Manutenção Empresa ";
+            this.Text = "Empresa ";
             this.Load += new System.EventHandler(this.manutencaoempresaForm_Load_1);
             this.empresaGroupBox.ResumeLayout(false);
             this.empresaGroupBox.PerformLayout();

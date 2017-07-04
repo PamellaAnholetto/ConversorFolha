@@ -248,7 +248,7 @@
             this.MaximizeBox = false;
             this.Name = "cadastrareventoForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Cadastro Evento";
+            this.Text = "Evento";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.CadastrareventoForm_FormClosing);
             this.Load += new System.EventHandler(this.cadastrareventoForm_Load_1);
             this.cadastroeventoGroupBox.ResumeLayout(false);

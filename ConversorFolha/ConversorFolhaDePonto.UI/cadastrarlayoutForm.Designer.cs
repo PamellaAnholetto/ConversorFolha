@@ -361,7 +361,7 @@
             this.MaximizeBox = false;
             this.Name = "cadastrarlayoutForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Cadastro Layout";        
+            this.Text = "Layout";
             this.Load += new System.EventHandler(this.CadastrolayoutForm_Load);
             this.cadastrolayoutGroupBox.ResumeLayout(false);
             this.cadastrolayoutGroupBox.PerformLayout();
