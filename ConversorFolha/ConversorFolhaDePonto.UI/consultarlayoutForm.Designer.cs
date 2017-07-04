@@ -37,16 +37,16 @@
             this.nomelayoutComboBox = new System.Windows.Forms.ComboBox();
             this.layoutBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.consultalayoutGridView = new System.Windows.Forms.DataGridView();
+            this.nomelayoutLabel = new System.Windows.Forms.Label();
             this.nomeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.inicioEmpresaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tamanhoEmpresaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.inicioFuncionarioDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tamanhoFuncionarioDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.inicioEventoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tamanhoEventoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.inicioHorasDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tamanhoHorasDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nomelayoutLabel = new System.Windows.Forms.Label();
+            this.inicioFuncionarioDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tamanhoFuncionarioDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.consultalayoutGroupBox.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.layoutBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.consultalayoutGridView)).BeginInit();
@@ -122,12 +122,12 @@
             this.nomeDataGridViewTextBoxColumn,
             this.inicioEmpresaDataGridViewTextBoxColumn,
             this.tamanhoEmpresaDataGridViewTextBoxColumn,
-            this.inicioFuncionarioDataGridViewTextBoxColumn,
-            this.tamanhoFuncionarioDataGridViewTextBoxColumn,
             this.inicioEventoDataGridViewTextBoxColumn,
             this.tamanhoEventoDataGridViewTextBoxColumn,
             this.inicioHorasDataGridViewTextBoxColumn,
-            this.tamanhoHorasDataGridViewTextBoxColumn});
+            this.tamanhoHorasDataGridViewTextBoxColumn,
+            this.inicioFuncionarioDataGridViewTextBoxColumn,
+            this.tamanhoFuncionarioDataGridViewTextBoxColumn});
             this.consultalayoutGridView.DataSource = this.layoutBindingSource;
             this.consultalayoutGridView.Location = new System.Drawing.Point(9, 69);
             this.consultalayoutGridView.Name = "consultalayoutGridView";
@@ -138,6 +138,16 @@
             this.consultalayoutGridView.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.consultalayoutGridView.Size = new System.Drawing.Size(850, 350);
             this.consultalayoutGridView.TabIndex = 4;
+            // 
+            // nomelayoutLabel
+            // 
+            this.nomelayoutLabel.AutoSize = true;
+            this.nomelayoutLabel.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.nomelayoutLabel.Location = new System.Drawing.Point(6, 18);
+            this.nomelayoutLabel.Name = "nomelayoutLabel";
+            this.nomelayoutLabel.Size = new System.Drawing.Size(87, 17);
+            this.nomelayoutLabel.TabIndex = 9;
+            this.nomelayoutLabel.Text = "Nome Layout";
             // 
             // nomeDataGridViewTextBoxColumn
             // 
@@ -165,24 +175,6 @@
             this.tamanhoEmpresaDataGridViewTextBoxColumn.ReadOnly = true;
             this.tamanhoEmpresaDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             this.tamanhoEmpresaDataGridViewTextBoxColumn.Width = 80;
-            // 
-            // inicioFuncionarioDataGridViewTextBoxColumn
-            // 
-            this.inicioFuncionarioDataGridViewTextBoxColumn.DataPropertyName = "InicioFuncionario";
-            this.inicioFuncionarioDataGridViewTextBoxColumn.HeaderText = "Inicio Funcionário";
-            this.inicioFuncionarioDataGridViewTextBoxColumn.Name = "inicioFuncionarioDataGridViewTextBoxColumn";
-            this.inicioFuncionarioDataGridViewTextBoxColumn.ReadOnly = true;
-            this.inicioFuncionarioDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.inicioFuncionarioDataGridViewTextBoxColumn.Width = 80;
-            // 
-            // tamanhoFuncionarioDataGridViewTextBoxColumn
-            // 
-            this.tamanhoFuncionarioDataGridViewTextBoxColumn.DataPropertyName = "TamanhoFuncionario";
-            this.tamanhoFuncionarioDataGridViewTextBoxColumn.HeaderText = "Tamanho Funcionário";
-            this.tamanhoFuncionarioDataGridViewTextBoxColumn.Name = "tamanhoFuncionarioDataGridViewTextBoxColumn";
-            this.tamanhoFuncionarioDataGridViewTextBoxColumn.ReadOnly = true;
-            this.tamanhoFuncionarioDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.tamanhoFuncionarioDataGridViewTextBoxColumn.Width = 80;
             // 
             // inicioEventoDataGridViewTextBoxColumn
             // 
@@ -220,15 +212,23 @@
             this.tamanhoHorasDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             this.tamanhoHorasDataGridViewTextBoxColumn.Width = 70;
             // 
-            // nomelayoutLabel
+            // inicioFuncionarioDataGridViewTextBoxColumn
             // 
-            this.nomelayoutLabel.AutoSize = true;
-            this.nomelayoutLabel.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.nomelayoutLabel.Location = new System.Drawing.Point(6, 18);
-            this.nomelayoutLabel.Name = "nomelayoutLabel";
-            this.nomelayoutLabel.Size = new System.Drawing.Size(87, 17);
-            this.nomelayoutLabel.TabIndex = 9;
-            this.nomelayoutLabel.Text = "Nome Layout";
+            this.inicioFuncionarioDataGridViewTextBoxColumn.DataPropertyName = "InicioFuncionario";
+            this.inicioFuncionarioDataGridViewTextBoxColumn.HeaderText = "Inicio Funcionário";
+            this.inicioFuncionarioDataGridViewTextBoxColumn.Name = "inicioFuncionarioDataGridViewTextBoxColumn";
+            this.inicioFuncionarioDataGridViewTextBoxColumn.ReadOnly = true;
+            this.inicioFuncionarioDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.inicioFuncionarioDataGridViewTextBoxColumn.Width = 80;
+            // 
+            // tamanhoFuncionarioDataGridViewTextBoxColumn
+            // 
+            this.tamanhoFuncionarioDataGridViewTextBoxColumn.DataPropertyName = "TamanhoFuncionario";
+            this.tamanhoFuncionarioDataGridViewTextBoxColumn.HeaderText = "Tamanho Funcionário";
+            this.tamanhoFuncionarioDataGridViewTextBoxColumn.Name = "tamanhoFuncionarioDataGridViewTextBoxColumn";
+            this.tamanhoFuncionarioDataGridViewTextBoxColumn.ReadOnly = true;
+            this.tamanhoFuncionarioDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.tamanhoFuncionarioDataGridViewTextBoxColumn.Width = 80;
             // 
             // consultarlayoutForm
             // 
@@ -258,15 +258,15 @@
         private System.Windows.Forms.DataGridView consultalayoutGridView;
         private System.Windows.Forms.Label nomelayoutLabel;
         private System.Windows.Forms.BindingSource layoutBindingSource;
+        private System.Windows.Forms.Button detalheslayoutButton;
         private System.Windows.Forms.DataGridViewTextBoxColumn nomeDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn inicioEmpresaDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn tamanhoEmpresaDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn inicioFuncionarioDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn tamanhoFuncionarioDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn inicioEventoDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn tamanhoEventoDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn inicioHorasDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn tamanhoHorasDataGridViewTextBoxColumn;
-        private System.Windows.Forms.Button detalheslayoutButton;
+        private System.Windows.Forms.DataGridViewTextBoxColumn inicioFuncionarioDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn tamanhoFuncionarioDataGridViewTextBoxColumn;
     }
 }

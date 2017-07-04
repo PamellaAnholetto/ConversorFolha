@@ -31,6 +31,14 @@ namespace ConversorFolhaDePonto.UI
             linhaSelecionada = LinhaSelecionada;
             consultaLayoutGridView = ConsultaLayoutGridView;
             nomelayoutComboBox = NomeLayout;
+            inicio1ComboBox.Enabled = true;
+            inicio2ComboBox.Enabled = true;
+            inicio3ComboBox.Enabled = true;
+            inicio4ComboBox.Enabled = true;
+            tamanho1ComboBox.Enabled = true;
+            tamanho2ComboBox.Enabled = true;
+            tamanho3ComboBox.Enabled = true;
+            tamanho4ComboBox.Enabled = true;
         }
 
         private static IEnumerable<ComboBox> ConteudoComboBoxes;
