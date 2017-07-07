@@ -16,7 +16,7 @@ namespace ConversorFolhaDePonto.UI
         public manualForm()
         {
             InitializeComponent();
-            webBrowser.Navigate(string.Format(@"file://{0}\Manual_ConversorPonto_OFICIAL.pdf", Application.StartupPath));    
+            webBrowser.Navigate(string.Format(@"file://{0}\Manual_ConversorPonto.pdf", Application.StartupPath));    
         }
     }
 }
