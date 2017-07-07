@@ -70,7 +70,7 @@
             this.diretoriogravacaoLabel.Location = new System.Drawing.Point(7, 115);
             this.diretoriogravacaoLabel.Name = "diretoriogravacaoLabel";
             this.diretoriogravacaoLabel.Size = new System.Drawing.Size(125, 17);
-            this.diretoriogravacaoLabel.TabIndex = 7;
+            this.diretoriogravacaoLabel.TabIndex = 9;
             this.diretoriogravacaoLabel.Text = "Diretório Gravação";
             // 
             // diretorioarquivoLabel
@@ -80,7 +80,7 @@
             this.diretorioarquivoLabel.Location = new System.Drawing.Point(7, 77);
             this.diretorioarquivoLabel.Name = "diretorioarquivoLabel";
             this.diretorioarquivoLabel.Size = new System.Drawing.Size(110, 17);
-            this.diretorioarquivoLabel.TabIndex = 4;
+            this.diretorioarquivoLabel.TabIndex = 6;
             this.diretorioarquivoLabel.Text = "Diretório Arquivo";
             // 
             // diretoriogravarTextBox
@@ -89,7 +89,7 @@
             this.diretoriogravarTextBox.Location = new System.Drawing.Point(138, 112);
             this.diretoriogravarTextBox.Name = "diretoriogravarTextBox";
             this.diretoriogravarTextBox.Size = new System.Drawing.Size(482, 22);
-            this.diretoriogravarTextBox.TabIndex = 8;
+            this.diretoriogravarTextBox.TabIndex = 10;
             // 
             // lerdiretorioTextBox
             // 
@@ -97,7 +97,7 @@
             this.lerdiretorioTextBox.Location = new System.Drawing.Point(138, 77);
             this.lerdiretorioTextBox.Name = "lerdiretorioTextBox";
             this.lerdiretorioTextBox.Size = new System.Drawing.Size(482, 22);
-            this.lerdiretorioTextBox.TabIndex = 5;
+            this.lerdiretorioTextBox.TabIndex = 7;
             // 
             // nomeempresaTextBox
             // 
@@ -107,7 +107,7 @@
             this.nomeempresaTextBox.Location = new System.Drawing.Point(138, 41);
             this.nomeempresaTextBox.Name = "nomeempresaTextBox";
             this.nomeempresaTextBox.Size = new System.Drawing.Size(324, 22);
-            this.nomeempresaTextBox.TabIndex = 3;
+            this.nomeempresaTextBox.TabIndex = 4;
             // 
             // nomeempresaLabel
             // 
@@ -116,7 +116,7 @@
             this.nomeempresaLabel.Location = new System.Drawing.Point(135, 20);
             this.nomeempresaLabel.Name = "nomeempresaLabel";
             this.nomeempresaLabel.Size = new System.Drawing.Size(97, 17);
-            this.nomeempresaLabel.TabIndex = 2;
+            this.nomeempresaLabel.TabIndex = 1;
             this.nomeempresaLabel.Text = "Nome Empresa";
             // 
             // codigopontoGroupBox
@@ -151,7 +151,7 @@
             this.nomelayoutComboBox.Location = new System.Drawing.Point(507, 38);
             this.nomelayoutComboBox.Name = "nomelayoutComboBox";
             this.nomelayoutComboBox.Size = new System.Drawing.Size(140, 25);
-            this.nomelayoutComboBox.TabIndex = 12;
+            this.nomelayoutComboBox.TabIndex = 5;
             this.nomelayoutComboBox.ValueMember = "Nome";
             // 
             // layoutBindingSource
@@ -165,7 +165,7 @@
             this.nomelayoutLabel.Location = new System.Drawing.Point(504, 18);
             this.nomelayoutLabel.Name = "nomelayoutLabel";
             this.nomelayoutLabel.Size = new System.Drawing.Size(48, 17);
-            this.nomelayoutLabel.TabIndex = 11;
+            this.nomelayoutLabel.TabIndex = 2;
             this.nomelayoutLabel.Text = "Layout";
             // 
             // codigoempresaComboBox
@@ -178,7 +178,7 @@
             this.codigoempresaComboBox.Location = new System.Drawing.Point(10, 38);
             this.codigoempresaComboBox.Name = "codigoempresaComboBox";
             this.codigoempresaComboBox.Size = new System.Drawing.Size(68, 25);
-            this.codigoempresaComboBox.TabIndex = 1;
+            this.codigoempresaComboBox.TabIndex = 3;
             this.codigoempresaComboBox.ValueMember = "Nome";
             this.codigoempresaComboBox.SelectedIndexChanged += new System.EventHandler(this.codigoempresaComboBox_SelectedIndexChanged);
             // 
@@ -197,7 +197,7 @@
             this.gerarpontoButton.Location = new System.Drawing.Point(595, 141);
             this.gerarpontoButton.Name = "gerarpontoButton";
             this.gerarpontoButton.Size = new System.Drawing.Size(68, 26);
-            this.gerarpontoButton.TabIndex = 10;
+            this.gerarpontoButton.TabIndex = 12;
             this.gerarpontoButton.Text = "Gerar";
             this.gerarpontoButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.gerarpontoButton.UseVisualStyleBackColor = false;
@@ -213,7 +213,7 @@
             this.diretoriogravarButton.Location = new System.Drawing.Point(630, 109);
             this.diretoriogravarButton.Name = "diretoriogravarButton";
             this.diretoriogravarButton.Size = new System.Drawing.Size(33, 26);
-            this.diretoriogravarButton.TabIndex = 9;
+            this.diretoriogravarButton.TabIndex = 11;
             this.diretoriogravarButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.diretoriogravarButton.UseVisualStyleBackColor = false;
             this.diretoriogravarButton.Click += new System.EventHandler(this.diretoriogravarButton_Click);
@@ -228,7 +228,7 @@
             this.lerdiretoriodoButton.Location = new System.Drawing.Point(630, 72);
             this.lerdiretoriodoButton.Name = "lerdiretoriodoButton";
             this.lerdiretoriodoButton.Size = new System.Drawing.Size(33, 27);
-            this.lerdiretoriodoButton.TabIndex = 6;
+            this.lerdiretoriodoButton.TabIndex = 8;
             this.lerdiretoriodoButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.lerdiretoriodoButton.UseVisualStyleBackColor = false;
             this.lerdiretoriodoButton.Click += new System.EventHandler(this.lerdiretorioButton_Click);

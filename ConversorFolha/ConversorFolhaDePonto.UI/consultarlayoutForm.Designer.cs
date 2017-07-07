@@ -37,7 +37,6 @@
             this.nomelayoutComboBox = new System.Windows.Forms.ComboBox();
             this.layoutBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.consultalayoutGridView = new System.Windows.Forms.DataGridView();
-            this.nomelayoutLabel = new System.Windows.Forms.Label();
             this.nomeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.inicioEmpresaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tamanhoEmpresaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -47,6 +46,7 @@
             this.tamanhoHorasDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.inicioFuncionarioDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tamanhoFuncionarioDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nomelayoutLabel = new System.Windows.Forms.Label();
             this.consultalayoutGroupBox.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.layoutBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.consultalayoutGridView)).BeginInit();
@@ -62,7 +62,7 @@
             this.consultalayoutGroupBox.Location = new System.Drawing.Point(12, 12);
             this.consultalayoutGroupBox.Name = "consultalayoutGroupBox";
             this.consultalayoutGroupBox.Size = new System.Drawing.Size(869, 457);
-            this.consultalayoutGroupBox.TabIndex = 13;
+            this.consultalayoutGroupBox.TabIndex = 0;
             this.consultalayoutGroupBox.TabStop = false;
             // 
             // detalheslayoutButton
@@ -76,7 +76,7 @@
             this.detalheslayoutButton.Location = new System.Drawing.Point(774, 424);
             this.detalheslayoutButton.Name = "detalheslayoutButton";
             this.detalheslayoutButton.Size = new System.Drawing.Size(85, 26);
-            this.detalheslayoutButton.TabIndex = 24;
+            this.detalheslayoutButton.TabIndex = 3;
             this.detalheslayoutButton.Text = "Detalhes";
             this.detalheslayoutButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.detalheslayoutButton.UseVisualStyleBackColor = false;
@@ -91,7 +91,7 @@
             this.nomelayoutComboBox.Location = new System.Drawing.Point(9, 38);
             this.nomelayoutComboBox.Name = "nomelayoutComboBox";
             this.nomelayoutComboBox.Size = new System.Drawing.Size(252, 25);
-            this.nomelayoutComboBox.TabIndex = 14;
+            this.nomelayoutComboBox.TabIndex = 1;
             this.nomelayoutComboBox.ValueMember = "Nome";
             this.nomelayoutComboBox.SelectedIndexChanged += new System.EventHandler(this.NomelayoutComboBox_SelectedIndexChanged);
             // 
@@ -137,17 +137,7 @@
             this.consultalayoutGridView.RowsDefaultCellStyle = dataGridViewCellStyle2;
             this.consultalayoutGridView.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.consultalayoutGridView.Size = new System.Drawing.Size(850, 350);
-            this.consultalayoutGridView.TabIndex = 4;
-            // 
-            // nomelayoutLabel
-            // 
-            this.nomelayoutLabel.AutoSize = true;
-            this.nomelayoutLabel.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.nomelayoutLabel.Location = new System.Drawing.Point(6, 18);
-            this.nomelayoutLabel.Name = "nomelayoutLabel";
-            this.nomelayoutLabel.Size = new System.Drawing.Size(87, 17);
-            this.nomelayoutLabel.TabIndex = 9;
-            this.nomelayoutLabel.Text = "Nome Layout";
+            this.consultalayoutGridView.TabIndex = 2;
             // 
             // nomeDataGridViewTextBoxColumn
             // 
@@ -229,6 +219,16 @@
             this.tamanhoFuncionarioDataGridViewTextBoxColumn.ReadOnly = true;
             this.tamanhoFuncionarioDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             this.tamanhoFuncionarioDataGridViewTextBoxColumn.Width = 80;
+            // 
+            // nomelayoutLabel
+            // 
+            this.nomelayoutLabel.AutoSize = true;
+            this.nomelayoutLabel.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.nomelayoutLabel.Location = new System.Drawing.Point(6, 18);
+            this.nomelayoutLabel.Name = "nomelayoutLabel";
+            this.nomelayoutLabel.Size = new System.Drawing.Size(87, 17);
+            this.nomelayoutLabel.TabIndex = 0;
+            this.nomelayoutLabel.Text = "Nome Layout";
             // 
             // consultarlayoutForm
             // 

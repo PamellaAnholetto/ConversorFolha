@@ -34,6 +34,11 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(consultaeventoForm));
             this.consultaeventoGridView = new System.Windows.Forms.DataGridView();
+            this.idEmpresaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nomeEmpresaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.externoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.internoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.transferivelDataGridViewCheckBoxColumn = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.eventoBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.consultaeventoGroupBox = new System.Windows.Forms.GroupBox();
             this.incluireventoButton = new System.Windows.Forms.Button();
@@ -43,11 +48,6 @@
             this.nomeempresaLabel = new System.Windows.Forms.Label();
             this.nomeempresaTextBox = new System.Windows.Forms.TextBox();
             this.codigoempresaLabel = new System.Windows.Forms.Label();
-            this.idEmpresaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nomeEmpresaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.externoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.internoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.transferivelDataGridViewCheckBoxColumn = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.consultaeventoGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.eventoBindingSource)).BeginInit();
             this.consultaeventoGroupBox.SuspendLayout();
@@ -97,107 +97,7 @@
             this.consultaeventoGridView.RowsDefaultCellStyle = dataGridViewCellStyle3;
             this.consultaeventoGridView.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.consultaeventoGridView.Size = new System.Drawing.Size(556, 345);
-            this.consultaeventoGridView.TabIndex = 5;
-            // 
-            // eventoBindingSource
-            // 
-            this.eventoBindingSource.DataSource = typeof(ConversorFolhaDePonto.Modelo.Evento);
-            // 
-            // consultaeventoGroupBox
-            // 
-            this.consultaeventoGroupBox.Controls.Add(this.incluireventoButton);
-            this.consultaeventoGroupBox.Controls.Add(this.detalheseventoButton);
-            this.consultaeventoGroupBox.Controls.Add(this.codigoempresaComboBox);
-            this.consultaeventoGroupBox.Controls.Add(this.consultaeventoGridView);
-            this.consultaeventoGroupBox.Controls.Add(this.nomeempresaLabel);
-            this.consultaeventoGroupBox.Controls.Add(this.nomeempresaTextBox);
-            this.consultaeventoGroupBox.Controls.Add(this.codigoempresaLabel);
-            this.consultaeventoGroupBox.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.consultaeventoGroupBox.Location = new System.Drawing.Point(13, 12);
-            this.consultaeventoGroupBox.Name = "consultaeventoGroupBox";
-            this.consultaeventoGroupBox.Size = new System.Drawing.Size(574, 452);
-            this.consultaeventoGroupBox.TabIndex = 12;
-            this.consultaeventoGroupBox.TabStop = false;
-            // 
-            // incluireventoButton
-            // 
-            this.incluireventoButton.BackColor = System.Drawing.Color.Transparent;
-            this.incluireventoButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.incluireventoButton.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.incluireventoButton.ForeColor = System.Drawing.Color.Black;
-            this.incluireventoButton.Image = ((System.Drawing.Image)(resources.GetObject("incluireventoButton.Image")));
-            this.incluireventoButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.incluireventoButton.Location = new System.Drawing.Point(405, 420);
-            this.incluireventoButton.Name = "incluireventoButton";
-            this.incluireventoButton.Size = new System.Drawing.Size(69, 26);
-            this.incluireventoButton.TabIndex = 23;
-            this.incluireventoButton.Text = "Incluir";
-            this.incluireventoButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.incluireventoButton.UseVisualStyleBackColor = false;
-            this.incluireventoButton.Click += new System.EventHandler(this.IncluireventoButton_Click);
-            // 
-            // detalheseventoButton
-            // 
-            this.detalheseventoButton.BackColor = System.Drawing.Color.Transparent;
-            this.detalheseventoButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.detalheseventoButton.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.detalheseventoButton.ForeColor = System.Drawing.Color.Black;
-            this.detalheseventoButton.Image = ((System.Drawing.Image)(resources.GetObject("detalheseventoButton.Image")));
-            this.detalheseventoButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.detalheseventoButton.Location = new System.Drawing.Point(480, 420);
-            this.detalheseventoButton.Name = "detalheseventoButton";
-            this.detalheseventoButton.Size = new System.Drawing.Size(85, 26);
-            this.detalheseventoButton.TabIndex = 21;
-            this.detalheseventoButton.Text = "Detalhes";
-            this.detalheseventoButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.detalheseventoButton.UseVisualStyleBackColor = false;
-            this.detalheseventoButton.Click += new System.EventHandler(this.DetalheseventoButton_Click);
-            // 
-            // codigoempresaComboBox
-            // 
-            this.codigoempresaComboBox.DataSource = this.empresaBindingSource;
-            this.codigoempresaComboBox.DisplayMember = "Id";
-            this.codigoempresaComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.codigoempresaComboBox.FormattingEnabled = true;
-            this.codigoempresaComboBox.Location = new System.Drawing.Point(9, 38);
-            this.codigoempresaComboBox.Name = "codigoempresaComboBox";
-            this.codigoempresaComboBox.Size = new System.Drawing.Size(72, 25);
-            this.codigoempresaComboBox.TabIndex = 14;
-            this.codigoempresaComboBox.ValueMember = "Nome";
-            this.codigoempresaComboBox.SelectedIndexChanged += new System.EventHandler(this.CodigoempresaComboBox_SelectedIndexChanged);
-            // 
-            // empresaBindingSource
-            // 
-            this.empresaBindingSource.DataSource = typeof(ConversorFolhaDePonto.Modelo.Empresa);
-            // 
-            // nomeempresaLabel
-            // 
-            this.nomeempresaLabel.AutoSize = true;
-            this.nomeempresaLabel.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.nomeempresaLabel.Location = new System.Drawing.Point(126, 18);
-            this.nomeempresaLabel.Name = "nomeempresaLabel";
-            this.nomeempresaLabel.Size = new System.Drawing.Size(97, 17);
-            this.nomeempresaLabel.TabIndex = 9;
-            this.nomeempresaLabel.Text = "Nome Empresa";
-            // 
-            // nomeempresaTextBox
-            // 
-            this.nomeempresaTextBox.AccessibleName = "Nome da Empresa";
-            this.nomeempresaTextBox.Enabled = false;
-            this.nomeempresaTextBox.Location = new System.Drawing.Point(129, 41);
-            this.nomeempresaTextBox.Name = "nomeempresaTextBox";
-            this.nomeempresaTextBox.Size = new System.Drawing.Size(276, 22);
-            this.nomeempresaTextBox.TabIndex = 10;
-            // 
-            // codigoempresaLabel
-            // 
-            this.codigoempresaLabel.AutoSize = true;
-            this.codigoempresaLabel.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.codigoempresaLabel.Location = new System.Drawing.Point(6, 18);
-            this.codigoempresaLabel.Name = "codigoempresaLabel";
-            this.codigoempresaLabel.Size = new System.Drawing.Size(105, 17);
-            this.codigoempresaLabel.TabIndex = 1;
-            this.codigoempresaLabel.Text = "Código Empresa";
+            this.consultaeventoGridView.TabIndex = 4;
             // 
             // idEmpresaDataGridViewTextBoxColumn
             // 
@@ -242,6 +142,106 @@
             this.transferivelDataGridViewCheckBoxColumn.Name = "transferivelDataGridViewCheckBoxColumn";
             this.transferivelDataGridViewCheckBoxColumn.ReadOnly = true;
             this.transferivelDataGridViewCheckBoxColumn.Width = 80;
+            // 
+            // eventoBindingSource
+            // 
+            this.eventoBindingSource.DataSource = typeof(ConversorFolhaDePonto.Modelo.Evento);
+            // 
+            // consultaeventoGroupBox
+            // 
+            this.consultaeventoGroupBox.Controls.Add(this.incluireventoButton);
+            this.consultaeventoGroupBox.Controls.Add(this.detalheseventoButton);
+            this.consultaeventoGroupBox.Controls.Add(this.codigoempresaComboBox);
+            this.consultaeventoGroupBox.Controls.Add(this.consultaeventoGridView);
+            this.consultaeventoGroupBox.Controls.Add(this.nomeempresaLabel);
+            this.consultaeventoGroupBox.Controls.Add(this.nomeempresaTextBox);
+            this.consultaeventoGroupBox.Controls.Add(this.codigoempresaLabel);
+            this.consultaeventoGroupBox.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.consultaeventoGroupBox.Location = new System.Drawing.Point(13, 12);
+            this.consultaeventoGroupBox.Name = "consultaeventoGroupBox";
+            this.consultaeventoGroupBox.Size = new System.Drawing.Size(574, 452);
+            this.consultaeventoGroupBox.TabIndex = 0;
+            this.consultaeventoGroupBox.TabStop = false;
+            // 
+            // incluireventoButton
+            // 
+            this.incluireventoButton.BackColor = System.Drawing.Color.Transparent;
+            this.incluireventoButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.incluireventoButton.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.incluireventoButton.ForeColor = System.Drawing.Color.Black;
+            this.incluireventoButton.Image = ((System.Drawing.Image)(resources.GetObject("incluireventoButton.Image")));
+            this.incluireventoButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.incluireventoButton.Location = new System.Drawing.Point(405, 420);
+            this.incluireventoButton.Name = "incluireventoButton";
+            this.incluireventoButton.Size = new System.Drawing.Size(69, 26);
+            this.incluireventoButton.TabIndex = 5;
+            this.incluireventoButton.Text = "Incluir";
+            this.incluireventoButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.incluireventoButton.UseVisualStyleBackColor = false;
+            this.incluireventoButton.Click += new System.EventHandler(this.IncluireventoButton_Click);
+            // 
+            // detalheseventoButton
+            // 
+            this.detalheseventoButton.BackColor = System.Drawing.Color.Transparent;
+            this.detalheseventoButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.detalheseventoButton.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.detalheseventoButton.ForeColor = System.Drawing.Color.Black;
+            this.detalheseventoButton.Image = ((System.Drawing.Image)(resources.GetObject("detalheseventoButton.Image")));
+            this.detalheseventoButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.detalheseventoButton.Location = new System.Drawing.Point(480, 420);
+            this.detalheseventoButton.Name = "detalheseventoButton";
+            this.detalheseventoButton.Size = new System.Drawing.Size(85, 26);
+            this.detalheseventoButton.TabIndex = 6;
+            this.detalheseventoButton.Text = "Detalhes";
+            this.detalheseventoButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.detalheseventoButton.UseVisualStyleBackColor = false;
+            this.detalheseventoButton.Click += new System.EventHandler(this.DetalheseventoButton_Click);
+            // 
+            // codigoempresaComboBox
+            // 
+            this.codigoempresaComboBox.DataSource = this.empresaBindingSource;
+            this.codigoempresaComboBox.DisplayMember = "Id";
+            this.codigoempresaComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.codigoempresaComboBox.FormattingEnabled = true;
+            this.codigoempresaComboBox.Location = new System.Drawing.Point(9, 38);
+            this.codigoempresaComboBox.Name = "codigoempresaComboBox";
+            this.codigoempresaComboBox.Size = new System.Drawing.Size(72, 25);
+            this.codigoempresaComboBox.TabIndex = 2;
+            this.codigoempresaComboBox.ValueMember = "Nome";
+            this.codigoempresaComboBox.SelectedIndexChanged += new System.EventHandler(this.CodigoempresaComboBox_SelectedIndexChanged);
+            // 
+            // empresaBindingSource
+            // 
+            this.empresaBindingSource.DataSource = typeof(ConversorFolhaDePonto.Modelo.Empresa);
+            // 
+            // nomeempresaLabel
+            // 
+            this.nomeempresaLabel.AutoSize = true;
+            this.nomeempresaLabel.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.nomeempresaLabel.Location = new System.Drawing.Point(126, 18);
+            this.nomeempresaLabel.Name = "nomeempresaLabel";
+            this.nomeempresaLabel.Size = new System.Drawing.Size(97, 17);
+            this.nomeempresaLabel.TabIndex = 1;
+            this.nomeempresaLabel.Text = "Nome Empresa";
+            // 
+            // nomeempresaTextBox
+            // 
+            this.nomeempresaTextBox.AccessibleName = "Nome da Empresa";
+            this.nomeempresaTextBox.Enabled = false;
+            this.nomeempresaTextBox.Location = new System.Drawing.Point(129, 41);
+            this.nomeempresaTextBox.Name = "nomeempresaTextBox";
+            this.nomeempresaTextBox.Size = new System.Drawing.Size(276, 22);
+            this.nomeempresaTextBox.TabIndex = 3;
+            // 
+            // codigoempresaLabel
+            // 
+            this.codigoempresaLabel.AutoSize = true;
+            this.codigoempresaLabel.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.codigoempresaLabel.Location = new System.Drawing.Point(6, 18);
+            this.codigoempresaLabel.Name = "codigoempresaLabel";
+            this.codigoempresaLabel.Size = new System.Drawing.Size(105, 17);
+            this.codigoempresaLabel.TabIndex = 0;
+            this.codigoempresaLabel.Text = "Código Empresa";
             // 
             // consultaeventoForm
             // 

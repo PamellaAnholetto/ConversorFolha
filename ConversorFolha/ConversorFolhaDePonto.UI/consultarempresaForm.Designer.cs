@@ -33,13 +33,6 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ConsultarempresaForm));
             this.consultaempresaGridView = new System.Windows.Forms.DataGridView();
-            this.empresaBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.consultaempresaGroupBox = new System.Windows.Forms.GroupBox();
-            this.detalhesempresaButton = new System.Windows.Forms.Button();
-            this.codigoempresaComboBox = new System.Windows.Forms.ComboBox();
-            this.nomeempresaLabel = new System.Windows.Forms.Label();
-            this.nomeempresaTextBox = new System.Windows.Forms.TextBox();
-            this.codigoempresaLabel = new System.Windows.Forms.Label();
             this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nomeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.inicioEventoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -48,6 +41,13 @@
             this.tamanhoHorasDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.inicioFuncionarioDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tamanhoFuncionarioDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.empresaBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.consultaempresaGroupBox = new System.Windows.Forms.GroupBox();
+            this.detalhesempresaButton = new System.Windows.Forms.Button();
+            this.codigoempresaComboBox = new System.Windows.Forms.ComboBox();
+            this.nomeempresaLabel = new System.Windows.Forms.Label();
+            this.nomeempresaTextBox = new System.Windows.Forms.TextBox();
+            this.codigoempresaLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.consultaempresaGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.empresaBindingSource)).BeginInit();
             this.consultaempresaGroupBox.SuspendLayout();
@@ -90,85 +90,7 @@
             this.consultaempresaGridView.RowsDefaultCellStyle = dataGridViewCellStyle2;
             this.consultaempresaGridView.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.consultaempresaGridView.Size = new System.Drawing.Size(789, 315);
-            this.consultaempresaGridView.TabIndex = 2;
-            // 
-            // empresaBindingSource
-            // 
-            this.empresaBindingSource.DataSource = typeof(ConversorFolhaDePonto.Modelo.Empresa);
-            // 
-            // consultaempresaGroupBox
-            // 
-            this.consultaempresaGroupBox.Controls.Add(this.detalhesempresaButton);
-            this.consultaempresaGroupBox.Controls.Add(this.codigoempresaComboBox);
-            this.consultaempresaGroupBox.Controls.Add(this.consultaempresaGridView);
-            this.consultaempresaGroupBox.Controls.Add(this.nomeempresaLabel);
-            this.consultaempresaGroupBox.Controls.Add(this.nomeempresaTextBox);
-            this.consultaempresaGroupBox.Controls.Add(this.codigoempresaLabel);
-            this.consultaempresaGroupBox.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.consultaempresaGroupBox.Location = new System.Drawing.Point(12, 12);
-            this.consultaempresaGroupBox.Name = "consultaempresaGroupBox";
-            this.consultaempresaGroupBox.Size = new System.Drawing.Size(808, 421);
-            this.consultaempresaGroupBox.TabIndex = 18;
-            this.consultaempresaGroupBox.TabStop = false;
-            // 
-            // detalhesempresaButton
-            // 
-            this.detalhesempresaButton.BackColor = System.Drawing.Color.Transparent;
-            this.detalhesempresaButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.detalhesempresaButton.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.detalhesempresaButton.ForeColor = System.Drawing.Color.Black;
-            this.detalhesempresaButton.Image = ((System.Drawing.Image)(resources.GetObject("detalhesempresaButton.Image")));
-            this.detalhesempresaButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.detalhesempresaButton.Location = new System.Drawing.Point(713, 388);
-            this.detalhesempresaButton.Name = "detalhesempresaButton";
-            this.detalhesempresaButton.Size = new System.Drawing.Size(85, 26);
-            this.detalhesempresaButton.TabIndex = 22;
-            this.detalhesempresaButton.Text = "Detalhes";
-            this.detalhesempresaButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.detalhesempresaButton.UseVisualStyleBackColor = false;
-            this.detalhesempresaButton.Click += new System.EventHandler(this.DetalhesempresaButton_Click);
-            // 
-            // codigoempresaComboBox
-            // 
-            this.codigoempresaComboBox.DataSource = this.empresaBindingSource;
-            this.codigoempresaComboBox.DisplayMember = "Id";
-            this.codigoempresaComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.codigoempresaComboBox.FormattingEnabled = true;
-            this.codigoempresaComboBox.Location = new System.Drawing.Point(9, 36);
-            this.codigoempresaComboBox.Name = "codigoempresaComboBox";
-            this.codigoempresaComboBox.Size = new System.Drawing.Size(71, 25);
-            this.codigoempresaComboBox.TabIndex = 14;
-            this.codigoempresaComboBox.ValueMember = "Nome";
-            this.codigoempresaComboBox.SelectedIndexChanged += new System.EventHandler(this.CodigoempresaComboBox_SelectedIndexChanged);
-            // 
-            // nomeempresaLabel
-            // 
-            this.nomeempresaLabel.AutoSize = true;
-            this.nomeempresaLabel.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.nomeempresaLabel.Location = new System.Drawing.Point(126, 19);
-            this.nomeempresaLabel.Name = "nomeempresaLabel";
-            this.nomeempresaLabel.Size = new System.Drawing.Size(97, 17);
-            this.nomeempresaLabel.TabIndex = 9;
-            this.nomeempresaLabel.Text = "Nome Empresa";
-            // 
-            // nomeempresaTextBox
-            // 
-            this.nomeempresaTextBox.AccessibleName = "Nome da Empresa";
-            this.nomeempresaTextBox.Enabled = false;
-            this.nomeempresaTextBox.Location = new System.Drawing.Point(129, 39);
-            this.nomeempresaTextBox.Name = "nomeempresaTextBox";
-            this.nomeempresaTextBox.Size = new System.Drawing.Size(280, 22);
-            this.nomeempresaTextBox.TabIndex = 10;
-            // 
-            // codigoempresaLabel
-            // 
-            this.codigoempresaLabel.AutoSize = true;
-            this.codigoempresaLabel.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.codigoempresaLabel.Location = new System.Drawing.Point(6, 18);
-            this.codigoempresaLabel.Name = "codigoempresaLabel";
-            this.codigoempresaLabel.Size = new System.Drawing.Size(105, 17);
-            this.codigoempresaLabel.TabIndex = 1;
-            this.codigoempresaLabel.Text = "Código Empresa";
+            this.consultaempresaGridView.TabIndex = 4;
             // 
             // idDataGridViewTextBoxColumn
             // 
@@ -233,6 +155,84 @@
             this.tamanhoFuncionarioDataGridViewTextBoxColumn.Name = "tamanhoFuncionarioDataGridViewTextBoxColumn";
             this.tamanhoFuncionarioDataGridViewTextBoxColumn.ReadOnly = true;
             this.tamanhoFuncionarioDataGridViewTextBoxColumn.Width = 80;
+            // 
+            // empresaBindingSource
+            // 
+            this.empresaBindingSource.DataSource = typeof(ConversorFolhaDePonto.Modelo.Empresa);
+            // 
+            // consultaempresaGroupBox
+            // 
+            this.consultaempresaGroupBox.Controls.Add(this.detalhesempresaButton);
+            this.consultaempresaGroupBox.Controls.Add(this.codigoempresaComboBox);
+            this.consultaempresaGroupBox.Controls.Add(this.consultaempresaGridView);
+            this.consultaempresaGroupBox.Controls.Add(this.nomeempresaLabel);
+            this.consultaempresaGroupBox.Controls.Add(this.nomeempresaTextBox);
+            this.consultaempresaGroupBox.Controls.Add(this.codigoempresaLabel);
+            this.consultaempresaGroupBox.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.consultaempresaGroupBox.Location = new System.Drawing.Point(12, 12);
+            this.consultaempresaGroupBox.Name = "consultaempresaGroupBox";
+            this.consultaempresaGroupBox.Size = new System.Drawing.Size(808, 421);
+            this.consultaempresaGroupBox.TabIndex = 0;
+            this.consultaempresaGroupBox.TabStop = false;
+            // 
+            // detalhesempresaButton
+            // 
+            this.detalhesempresaButton.BackColor = System.Drawing.Color.Transparent;
+            this.detalhesempresaButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.detalhesempresaButton.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.detalhesempresaButton.ForeColor = System.Drawing.Color.Black;
+            this.detalhesempresaButton.Image = ((System.Drawing.Image)(resources.GetObject("detalhesempresaButton.Image")));
+            this.detalhesempresaButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.detalhesempresaButton.Location = new System.Drawing.Point(713, 388);
+            this.detalhesempresaButton.Name = "detalhesempresaButton";
+            this.detalhesempresaButton.Size = new System.Drawing.Size(85, 26);
+            this.detalhesempresaButton.TabIndex = 5;
+            this.detalhesempresaButton.Text = "Detalhes";
+            this.detalhesempresaButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.detalhesempresaButton.UseVisualStyleBackColor = false;
+            this.detalhesempresaButton.Click += new System.EventHandler(this.DetalhesempresaButton_Click);
+            // 
+            // codigoempresaComboBox
+            // 
+            this.codigoempresaComboBox.DataSource = this.empresaBindingSource;
+            this.codigoempresaComboBox.DisplayMember = "Id";
+            this.codigoempresaComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.codigoempresaComboBox.FormattingEnabled = true;
+            this.codigoempresaComboBox.Location = new System.Drawing.Point(9, 36);
+            this.codigoempresaComboBox.Name = "codigoempresaComboBox";
+            this.codigoempresaComboBox.Size = new System.Drawing.Size(71, 25);
+            this.codigoempresaComboBox.TabIndex = 2;
+            this.codigoempresaComboBox.ValueMember = "Nome";
+            this.codigoempresaComboBox.SelectedIndexChanged += new System.EventHandler(this.CodigoempresaComboBox_SelectedIndexChanged);
+            // 
+            // nomeempresaLabel
+            // 
+            this.nomeempresaLabel.AutoSize = true;
+            this.nomeempresaLabel.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.nomeempresaLabel.Location = new System.Drawing.Point(126, 19);
+            this.nomeempresaLabel.Name = "nomeempresaLabel";
+            this.nomeempresaLabel.Size = new System.Drawing.Size(97, 17);
+            this.nomeempresaLabel.TabIndex = 1;
+            this.nomeempresaLabel.Text = "Nome Empresa";
+            // 
+            // nomeempresaTextBox
+            // 
+            this.nomeempresaTextBox.AccessibleName = "Nome da Empresa";
+            this.nomeempresaTextBox.Enabled = false;
+            this.nomeempresaTextBox.Location = new System.Drawing.Point(129, 39);
+            this.nomeempresaTextBox.Name = "nomeempresaTextBox";
+            this.nomeempresaTextBox.Size = new System.Drawing.Size(280, 22);
+            this.nomeempresaTextBox.TabIndex = 3;
+            // 
+            // codigoempresaLabel
+            // 
+            this.codigoempresaLabel.AutoSize = true;
+            this.codigoempresaLabel.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.codigoempresaLabel.Location = new System.Drawing.Point(6, 18);
+            this.codigoempresaLabel.Name = "codigoempresaLabel";
+            this.codigoempresaLabel.Size = new System.Drawing.Size(105, 17);
+            this.codigoempresaLabel.TabIndex = 0;
+            this.codigoempresaLabel.Text = "Código Empresa";
             // 
             // ConsultarempresaForm
             // 
